@@ -10,7 +10,7 @@ review our <a href=https://docs.pastel.network/introduction/pastel-overview>docu
 
 ## Requirements.
 
-Python 3.7+
+Python 3.9+
 
 ## Installation & Usage
 ### pip install
