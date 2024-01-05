@@ -1,4 +1,7 @@
 # pastel-gateway-sdk
+
+[![gateway_client Python package](https://github.com/pastelnetwork/gateway-sdk-py/actions/workflows/python.yml/badge.svg)](https://github.com/pastelnetwork/gateway-sdk-py/actions/workflows/python.yml)
+
 Pastel Network’s Gateway provides Web3 developers with easy, robust,<br/> 
 and reliable access to the Pastel Network and its underlying protocols via a lightweight, centralized service.<br/> 
 For more information on Pastel Network,<br/> 
