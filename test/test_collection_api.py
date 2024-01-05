@@ -21,7 +21,7 @@ class TestCollectionApi(unittest.TestCase):
     """CollectionApi unit test stubs"""
 
     def setUp(self) -> None:
-        self.api = CollectionApi()
+        pass
 
     def tearDown(self) -> None:
         pass

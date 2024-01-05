@@ -21,7 +21,7 @@ class TestUsersApi(unittest.TestCase):
     """UsersApi unit test stubs"""
 
     def setUp(self) -> None:
-        self.api = UsersApi()
+        pass
 
     def tearDown(self) -> None:
         pass

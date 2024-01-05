@@ -21,7 +21,7 @@ class TestSenseApi(unittest.TestCase):
     """SenseApi unit test stubs"""
 
     def setUp(self) -> None:
-        self.api = SenseApi()
+        pass
 
     def tearDown(self) -> None:
         pass

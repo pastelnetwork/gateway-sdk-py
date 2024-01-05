@@ -21,7 +21,7 @@ class TestNftApi(unittest.TestCase):
     """NftApi unit test stubs"""
 
     def setUp(self) -> None:
-        self.api = NftApi()
+        pass
 
     def tearDown(self) -> None:
         pass
