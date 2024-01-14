@@ -36,7 +36,6 @@ from pastel_gateway_sdk.exceptions import ApiValueError
 from pastel_gateway_sdk.exceptions import ApiKeyError
 from pastel_gateway_sdk.exceptions import ApiAttributeError
 from pastel_gateway_sdk.exceptions import ApiException
-from pastel_gateway_sdk.gateway_api_client import GatewayApiClientAsync
 
 # import models into sdk package
 from pastel_gateway_sdk.models.api_key import ApiKey
@@ -60,3 +59,5 @@ from pastel_gateway_sdk.models.user_create import UserCreate
 from pastel_gateway_sdk.models.user_id_or_email import UserIdOrEmail
 from pastel_gateway_sdk.models.user_update import UserUpdate
 from pastel_gateway_sdk.models.validation_error import ValidationError
+
+from pastel_gateway_sdk.gateway_api_client import GatewayApiClientAsync

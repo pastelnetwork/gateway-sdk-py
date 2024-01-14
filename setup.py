@@ -21,7 +21,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "pastel-gateway-sdk"
-VERSION = "1.0.0"
+VERSION = "0.0.9"
 PYTHON_REQUIRES = ">=3.9"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
@@ -45,7 +45,9 @@ setup(
     include_package_data=True,
     long_description_content_type='text/markdown',
     long_description="""\
-    Pastel Network’s Gateway provides Web3 developers with easy, robust, and reliable access to the Pastel Network and its underlying protocols via a lightweight, centralized service.&lt;br/&gt; For more information on Pastel Network, review our &lt;a href&#x3D;https://docs.pastel.network/introduction/pastel-overview&gt;documentation&lt;/a&gt;.
+    Pastel Network’s Gateway provides Web3 developers with easy, robust, and reliable access to the Pastel Network 
+    and its underlying protocols via a lightweight, centralized service.
+    For more information on Pastel Network, review our documentation  https://docs.pastel.network/introduction/pastel-overview.
     """,  # noqa: E501
     package_data={"pastel_gateway_sdk": ["py.typed"]},
 )

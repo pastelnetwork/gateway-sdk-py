@@ -1,6 +1,6 @@
 from pastel_gateway_sdk.api import (LoginApi, AccountApi, ApiKeysApi, UsersApi,
                                 CascadeApi, CollectionApi, NftApi, SenseApi)
-from pastel_gateway_sdk import ApiClient, Configuration
+from pastel_gateway_sdk import ApiClient, Configuration, Token
 
 
 class GatewayApiClientAsync(ApiClient):
@@ -33,11 +33,27 @@ class GatewayApiClientAsync(ApiClient):
         raise ValueError(f"Invalid network. Choose from {list(GatewayApiClientAsync.NETWORKS.keys())} "
                          f"or provide custom_url")
 
-    async def authenticate(self, username: str, password: str):
+    async def authenticate(self, username: str, password: str) -> bool:
         login_api = self.login_api
         token = await login_api.login_access_token(username=username, password=password)
+        if not token or type(token) is not Token or not token.access_token:
+            return False
         self.configuration.access_token = token.access_token
         self._token = token.access_token
+        return True
+
+    async def logout(self):
+        self.clear_auth_api_key()
+        self.configuration.access_token = None
+        self._token = None
+        self._account_api = None
+        self._api_keys_api = None
+        self._users_api = None
+        self._login_api = None
+        self._cascade_api = None
+        self._collection_api = None
+        self._nft_api = None
+        self._sense_api = None
 
     async def test_token(self):
         api = self.login_api

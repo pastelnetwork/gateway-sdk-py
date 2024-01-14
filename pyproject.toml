@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pastel-gateway-sdk"
-version = "1.0.0"
+version = "0.0.9"
 description = "Pastel Network Gateway SDK"
 authors = ["Pastel Network Team <team@pastel.network>"]
 license = "NoLicense"

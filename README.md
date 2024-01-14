@@ -8,8 +8,6 @@ For more information on Pastel Network,<br/>
 review our <a href=https://docs.pastel.network/introduction/pastel-overview>documentation</a>.
 
 - API version: 1.0.0
-- Package version: 1.0.0
-- Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 ## Requirements.
 
