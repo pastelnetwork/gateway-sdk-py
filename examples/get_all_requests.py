@@ -1,4 +1,3 @@
-import os
 import asyncio
 from pastel_gateway_sdk.rest import ApiException
 from pastel_gateway_sdk import GatewayApiClientAsync, AccountApi, ApiKeysApi
@@ -8,7 +7,10 @@ from pprint import pprint  # add pprint import here
 async def main():
     client = GatewayApiClientAsync(network="testnet")
     try:
-        await client.authenticate("test@example.com", "string")
+        ok = await client.authenticate("test@example.com", "string")
+        if not ok:
+            print("Authentication failed")
+            return 0
 
         # My Total Balance
         account_api: AccountApi = client.account_api
