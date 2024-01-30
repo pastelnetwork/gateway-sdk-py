@@ -6,7 +6,8 @@ from pastel_gateway_sdk import ApiClient, Configuration, Token
 class GatewayApiClientAsync(ApiClient):
     NETWORKS = {
         "mainnet": "https://gateway-api.pastel.network/",
-        "testnet": "https://testnet.gateway-api.pastel.network/"
+        "testnet": "https://testnet.gateway-api.pastel.network/",
+        "devnet": "https://devnet.gateway-api.pastel.network/"
     }
 
     def __init__(self, network: str = None, custom_url: str = None):
