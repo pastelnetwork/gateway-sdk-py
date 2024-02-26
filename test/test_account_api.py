@@ -14,20 +14,11 @@
 
 import unittest
 
-from pastel_gateway_sdk import AccountApi
-from pastel_gateway_sdk import GatewayApiClientAsync
+from base_test import BaseTestCase
 
 
-class TestAccountApi(unittest.IsolatedAsyncioTestCase):
+class TestAccountApi(BaseTestCase):
     """AccountApi unit test stubs"""
-
-    async def asyncSetUp(self) -> None:
-        self.client = GatewayApiClientAsync(network="testnet")
-        await self.client.authenticate(username="test@example.com", password="string")
-        self.api: AccountApi = self.client.account_api
-
-    async def asyncTearDown(self) -> None:
-        pass
 
     async def test_account_my_total_balance(self) -> None:
         """Test case for account_my_total_balance
@@ -36,6 +27,22 @@ class TestAccountApi(unittest.IsolatedAsyncioTestCase):
         """
         balance = await self.api.account_my_total_balance()
         self.assertIsNotNone(balance)
+
+    async def test_account_set_balance_limit(self) -> None:
+        """Test case for account_set_balance_limit
+
+        Set Balance Limit
+        SUPER ADMIN ONLY!!!
+        """
+        pass
+
+    async def test_account_total_balances(self) -> None:
+        """Test case for account_total_balances
+
+        Total Balances
+        SUPER ADMIN ONLY!!!
+        """
+        pass
 
     async def test_account_pastelid_claiming_step1(self) -> None:
         """Test case for account_pastelid_claiming_step1
@@ -48,20 +55,6 @@ class TestAccountApi(unittest.IsolatedAsyncioTestCase):
         """Test case for account_pastelid_claiming_step2
 
         Pastelid Claiming Step 2
-        """
-        pass
-
-    async def test_account_set_balance_limit(self) -> None:
-        """Test case for account_set_balance_limit
-
-        Set Balance Limit
-        """
-        pass
-
-    async def test_account_total_balances(self) -> None:
-        """Test case for account_total_balances
-
-        Total Balances
         """
         pass
 

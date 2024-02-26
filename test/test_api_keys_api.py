@@ -13,21 +13,11 @@
 
 
 import unittest
-
-from pastel_gateway_sdk import ApiKeysApi
-from pastel_gateway_sdk import GatewayApiClientAsync
+from base_test import BaseTestCase
 
 
-class TestApiKeysApi(unittest.IsolatedAsyncioTestCase):
+class TestApiKeysApi(BaseTestCase):
     """ApiKeysApi unit test stubs"""
-
-    async def asyncSetUp(self) -> None:
-        self.client = GatewayApiClientAsync(network="testnet")
-        await self.client.authenticate(username="test@example.com", password="string")
-        self.api: ApiKeysApi = self.client.api_keys_api
-
-    async def asyncTearDown(self) -> None:
-        pass
 
     async def test_api_keys_create_apikey(self) -> None:
         """Test case for api_keys_create_apikey

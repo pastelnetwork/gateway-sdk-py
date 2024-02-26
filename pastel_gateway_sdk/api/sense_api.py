@@ -95,7 +95,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_parsed_output_files_from_request_serialize(
+        _param = self._sense_get_all_parsed_output_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -119,7 +119,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_all_parsed_output_files_from_request_with_http_info(
+    async def sense_get_all_parsed_output_files_from_request_id_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -162,7 +162,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_parsed_output_files_from_request_serialize(
+        _param = self._sense_get_all_parsed_output_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -186,7 +186,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_all_parsed_output_files_from_request_without_preload_content(
+    async def sense_get_all_parsed_output_files_from_request_id_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -229,7 +229,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_parsed_output_files_from_request_serialize(
+        _param = self._sense_get_all_parsed_output_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -248,7 +248,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_all_parsed_output_files_from_request_serialize(
+    def _sense_get_all_parsed_output_files_from_request_id_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -353,7 +353,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_pastel_registration_tickets_from_request_serialize(
+        _param = self._sense_get_all_pastel_registration_tickets_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -377,7 +377,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_all_pastel_registration_tickets_from_request_with_http_info(
+    async def sense_get_all_pastel_registration_tickets_from_request_id_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -420,7 +420,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_pastel_registration_tickets_from_request_serialize(
+        _param = self._sense_get_all_pastel_registration_tickets_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -444,7 +444,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_all_pastel_registration_tickets_from_request_without_preload_content(
+    async def sense_get_all_pastel_registration_tickets_from_request_id_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -487,7 +487,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_pastel_registration_tickets_from_request_serialize(
+        _param = self._sense_get_all_pastel_registration_tickets_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -506,7 +506,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_all_pastel_registration_tickets_from_request_serialize(
+    def _sense_get_all_pastel_registration_tickets_from_request_id_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -611,7 +611,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_raw_output_files_from_request_serialize(
+        _param = self._sense_get_all_raw_output_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -635,7 +635,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_all_raw_output_files_from_request_with_http_info(
+    async def sense_get_all_raw_output_files_from_request_id_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -678,7 +678,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_raw_output_files_from_request_serialize(
+        _param = self._sense_get_all_raw_output_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -702,7 +702,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_all_raw_output_files_from_request_without_preload_content(
+    async def sense_get_all_raw_output_files_from_request_id_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -745,7 +745,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_raw_output_files_from_request_serialize(
+        _param = self._sense_get_all_raw_output_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -764,7 +764,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_all_raw_output_files_from_request_serialize(
+    def _sense_get_all_raw_output_files_from_request_id_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -1414,7 +1414,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_originally_submitted_file_by_result_id(
+    async def sense_get_originally_submitted_file(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1457,7 +1457,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_originally_submitted_file_by_result_id_serialize(
+        _param = self._sense_get_originally_submitted_file_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1481,7 +1481,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_originally_submitted_file_by_result_id_with_http_info(
+    async def sense_get_originally_submitted_file_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1524,7 +1524,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_originally_submitted_file_by_result_id_serialize(
+        _param = self._sense_get_originally_submitted_file_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1548,7 +1548,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_originally_submitted_file_by_result_id_without_preload_content(
+    async def sense_get_originally_submitted_file_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1591,7 +1591,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_originally_submitted_file_by_result_id_serialize(
+        _param = self._sense_get_originally_submitted_file_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1610,7 +1610,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_originally_submitted_file_by_result_id_serialize(
+    def _sense_get_originally_submitted_file_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -1672,7 +1672,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_activation_ticket(
+    async def sense_get_parsed_output_file_from_activation_ticket(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -1715,7 +1715,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_activation_ticket_serialize(
+        _param = self._sense_get_parsed_output_file_from_activation_ticket_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1739,7 +1739,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_activation_ticket_with_http_info(
+    async def sense_get_parsed_output_file_from_activation_ticket_with_http_info(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -1782,7 +1782,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_activation_ticket_serialize(
+        _param = self._sense_get_parsed_output_file_from_activation_ticket_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1806,7 +1806,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_activation_ticket_without_preload_content(
+    async def sense_get_parsed_output_file_from_activation_ticket_without_preload_content(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -1849,7 +1849,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_activation_ticket_serialize(
+        _param = self._sense_get_parsed_output_file_from_activation_ticket_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1868,7 +1868,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_parsed_output_file_by_activation_ticket_serialize(
+    def _sense_get_parsed_output_file_from_activation_ticket_serialize(
         self,
         activation_ticket_txid,
         _request_auth,
@@ -1912,7 +1912,7 @@ class SenseApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/sense/parsed_output_file_by_activation_txid/{activation_ticket_txid}',
+            resource_path='/api/v1/sense/parsed_output_file_from_activation_ticket/{activation_ticket_txid}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1929,7 +1929,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_pastel_id(
+    async def sense_get_parsed_output_file_from_pastel_id(
         self,
         pastel_id_of_user: StrictStr,
         _request_timeout: Union[
@@ -1972,7 +1972,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_pastel_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_pastel_id_serialize(
             pastel_id_of_user=pastel_id_of_user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1996,7 +1996,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_pastel_id_with_http_info(
+    async def sense_get_parsed_output_file_from_pastel_id_with_http_info(
         self,
         pastel_id_of_user: StrictStr,
         _request_timeout: Union[
@@ -2039,7 +2039,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_pastel_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_pastel_id_serialize(
             pastel_id_of_user=pastel_id_of_user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2063,7 +2063,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_pastel_id_without_preload_content(
+    async def sense_get_parsed_output_file_from_pastel_id_without_preload_content(
         self,
         pastel_id_of_user: StrictStr,
         _request_timeout: Union[
@@ -2106,7 +2106,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_pastel_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_pastel_id_serialize(
             pastel_id_of_user=pastel_id_of_user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2125,7 +2125,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_parsed_output_file_by_pastel_id_serialize(
+    def _sense_get_parsed_output_file_from_pastel_id_serialize(
         self,
         pastel_id_of_user,
         _request_auth,
@@ -2169,7 +2169,7 @@ class SenseApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/sense/parsed_output_file_by_pastel_id/{pastel_id_of_user}',
+            resource_path='/api/v1/sense/parsed_output_file_from_pastel_id/{pastel_id_of_user}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2186,7 +2186,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_registration_ticket(
+    async def sense_get_parsed_output_file_from_registration_ticket(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -2229,7 +2229,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_registration_ticket_serialize(
+        _param = self._sense_get_parsed_output_file_from_registration_ticket_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2253,7 +2253,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_registration_ticket_with_http_info(
+    async def sense_get_parsed_output_file_from_registration_ticket_with_http_info(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -2296,7 +2296,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_registration_ticket_serialize(
+        _param = self._sense_get_parsed_output_file_from_registration_ticket_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2320,7 +2320,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_registration_ticket_without_preload_content(
+    async def sense_get_parsed_output_file_from_registration_ticket_without_preload_content(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -2363,7 +2363,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_registration_ticket_serialize(
+        _param = self._sense_get_parsed_output_file_from_registration_ticket_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2382,7 +2382,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_parsed_output_file_by_registration_ticket_serialize(
+    def _sense_get_parsed_output_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
         _request_auth,
@@ -2426,7 +2426,7 @@ class SenseApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/sense/parsed_output_file_by_registration_ticket/{registration_ticket_txid}',
+            resource_path='/api/v1/sense/parsed_output_file_from_registration_ticket/{registration_ticket_txid}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2443,7 +2443,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_result_id(
+    async def sense_get_parsed_output_file_from_result_id(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2486,7 +2486,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_result_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2510,7 +2510,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_result_id_with_http_info(
+    async def sense_get_parsed_output_file_from_result_id_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2553,7 +2553,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_result_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2577,7 +2577,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_parsed_output_file_by_result_id_without_preload_content(
+    async def sense_get_parsed_output_file_from_result_id_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2620,7 +2620,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_by_result_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2639,7 +2639,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_parsed_output_file_by_result_id_serialize(
+    def _sense_get_parsed_output_file_from_result_id_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -2701,7 +2701,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_activation_ticket_by_its_txid(
+    async def sense_get_pastel_activation_ticket_from_txid(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -2744,7 +2744,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_by_its_txid_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_txid_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2768,7 +2768,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_activation_ticket_by_its_txid_with_http_info(
+    async def sense_get_pastel_activation_ticket_from_txid_with_http_info(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -2811,7 +2811,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_by_its_txid_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_txid_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2835,7 +2835,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_activation_ticket_by_its_txid_without_preload_content(
+    async def sense_get_pastel_activation_ticket_from_txid_without_preload_content(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -2878,7 +2878,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_by_its_txid_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_txid_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2897,7 +2897,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_pastel_activation_ticket_by_its_txid_serialize(
+    def _sense_get_pastel_activation_ticket_from_txid_serialize(
         self,
         activation_ticket_txid,
         _request_auth,
@@ -2958,7 +2958,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_activation_ticket_by_result_id(
+    async def sense_get_pastel_activation_ticket_from_result_id(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3001,7 +3001,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_by_result_id_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3025,7 +3025,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_activation_ticket_by_result_id_with_http_info(
+    async def sense_get_pastel_activation_ticket_from_result_id_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3068,7 +3068,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_by_result_id_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3092,7 +3092,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_activation_ticket_by_result_id_without_preload_content(
+    async def sense_get_pastel_activation_ticket_from_result_id_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3135,7 +3135,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_by_result_id_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3154,7 +3154,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_pastel_activation_ticket_by_result_id_serialize(
+    def _sense_get_pastel_activation_ticket_from_result_id_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -3216,7 +3216,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_registration_ticket_by_its_txid(
+    async def sense_get_pastel_registration_ticket_from_txid(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -3259,7 +3259,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_by_its_txid_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_txid_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3283,7 +3283,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_registration_ticket_by_its_txid_with_http_info(
+    async def sense_get_pastel_registration_ticket_from_txid_with_http_info(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -3326,7 +3326,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_by_its_txid_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_txid_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3350,7 +3350,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_registration_ticket_by_its_txid_without_preload_content(
+    async def sense_get_pastel_registration_ticket_from_txid_without_preload_content(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -3393,7 +3393,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_by_its_txid_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_txid_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3412,7 +3412,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_pastel_registration_ticket_by_its_txid_serialize(
+    def _sense_get_pastel_registration_ticket_from_txid_serialize(
         self,
         registration_ticket_txid,
         _request_auth,
@@ -3473,7 +3473,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_registration_ticket_by_result_id(
+    async def sense_get_pastel_registration_ticket_from_result_id(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3516,7 +3516,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_by_result_id_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3540,7 +3540,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_registration_ticket_by_result_id_with_http_info(
+    async def sense_get_pastel_registration_ticket_from_result_id_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3583,7 +3583,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_by_result_id_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3607,7 +3607,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_registration_ticket_by_result_id_without_preload_content(
+    async def sense_get_pastel_registration_ticket_from_result_id_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3650,7 +3650,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_by_result_id_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3669,7 +3669,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_pastel_registration_ticket_by_result_id_serialize(
+    def _sense_get_pastel_registration_ticket_from_result_id_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -3731,7 +3731,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_ticket_by_media_file_hash(
+    async def sense_get_pastel_ticket_from_media_file_hash(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -3774,7 +3774,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_ticket_by_media_file_hash_serialize(
+        _param = self._sense_get_pastel_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3798,7 +3798,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_ticket_by_media_file_hash_with_http_info(
+    async def sense_get_pastel_ticket_from_media_file_hash_with_http_info(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -3841,7 +3841,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_ticket_by_media_file_hash_serialize(
+        _param = self._sense_get_pastel_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3865,7 +3865,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_pastel_ticket_by_media_file_hash_without_preload_content(
+    async def sense_get_pastel_ticket_from_media_file_hash_without_preload_content(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -3908,7 +3908,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_ticket_by_media_file_hash_serialize(
+        _param = self._sense_get_pastel_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3927,7 +3927,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_pastel_ticket_by_media_file_hash_serialize(
+    def _sense_get_pastel_ticket_from_media_file_hash_serialize(
         self,
         media_file_sha256_hash,
         _request_auth,
@@ -3971,7 +3971,7 @@ class SenseApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/sense/pastel_ticket_by_media_file_hash/{media_file_sha256_hash}',
+            resource_path='/api/v1/sense/pastel_ticket_from_media_file_hash/{media_file_sha256_hash}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -3988,7 +3988,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_activation_ticket(
+    async def sense_get_raw_output_file_from_activation_ticket(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -4031,7 +4031,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_activation_ticket_serialize(
+        _param = self._sense_get_raw_output_file_from_activation_ticket_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4055,7 +4055,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_activation_ticket_with_http_info(
+    async def sense_get_raw_output_file_from_activation_ticket_with_http_info(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -4098,7 +4098,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_activation_ticket_serialize(
+        _param = self._sense_get_raw_output_file_from_activation_ticket_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4122,7 +4122,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_activation_ticket_without_preload_content(
+    async def sense_get_raw_output_file_from_activation_ticket_without_preload_content(
         self,
         activation_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -4165,7 +4165,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_activation_ticket_serialize(
+        _param = self._sense_get_raw_output_file_from_activation_ticket_serialize(
             activation_ticket_txid=activation_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4184,7 +4184,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_raw_output_file_by_activation_ticket_serialize(
+    def _sense_get_raw_output_file_from_activation_ticket_serialize(
         self,
         activation_ticket_txid,
         _request_auth,
@@ -4228,7 +4228,7 @@ class SenseApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/sense/raw_output_file_by_activation_ticket/{activation_ticket_txid}',
+            resource_path='/api/v1/sense/raw_output_file_from_activation_ticket/{activation_ticket_txid}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -4245,7 +4245,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_pastel_id(
+    async def sense_get_raw_output_file_from_pastel_id(
         self,
         pastel_id_of_user: StrictStr,
         _request_timeout: Union[
@@ -4288,7 +4288,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_pastel_id_serialize(
+        _param = self._sense_get_raw_output_file_from_pastel_id_serialize(
             pastel_id_of_user=pastel_id_of_user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4312,7 +4312,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_pastel_id_with_http_info(
+    async def sense_get_raw_output_file_from_pastel_id_with_http_info(
         self,
         pastel_id_of_user: StrictStr,
         _request_timeout: Union[
@@ -4355,7 +4355,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_pastel_id_serialize(
+        _param = self._sense_get_raw_output_file_from_pastel_id_serialize(
             pastel_id_of_user=pastel_id_of_user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4379,7 +4379,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_pastel_id_without_preload_content(
+    async def sense_get_raw_output_file_from_pastel_id_without_preload_content(
         self,
         pastel_id_of_user: StrictStr,
         _request_timeout: Union[
@@ -4422,7 +4422,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_pastel_id_serialize(
+        _param = self._sense_get_raw_output_file_from_pastel_id_serialize(
             pastel_id_of_user=pastel_id_of_user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4441,7 +4441,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_raw_output_file_by_pastel_id_serialize(
+    def _sense_get_raw_output_file_from_pastel_id_serialize(
         self,
         pastel_id_of_user,
         _request_auth,
@@ -4485,7 +4485,7 @@ class SenseApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/sense/raw_output_file_by_pastel_id/{pastel_id_of_user}',
+            resource_path='/api/v1/sense/raw_output_file_from_pastel_id/{pastel_id_of_user}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -4502,7 +4502,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_registration_ticket(
+    async def sense_get_raw_output_file_from_registration_ticket(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -4545,7 +4545,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_registration_ticket_serialize(
+        _param = self._sense_get_raw_output_file_from_registration_ticket_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4569,7 +4569,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_registration_ticket_with_http_info(
+    async def sense_get_raw_output_file_from_registration_ticket_with_http_info(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -4612,7 +4612,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_registration_ticket_serialize(
+        _param = self._sense_get_raw_output_file_from_registration_ticket_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4636,7 +4636,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_registration_ticket_without_preload_content(
+    async def sense_get_raw_output_file_from_registration_ticket_without_preload_content(
         self,
         registration_ticket_txid: StrictStr,
         _request_timeout: Union[
@@ -4679,7 +4679,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_registration_ticket_serialize(
+        _param = self._sense_get_raw_output_file_from_registration_ticket_serialize(
             registration_ticket_txid=registration_ticket_txid,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4698,7 +4698,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_raw_output_file_by_registration_ticket_serialize(
+    def _sense_get_raw_output_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
         _request_auth,
@@ -4742,7 +4742,7 @@ class SenseApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/sense/raw_output_file_by_registration_ticket/{registration_ticket_txid}',
+            resource_path='/api/v1/sense/raw_output_file_from_registration_ticket/{registration_ticket_txid}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -4759,7 +4759,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_result_id(
+    async def sense_get_raw_output_file_from_result_id(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -4802,7 +4802,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_result_id_serialize(
+        _param = self._sense_get_raw_output_file_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4826,7 +4826,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_result_id_with_http_info(
+    async def sense_get_raw_output_file_from_result_id_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -4869,7 +4869,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_result_id_serialize(
+        _param = self._sense_get_raw_output_file_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4893,7 +4893,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_raw_output_file_by_result_id_without_preload_content(
+    async def sense_get_raw_output_file_from_result_id_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -4936,7 +4936,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_by_result_id_serialize(
+        _param = self._sense_get_raw_output_file_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4955,7 +4955,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_raw_output_file_by_result_id_serialize(
+    def _sense_get_raw_output_file_from_result_id_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -5017,7 +5017,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_request_by_id(
+    async def sense_get_request_from_id(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5060,7 +5060,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_request_by_id_serialize(
+        _param = self._sense_get_request_from_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5084,7 +5084,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_request_by_id_with_http_info(
+    async def sense_get_request_from_id_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5127,7 +5127,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_request_by_id_serialize(
+        _param = self._sense_get_request_from_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5151,7 +5151,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_request_by_id_without_preload_content(
+    async def sense_get_request_from_id_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5194,7 +5194,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_request_by_id_serialize(
+        _param = self._sense_get_request_from_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5213,7 +5213,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_request_by_id_serialize(
+    def _sense_get_request_from_id_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -5275,7 +5275,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_result_by_id(
+    async def sense_get_result_from_id(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5318,7 +5318,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_result_by_id_serialize(
+        _param = self._sense_get_result_from_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5342,7 +5342,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_result_by_id_with_http_info(
+    async def sense_get_result_from_id_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5385,7 +5385,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_result_by_id_serialize(
+        _param = self._sense_get_result_from_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5409,7 +5409,7 @@ class SenseApi:
 
 
     @validate_call
-    async def sense_get_result_by_id_without_preload_content(
+    async def sense_get_result_from_id_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5452,7 +5452,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_result_by_id_serialize(
+        _param = self._sense_get_result_from_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5471,7 +5471,7 @@ class SenseApi:
         return response_data.response
 
 
-    def _sense_get_result_by_id_serialize(
+    def _sense_get_result_from_id_serialize(
         self,
         gateway_result_id,
         _request_auth,

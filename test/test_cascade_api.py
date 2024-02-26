@@ -13,26 +13,21 @@
 
 
 import unittest
-
+from base_test import BaseTestCase
 from pastel_gateway_sdk import CascadeApi, ApiKeysApi
-from pastel_gateway_sdk import GatewayApiClientAsync
 
 
-class TestCascadeApi(unittest.IsolatedAsyncioTestCase):
+class TestCascadeApi(BaseTestCase):
     """CascadeApi unit test stubs"""
-
     async def asyncSetUp(self) -> None:
-        self.client = GatewayApiClientAsync(network="testnet")
-        await self.client.authenticate(username="test@example.com", password="string")
+        await super().asyncSetUp()
+
         self.api: CascadeApi = self.client.cascade_api
         api_key_api: ApiKeysApi = self.client.api_keys_api
         api_keys = await api_key_api.api_keys_read_apikeys()
         self.assertIsNotNone(api_keys)
         self.assertIsNot(api_keys, [])
         self.client.set_auth_api_key(api_keys[0].api_key)
-
-    async def asyncTearDown(self) -> None:
-        pass
 
     async def test_cascade_get_all_files_from_request(self) -> None:
         """Test case for cascade_get_all_files_from_request
@@ -72,8 +67,8 @@ class TestCascadeApi(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_cascade_get_pastel_activation_ticket_from_result(self) -> None:
-        """Test case for cascade_get_pastel_activation_ticket_from_result
+    async def test_cascade_get_pastel_activation_ticket_from_result_id(self) -> None:
+        """Test case for cascade_get_pastel_activation_ticket_from_result_id
 
         Get Pastel Cascade Activation Ticket By Result Id
         """
@@ -86,10 +81,10 @@ class TestCascadeApi(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_cascade_get_pastel_registration_ticket_from_result(self) -> None:
-        """Test case for cascade_get_pastel_registration_ticket_from_result
+    async def test_cascade_get_pastel_registration_ticket_from_result_id(self) -> None:
+        """Test case for cascade_get_pastel_registration_ticket_from_result_id
 
-        Get Pastel Cascade Registration Ticket By Result Id
+        Get Pastel Cascade Registration Ticket From Result Id
         """
         pass
 

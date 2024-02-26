@@ -13,12 +13,12 @@
 
 
 import unittest
-import datetime
 
 from pastel_gateway_sdk.models.api_key import ApiKey
+from base_test import BaseTestCase
 
 
-class TestApiKey(unittest.IsolatedAsyncioTestCase):
+class TestApiKey(BaseTestCase):
     """ApiKey unit test stubs"""
 
     def setUp(self):

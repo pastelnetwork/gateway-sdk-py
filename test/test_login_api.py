@@ -13,17 +13,14 @@
 
 
 import unittest
+from base_test import BaseTestCase
 
-from pastel_gateway_sdk import GatewayApiClientAsync
 
-
-class TestLoginApi(unittest.IsolatedAsyncioTestCase):
+class TestLoginApi(BaseTestCase):
     """LoginApi unit test stubs"""
 
     async def asyncSetUp(self) -> None:
-        self.client = GatewayApiClientAsync(network="testnet")
-        self.username = "test@example.com"
-        self.password = "string"
+        await super().asyncSetUp()
 
     async def asyncTearDown(self) -> None:
         pass
@@ -33,18 +30,22 @@ class TestLoginApi(unittest.IsolatedAsyncioTestCase):
 
         Login Access Token
         """
-        # Authenticate the client
-        await self.client.authenticate(self.username, self.password)
         # Assert that token is successfully set
         self.assertIsNotNone(self.client._token)
         return
 
-    async def test_login_password_recovery(self) -> None:
-        """Test case for login_password_recovery
+    async def test_login_test_token(self) -> None:
+        """Test case for login_test_token
 
-        Recover Password
+        Test Token
         """
-        pass
+        username = self.config['username']
+
+        await self.test_login_access_token()
+        login_api = self.client.login_api
+        user = await login_api.login_test_token()
+        self.assertIsNotNone(user)
+        self.assertEqual(user.email, username)
 
     async def test_login_reset_password(self) -> None:
         """Test case for login_reset_password
@@ -53,16 +54,12 @@ class TestLoginApi(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_login_test_token(self) -> None:
-        """Test case for login_test_token
+    async def test_login_password_recovery(self) -> None:
+        """Test case for login_password_recovery
 
-        Test Token
+        Recover Password
         """
-        await self.test_login_access_token()
-        login_api = self.client.login_api
-        user = await login_api.login_test_token()
-        self.assertIsNotNone(user)
-        self.assertEqual(user.email, self.username)
+        pass
 
 
 if __name__ == '__main__':

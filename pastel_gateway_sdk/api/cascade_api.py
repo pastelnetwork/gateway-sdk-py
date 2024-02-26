@@ -95,7 +95,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_files_from_request_serialize(
+        _param = self._cascade_get_all_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -119,7 +119,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_all_files_from_request_with_http_info(
+    async def cascade_get_all_files_from_request_id_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -162,7 +162,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_files_from_request_serialize(
+        _param = self._cascade_get_all_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -186,7 +186,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_all_files_from_request_without_preload_content(
+    async def cascade_get_all_files_from_request_id_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -229,7 +229,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_files_from_request_serialize(
+        _param = self._cascade_get_all_files_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -248,7 +248,7 @@ class CascadeApi:
         return response_data.response
 
 
-    def _cascade_get_all_files_from_request_serialize(
+    def _cascade_get_all_files_from_request_id_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -353,7 +353,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_pastel_registration_tickets_from_request_serialize(
+        _param = self._cascade_get_all_pastel_registration_tickets_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -377,7 +377,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_all_pastel_registration_tickets_from_request_with_http_info(
+    async def cascade_get_all_pastel_registration_tickets_from_request_id_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -420,7 +420,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_pastel_registration_tickets_from_request_serialize(
+        _param = self._cascade_get_all_pastel_registration_tickets_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -444,7 +444,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_all_pastel_registration_tickets_from_request_without_preload_content(
+    async def cascade_get_all_pastel_registration_tickets_from_request_id_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -487,7 +487,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_pastel_registration_tickets_from_request_serialize(
+        _param = self._cascade_get_all_pastel_registration_tickets_from_request_id_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -506,7 +506,7 @@ class CascadeApi:
         return response_data.response
 
 
-    def _cascade_get_all_pastel_registration_tickets_from_request_serialize(
+    def _cascade_get_all_pastel_registration_tickets_from_request_id_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -1417,7 +1417,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_pastel_activation_ticket_from_result(
+    async def cascade_get_pastel_activation_ticket_from_result_id(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1460,7 +1460,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_activation_ticket_from_result_serialize(
+        _param = self._cascade_get_pastel_activation_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1484,7 +1484,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_pastel_activation_ticket_from_result_with_http_info(
+    async def cascade_get_pastel_activation_ticket_from_result_id_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1527,7 +1527,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_activation_ticket_from_result_serialize(
+        _param = self._cascade_get_pastel_activation_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1551,7 +1551,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_pastel_activation_ticket_from_result_without_preload_content(
+    async def cascade_get_pastel_activation_ticket_from_result_id_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1594,7 +1594,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_activation_ticket_from_result_serialize(
+        _param = self._cascade_get_pastel_activation_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1613,7 +1613,7 @@ class CascadeApi:
         return response_data.response
 
 
-    def _cascade_get_pastel_activation_ticket_from_result_serialize(
+    def _cascade_get_pastel_activation_ticket_from_result_id_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -1932,7 +1932,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_pastel_registration_ticket_from_result(
+    async def cascade_get_pastel_registration_ticket_from_result_id(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1975,7 +1975,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_registration_ticket_from_result_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1999,7 +1999,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_pastel_registration_ticket_from_result_with_http_info(
+    async def cascade_get_pastel_registration_ticket_from_result_id_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2042,7 +2042,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_registration_ticket_from_result_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2066,7 +2066,7 @@ class CascadeApi:
 
 
     @validate_call
-    async def cascade_get_pastel_registration_ticket_from_result_without_preload_content(
+    async def cascade_get_pastel_registration_ticket_from_result_id_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2109,7 +2109,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_registration_ticket_from_result_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_result_id_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2128,7 +2128,7 @@ class CascadeApi:
         return response_data.response
 
 
-    def _cascade_get_pastel_registration_ticket_from_result_serialize(
+    def _cascade_get_pastel_registration_ticket_from_result_id_serialize(
         self,
         gateway_result_id,
         _request_auth,

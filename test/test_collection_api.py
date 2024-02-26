@@ -54,15 +54,15 @@ class TestCollectionApi(unittest.TestCase):
         """
         pass
 
-    def test_collection_get_nft_collections_by_collection_id(self) -> None:
-        """Test case for collection_get_nft_collections_by_collection_id
+    def test_collection_get_nft_collections_from_collection_id(self) -> None:
+        """Test case for collection_get_nft_collections_from_collection_id
 
         Get Nft Collections By Collection Id
         """
         pass
 
-    def test_collection_get_sense_collections_by_collection_id(self) -> None:
-        """Test case for collection_get_sense_collections_by_collection_id
+    def test_collection_get_sense_collections_from_collection_id(self) -> None:
+        """Test case for collection_get_sense_collections_from_collection_id
 
         Get Sense Collections By Collection Id
         """

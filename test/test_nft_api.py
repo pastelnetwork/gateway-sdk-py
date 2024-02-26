@@ -13,18 +13,21 @@
 
 
 import unittest
+from base_test import BaseTestCase
+from pastel_gateway_sdk import NftApi, ApiKeysApi
 
-from pastel_gateway_sdk.api.nft_api import NftApi
 
-
-class TestNftApi(unittest.TestCase):
+class TestNftApi(BaseTestCase):
     """NftApi unit test stubs"""
+    async def asyncSetUp(self) -> None:
+        await super().asyncSetUp()
 
-    def setUp(self) -> None:
-        pass
-
-    def tearDown(self) -> None:
-        pass
+        self.api: NftApi = self.client.cascade_api
+        api_key_api: ApiKeysApi = self.client.api_keys_api
+        api_keys = await api_key_api.api_keys_read_apikeys()
+        self.assertIsNotNone(api_keys)
+        self.assertIsNot(api_keys, [])
+        self.client.set_auth_api_key(api_keys[0].api_key)
 
     def test_nft_get_all_files_from_request(self) -> None:
         """Test case for nft_get_all_files_from_request
@@ -68,141 +71,141 @@ class TestNftApi(unittest.TestCase):
         """
         pass
 
-    def test_nft_get_originally_submitted_file_by_result_id(self) -> None:
-        """Test case for nft_get_originally_submitted_file_by_result_id
+    def test_nft_get_originally_submitted_file(self) -> None:
+        """Test case for nft_get_originally_submitted_file
 
         Get Originally Submitted File By Result Id
         """
         pass
 
-    def test_nft_get_parsed_dd_result_file_by_activation_txid(self) -> None:
-        """Test case for nft_get_parsed_dd_result_file_by_activation_txid
+    def test_nft_get_parsed_dd_result_file_from_activation_ticket(self) -> None:
+        """Test case for nft_get_parsed_dd_result_file_from_activation_ticket
 
         Get Parsed Dd Result File By Activation Txid
         """
         pass
 
-    def test_nft_get_parsed_dd_result_file_by_pastel_id(self) -> None:
-        """Test case for nft_get_parsed_dd_result_file_by_pastel_id
+    def test_nft_get_parsed_dd_result_file_from_pastel_id(self) -> None:
+        """Test case for nft_get_parsed_dd_result_file_from_pastel_id
 
         Get Parsed Dd Result File By Pastel Id
         """
         pass
 
-    def test_nft_get_parsed_dd_result_file_by_registration_ticket(self) -> None:
-        """Test case for nft_get_parsed_dd_result_file_by_registration_ticket
+    def test_nft_get_parsed_dd_result_file_from_registration_ticket(self) -> None:
+        """Test case for nft_get_parsed_dd_result_file_from_registration_ticket
 
         Get Parsed Dd Result File By Registration Ticket
         """
         pass
 
-    def test_nft_get_parsed_dd_result_file_by_result_id(self) -> None:
-        """Test case for nft_get_parsed_dd_result_file_by_result_id
+    def test_nft_get_parsed_dd_result_file_from_result_id(self) -> None:
+        """Test case for nft_get_parsed_dd_result_file_from_result_id
 
         Get Parsed Dd Result File By Result Id
         """
         pass
 
-    def test_nft_get_pastel_activation_ticket_by_its_txid(self) -> None:
-        """Test case for nft_get_pastel_activation_ticket_by_its_txid
+    def test_nft_get_pastel_activation_ticket_from_txid(self) -> None:
+        """Test case for nft_get_pastel_activation_ticket_from_txid
 
         Get Pastel Activation Ticket By Its Txid
         """
         pass
 
-    def test_nft_get_pastel_activation_ticket_by_result_id(self) -> None:
-        """Test case for nft_get_pastel_activation_ticket_by_result_id
+    def test_nft_get_pastel_activation_ticket_from_result_id(self) -> None:
+        """Test case for nft_get_pastel_activation_ticket_from_result_id
 
         Get Pastel Nft Activation Ticket By Result Id
         """
         pass
 
-    def test_nft_get_pastel_registration_ticket_by_its_txid(self) -> None:
-        """Test case for nft_get_pastel_registration_ticket_by_its_txid
+    def test_nft_get_pastel_registration_ticket_from_txid(self) -> None:
+        """Test case for nft_get_pastel_registration_ticket_from_txid
 
-        Get Pastel Registration Ticket By Its Txid
+        Get Pastel Registration Ticket From Txid
         """
         pass
 
-    def test_nft_get_pastel_registration_ticket_by_result_id(self) -> None:
-        """Test case for nft_get_pastel_registration_ticket_by_result_id
+    def test_nft_get_pastel_registration_ticket_from_result_id(self) -> None:
+        """Test case for nft_get_pastel_registration_ticket_from_result_id
 
-        Get Pastel Nft Registration Ticket By Result Id
+        Get Pastel Nft Registration Ticket from Result Id
         """
         pass
 
-    def test_nft_get_pastel_ticket_by_media_file_hash(self) -> None:
-        """Test case for nft_get_pastel_ticket_by_media_file_hash
+    def test_nft_get_pastel_ticket_from_media_file_hash(self) -> None:
+        """Test case for nft_get_pastel_ticket_from_media_file_hash
 
         Get Pastel Ticket Data From Media File Hash
         """
         pass
 
-    def test_nft_get_public_stored_file_by_registration_ticket(self) -> None:
-        """Test case for nft_get_public_stored_file_by_registration_ticket
+    def test_nft_get_public_stored_file_from_registration_ticket(self) -> None:
+        """Test case for nft_get_public_stored_file_from_registration_ticket
 
         Get Public Stored File By Registration Ticket
         """
         pass
 
-    def test_nft_get_raw_dd_result_file_by_activation_ticket(self) -> None:
-        """Test case for nft_get_raw_dd_result_file_by_activation_ticket
+    def test_nft_get_raw_dd_result_file_from_activation_ticket(self) -> None:
+        """Test case for nft_get_raw_dd_result_file_from_activation_ticket
 
         Get Raw Dd Result File By Activation Ticket
         """
         pass
 
-    def test_nft_get_raw_dd_result_file_by_pastel_id(self) -> None:
-        """Test case for nft_get_raw_dd_result_file_by_pastel_id
+    def test_nft_get_raw_dd_result_file_from_pastel_id(self) -> None:
+        """Test case for nft_get_raw_dd_result_file_from_pastel_id
 
         Get Raw Dd Result File By Pastel Id
         """
         pass
 
-    def test_nft_get_raw_dd_result_file_by_registration_ticket(self) -> None:
-        """Test case for nft_get_raw_dd_result_file_by_registration_ticket
+    def test_nft_get_raw_dd_result_file_from_registration_ticket(self) -> None:
+        """Test case for nft_get_raw_dd_result_file_from_registration_ticket
 
         Get Raw Dd Result File By Registration Ticket
         """
         pass
 
-    def test_nft_get_raw_dd_result_file_by_result_id(self) -> None:
-        """Test case for nft_get_raw_dd_result_file_by_result_id
+    def test_nft_get_raw_dd_result_file_from_result_id(self) -> None:
+        """Test case for nft_get_raw_dd_result_file_from_result_id
 
         Get Raw Dd Result File By Result Id
         """
         pass
 
-    def test_nft_get_request_by_request_id(self) -> None:
-        """Test case for nft_get_request_by_request_id
+    def test_nft_get_request_from_request_id(self) -> None:
+        """Test case for nft_get_request_from_request_id
 
         Get Request By Request Id
         """
         pass
 
-    def test_nft_get_result_by_result_id(self) -> None:
-        """Test case for nft_get_result_by_result_id
+    def test_nft_get_result_from_result_id(self) -> None:
+        """Test case for nft_get_result_from_result_id
 
         Get Result By Result Id
         """
         pass
 
-    def test_nft_get_stored_file_by_activation_ticket(self) -> None:
-        """Test case for nft_get_stored_file_by_activation_ticket
+    def test_nft_get_stored_file_from_activation_ticket(self) -> None:
+        """Test case for nft_get_stored_file_from_activation_ticket
 
         Get Stored File By Activation Ticket
         """
         pass
 
-    def test_nft_get_stored_file_by_registration_ticket(self) -> None:
-        """Test case for nft_get_stored_file_by_registration_ticket
+    def test_nft_get_stored_file_from_registration_ticket(self) -> None:
+        """Test case for nft_get_stored_file_from_registration_ticket
 
         Get Stored File By Registration Ticket
         """
         pass
 
-    def test_nft_get_stored_file_by_result_id(self) -> None:
-        """Test case for nft_get_stored_file_by_result_id
+    def test_nft_get_stored_file_from_result_id(self) -> None:
+        """Test case for nft_get_stored_file_from_result_id
 
         Get Stored File By Result Id
         """

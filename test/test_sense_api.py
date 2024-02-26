@@ -13,18 +13,21 @@
 
 
 import unittest
+from base_test import BaseTestCase
+from pastel_gateway_sdk import SenseApi, ApiKeysApi
 
-from pastel_gateway_sdk.api.sense_api import SenseApi
 
-
-class TestSenseApi(unittest.TestCase):
+class TestSenseApi(BaseTestCase):
     """SenseApi unit test stubs"""
+    async def asyncSetUp(self) -> None:
+        await super().asyncSetUp()
 
-    def setUp(self) -> None:
-        pass
-
-    def tearDown(self) -> None:
-        pass
+        self.api: SenseApi = self.client.cascade_api
+        api_key_api: ApiKeysApi = self.client.api_keys_api
+        api_keys = await api_key_api.api_keys_read_apikeys()
+        self.assertIsNotNone(api_keys)
+        self.assertIsNot(api_keys, [])
+        self.client.set_auth_api_key(api_keys[0].api_key)
 
     def test_sense_get_all_parsed_output_files_from_request(self) -> None:
         """Test case for sense_get_all_parsed_output_files_from_request
@@ -61,113 +64,113 @@ class TestSenseApi(unittest.TestCase):
         """
         pass
 
-    def test_sense_get_originally_submitted_file_by_result_id(self) -> None:
-        """Test case for sense_get_originally_submitted_file_by_result_id
+    def test_sense_get_originally_submitted_file(self) -> None:
+        """Test case for sense_get_originally_submitted_file
 
         Get Originally Submitted File By Result Id
         """
         pass
 
-    def test_sense_get_parsed_output_file_by_activation_ticket(self) -> None:
-        """Test case for sense_get_parsed_output_file_by_activation_ticket
+    def test_sense_get_parsed_output_file_from_activation_ticket(self) -> None:
+        """Test case for sense_get_parsed_output_file_from_activation_ticket
 
         Parsed Output File By Activation Ticket
         """
         pass
 
-    def test_sense_get_parsed_output_file_by_pastel_id(self) -> None:
-        """Test case for sense_get_parsed_output_file_by_pastel_id
+    def test_sense_get_parsed_output_file_from_pastel_id(self) -> None:
+        """Test case for sense_get_parsed_output_file_from_pastel_id
 
         Parsed Output File By Pastel Id
         """
         pass
 
-    def test_sense_get_parsed_output_file_by_registration_ticket(self) -> None:
-        """Test case for sense_get_parsed_output_file_by_registration_ticket
+    def test_sense_get_parsed_output_file_from_registration_ticket(self) -> None:
+        """Test case for sense_get_parsed_output_file_from_registration_ticket
 
         Get Parsed Output File By Registration Ticket
         """
         pass
 
-    def test_sense_get_parsed_output_file_by_result_id(self) -> None:
-        """Test case for sense_get_parsed_output_file_by_result_id
+    def test_sense_get_parsed_output_file_from_result_id(self) -> None:
+        """Test case for sense_get_parsed_output_file_from_result_id
 
         Get Parsed Output File By Result Id
         """
         pass
 
-    def test_sense_get_pastel_activation_ticket_by_its_txid(self) -> None:
-        """Test case for sense_get_pastel_activation_ticket_by_its_txid
+    def test_sense_get_pastel_activation_ticket_from_txid(self) -> None:
+        """Test case for sense_get_pastel_activation_ticket_from_txid
 
         Get Pastel Activation Ticket By Its Txid
         """
         pass
 
-    def test_sense_get_pastel_activation_ticket_by_result_id(self) -> None:
-        """Test case for sense_get_pastel_activation_ticket_by_result_id
+    def test_sense_get_pastel_activation_ticket_from_result_id(self) -> None:
+        """Test case for sense_get_pastel_activation_ticket_from_result_id
 
         Get Pastel Sense Activation Ticket By Result Id
         """
         pass
 
-    def test_sense_get_pastel_registration_ticket_by_its_txid(self) -> None:
-        """Test case for sense_get_pastel_registration_ticket_by_its_txid
+    def test_sense_get_pastel_registration_ticket_from_txid(self) -> None:
+        """Test case for sense_get_pastel_registration_ticket_from_txid
 
         Get Pastel Registration Ticket By Its Txid
         """
         pass
 
-    def test_sense_get_pastel_registration_ticket_by_result_id(self) -> None:
-        """Test case for sense_get_pastel_registration_ticket_by_result_id
+    def test_sense_get_pastel_registration_ticket_from_result_id(self) -> None:
+        """Test case for sense_get_pastel_registration_ticket_from_result_id
 
-        Get Pastel Sense Registration Ticket By Result Id
+        Get Pastel Sense Registration Ticket From Result Id
         """
         pass
 
-    def test_sense_get_pastel_ticket_by_media_file_hash(self) -> None:
-        """Test case for sense_get_pastel_ticket_by_media_file_hash
+    def test_sense_get_pastel_ticket_from_media_file_hash(self) -> None:
+        """Test case for sense_get_pastel_ticket_from_media_file_hash
 
         Get Pastel Ticket Data From Media File Hash
         """
         pass
 
-    def test_sense_get_raw_output_file_by_activation_ticket(self) -> None:
-        """Test case for sense_get_raw_output_file_by_activation_ticket
+    def test_sense_get_raw_output_file_from_activation_ticket(self) -> None:
+        """Test case for sense_get_raw_output_file_from_activation_ticket
 
         Get Raw Output File By Activation Ticket
         """
         pass
 
-    def test_sense_get_raw_output_file_by_pastel_id(self) -> None:
-        """Test case for sense_get_raw_output_file_by_pastel_id
+    def test_sense_get_raw_output_file_from_pastel_id(self) -> None:
+        """Test case for sense_get_raw_output_file_from_pastel_id
 
         Get Raw Output File By Pastel Id
         """
         pass
 
-    def test_sense_get_raw_output_file_by_registration_ticket(self) -> None:
-        """Test case for sense_get_raw_output_file_by_registration_ticket
+    def test_sense_get_raw_output_file_from_registration_ticket(self) -> None:
+        """Test case for sense_get_raw_output_file_from_registration_ticket
 
         Get Raw Output File By Registration Ticket
         """
         pass
 
-    def test_sense_get_raw_output_file_by_result_id(self) -> None:
-        """Test case for sense_get_raw_output_file_by_result_id
+    def test_sense_get_raw_output_file_from_result_id(self) -> None:
+        """Test case for sense_get_raw_output_file_from_result_id
 
         Get Raw Output File By Result Id
         """
         pass
 
-    def test_sense_get_request_by_id(self) -> None:
-        """Test case for sense_get_request_by_id
+    def test_sense_get_request_from_id(self) -> None:
+        """Test case for sense_get_request_from_id
 
         Get Request By Request Id
         """
         pass
 
-    def test_sense_get_result_by_id(self) -> None:
-        """Test case for sense_get_result_by_id
+    def test_sense_get_result_from_id(self) -> None:
+        """Test case for sense_get_result_from_id
 
         Get Result By Result Id
         """

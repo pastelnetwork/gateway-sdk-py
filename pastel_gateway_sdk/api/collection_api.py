@@ -1324,7 +1324,7 @@ class CollectionApi:
 
 
     @validate_call
-    async def collection_get_nft_collections_by_collection_id(
+    async def collection_get_nft_collections_from_collection_id(
         self,
         collection_id: StrictStr,
         _request_timeout: Union[
@@ -1367,7 +1367,7 @@ class CollectionApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._collection_get_nft_collections_by_collection_id_serialize(
+        _param = self._collection_get_nft_collections_from_collection_id_serialize(
             collection_id=collection_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1391,7 +1391,7 @@ class CollectionApi:
 
 
     @validate_call
-    async def collection_get_nft_collections_by_collection_id_with_http_info(
+    async def collection_get_nft_collections_from_collection_id_with_http_info(
         self,
         collection_id: StrictStr,
         _request_timeout: Union[
@@ -1434,7 +1434,7 @@ class CollectionApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._collection_get_nft_collections_by_collection_id_serialize(
+        _param = self._collection_get_nft_collections_from_collection_id_serialize(
             collection_id=collection_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1458,7 +1458,7 @@ class CollectionApi:
 
 
     @validate_call
-    async def collection_get_nft_collections_by_collection_id_without_preload_content(
+    async def collection_get_nft_collections_from_collection_id_without_preload_content(
         self,
         collection_id: StrictStr,
         _request_timeout: Union[
@@ -1501,7 +1501,7 @@ class CollectionApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._collection_get_nft_collections_by_collection_id_serialize(
+        _param = self._collection_get_nft_collections_from_collection_id_serialize(
             collection_id=collection_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1520,7 +1520,7 @@ class CollectionApi:
         return response_data.response
 
 
-    def _collection_get_nft_collections_by_collection_id_serialize(
+    def _collection_get_nft_collections_from_collection_id_serialize(
         self,
         collection_id,
         _request_auth,
@@ -1582,7 +1582,7 @@ class CollectionApi:
 
 
     @validate_call
-    async def collection_get_sense_collections_by_collection_id(
+    async def collection_get_sense_collections_from_collection_id(
         self,
         collection_id: StrictStr,
         _request_timeout: Union[
@@ -1625,7 +1625,7 @@ class CollectionApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._collection_get_sense_collections_by_collection_id_serialize(
+        _param = self._collection_get_sense_collections_from_collection_id_serialize(
             collection_id=collection_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1649,7 +1649,7 @@ class CollectionApi:
 
 
     @validate_call
-    async def collection_get_sense_collections_by_collection_id_with_http_info(
+    async def collection_get_sense_collections_from_collection_id_with_http_info(
         self,
         collection_id: StrictStr,
         _request_timeout: Union[
@@ -1692,7 +1692,7 @@ class CollectionApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._collection_get_sense_collections_by_collection_id_serialize(
+        _param = self._collection_get_sense_collections_from_collection_id_serialize(
             collection_id=collection_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1716,7 +1716,7 @@ class CollectionApi:
 
 
     @validate_call
-    async def collection_get_sense_collections_by_collection_id_without_preload_content(
+    async def collection_get_sense_collections_from_collection_id_without_preload_content(
         self,
         collection_id: StrictStr,
         _request_timeout: Union[
@@ -1759,7 +1759,7 @@ class CollectionApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._collection_get_sense_collections_by_collection_id_serialize(
+        _param = self._collection_get_sense_collections_from_collection_id_serialize(
             collection_id=collection_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1778,7 +1778,7 @@ class CollectionApi:
         return response_data.response
 
 
-    def _collection_get_sense_collections_by_collection_id_serialize(
+    def _collection_get_sense_collections_from_collection_id_serialize(
         self,
         collection_id,
         _request_auth,
