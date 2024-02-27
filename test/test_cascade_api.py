@@ -60,15 +60,15 @@ class TestCascadeApi(BaseTestCase):
         """
         pass
 
-    async def test_cascade_get_originally_submitted_file(self) -> None:
-        """Test case for cascade_get_originally_submitted_file
+    async def test_cascade_get_originally_submitted_file_from_result(self) -> None:
+        """Test case for cascade_get_originally_submitted_file_from_result
 
         Get Originally Submitted File By Result Id
         """
         pass
 
-    async def test_cascade_get_pastel_activation_ticket_from_result_id(self) -> None:
-        """Test case for cascade_get_pastel_activation_ticket_from_result_id
+    async def test_cascade_get_pastel_activation_ticket_from_result(self) -> None:
+        """Test case for cascade_get_pastel_activation_ticket_from_result
 
         Get Pastel Cascade Activation Ticket By Result Id
         """
@@ -81,8 +81,8 @@ class TestCascadeApi(BaseTestCase):
         """
         pass
 
-    async def test_cascade_get_pastel_registration_ticket_from_result_id(self) -> None:
-        """Test case for cascade_get_pastel_registration_ticket_from_result_id
+    async def test_cascade_get_pastel_registration_ticket_from_result(self) -> None:
+        """Test case for cascade_get_pastel_registration_ticket_from_result
 
         Get Pastel Cascade Registration Ticket From Result Id
         """
@@ -95,8 +95,8 @@ class TestCascadeApi(BaseTestCase):
         """
         pass
 
-    async def test_cascade_get_pastel_ticket_from_stored_file_hash(self) -> None:
-        """Test case for cascade_get_pastel_ticket_from_stored_file_hash
+    async def test_cascade_get_pastel_registration_ticket_from_stored_file_hash(self) -> None:
+        """Test case for cascade_get_pastel_registration_ticket_from_stored_file_hash
 
         Get Pastel Registration Ticket By Stored File Hash
         """
@@ -123,8 +123,8 @@ class TestCascadeApi(BaseTestCase):
         """
         pass
 
-    async def test_cascade_get_stored_file(self) -> None:
-        """Test case for cascade_get_stored_file
+    async def cascade_get_stored_file_from_result(self) -> None:
+        """Test case for cascade_get_stored_file_from_result
 
         Get Stored File By Result Id
         """

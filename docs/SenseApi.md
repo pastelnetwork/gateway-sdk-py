@@ -9,23 +9,23 @@ Method | HTTP request | Description
 [**sense_get_all_raw_output_files_from_request**](SenseApi.md#sense_get_all_raw_output_files_from_request) | **GET** /api/v1/sense/all_raw_output_files_from_request/{gateway_request_id} | Get All Raw Output Files From Request
 [**sense_get_all_requests**](SenseApi.md#sense_get_all_requests) | **GET** /api/v1/sense/gateway_requests | Get All Requests
 [**sense_get_all_results**](SenseApi.md#sense_get_all_results) | **GET** /api/v1/sense/gateway_results | Get All Results
-[**sense_get_originally_submitted_file_by_result_id**](SenseApi.md#sense_get_originally_submitted_file_by_result_id) | **GET** /api/v1/sense/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File By Result Id
-[**sense_get_parsed_output_file_by_activation_ticket**](SenseApi.md#sense_get_parsed_output_file_by_activation_ticket) | **GET** /api/v1/sense/parsed_output_file_by_activation_txid/{activation_ticket_txid} | Parsed Output File By Activation Ticket
-[**sense_get_parsed_output_file_by_pastel_id**](SenseApi.md#sense_get_parsed_output_file_by_pastel_id) | **GET** /api/v1/sense/parsed_output_file_by_pastel_id/{pastel_id_of_user} | Parsed Output File By Pastel Id
-[**sense_get_parsed_output_file_by_registration_ticket**](SenseApi.md#sense_get_parsed_output_file_by_registration_ticket) | **GET** /api/v1/sense/parsed_output_file_by_registration_ticket/{registration_ticket_txid} | Get Parsed Output File By Registration Ticket
-[**sense_get_parsed_output_file_by_result_id**](SenseApi.md#sense_get_parsed_output_file_by_result_id) | **GET** /api/v1/sense/parsed_output_file/{gateway_result_id} | Get Parsed Output File By Result Id
-[**sense_get_pastel_activation_ticket_by_its_txid**](SenseApi.md#sense_get_pastel_activation_ticket_by_its_txid) | **GET** /api/v1/sense/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket By Its Txid
-[**sense_get_pastel_activation_ticket_by_result_id**](SenseApi.md#sense_get_pastel_activation_ticket_by_result_id) | **GET** /api/v1/sense/pastel_activation_ticket/{gateway_result_id} | Get Pastel Sense Activation Ticket By Result Id
-[**sense_get_pastel_registration_ticket_by_its_txid**](SenseApi.md#sense_get_pastel_registration_ticket_by_its_txid) | **GET** /api/v1/sense/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket By Its Txid
-[**sense_get_pastel_registration_ticket_by_result_id**](SenseApi.md#sense_get_pastel_registration_ticket_by_result_id) | **GET** /api/v1/sense/pastel_registration_ticket/{gateway_result_id} | Get Pastel Sense Registration Ticket By Result Id
-[**sense_get_pastel_ticket_by_media_file_hash**](SenseApi.md#sense_get_pastel_ticket_by_media_file_hash) | **GET** /api/v1/sense/pastel_ticket_by_media_file_hash/{media_file_sha256_hash} | Get Pastel Ticket Data From Media File Hash
-[**sense_get_raw_output_file_by_activation_ticket**](SenseApi.md#sense_get_raw_output_file_by_activation_ticket) | **GET** /api/v1/sense/raw_output_file_by_activation_ticket/{activation_ticket_txid} | Get Raw Output File By Activation Ticket
-[**sense_get_raw_output_file_by_pastel_id**](SenseApi.md#sense_get_raw_output_file_by_pastel_id) | **GET** /api/v1/sense/raw_output_file_by_pastel_id/{pastel_id_of_user} | Get Raw Output File By Pastel Id
-[**sense_get_raw_output_file_by_registration_ticket**](SenseApi.md#sense_get_raw_output_file_by_registration_ticket) | **GET** /api/v1/sense/raw_output_file_by_registration_ticket/{registration_ticket_txid} | Get Raw Output File By Registration Ticket
-[**sense_get_raw_output_file_by_result_id**](SenseApi.md#sense_get_raw_output_file_by_result_id) | **GET** /api/v1/sense/raw_output_file/{gateway_result_id} | Get Raw Output File By Result Id
-[**sense_get_request_by_id**](SenseApi.md#sense_get_request_by_id) | **GET** /api/v1/sense/gateway_requests/{gateway_request_id} | Get Request By Request Id
-[**sense_get_result_by_id**](SenseApi.md#sense_get_result_by_id) | **GET** /api/v1/sense/gateway_results/{gateway_result_id} | Get Result By Result Id
-[**sense_submit_request**](SenseApi.md#sense_submit_request) | **POST** /api/v1/sense | Process Request
+[**sense_get_originally_submitted_file_from_result**](SenseApi.md#sense_get_originally_submitted_file_from_result) | **GET** /api/v1/sense/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File By Result Id
+[**sense_get_parsed_output_file_from_activation_ticket**](SenseApi.md#sense_get_parsed_output_file_from_activation_ticket) | **GET** /api/v1/sense/parsed_output_file_from_activation_ticket/{activation_ticket_txid} | Parsed Output File By Activation Ticket
+[**sense_get_parsed_output_file_from_pastel_id**](SenseApi.md#sense_get_parsed_output_file_from_pastel_id) | **GET** /api/v1/sense/parsed_output_file_from_pastel_id/{pastel_id_of_user} | Parsed Output File By Pastel Id
+[**sense_get_parsed_output_file_from_registration_ticket**](SenseApi.md#sense_get_parsed_output_file_from_registration_ticket) | **GET** /api/v1/sense/parsed_output_file_from_registration_ticket/{registration_ticket_txid} | Get Parsed Output File By Registration Ticket
+[**sense_get_parsed_output_file_from_result**](SenseApi.md#sense_get_parsed_output_file_from_result) | **GET** /api/v1/sense/parsed_output_file/{gateway_result_id} | Get Parsed Output File By Result Id
+[**sense_get_pastel_activation_ticket_from_txid**](SenseApi.md#sense_get_pastel_activation_ticket_from_txid) | **GET** /api/v1/sense/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket By Its Txid
+[**sense_get_pastel_activation_ticket_from_result**](SenseApi.md#sense_get_pastel_activation_ticket_from_result) | **GET** /api/v1/sense/pastel_activation_ticket/{gateway_result_id} | Get Pastel Sense Activation Ticket By Result Id
+[**sense_get_pastel_registration_ticket_from_txid**](SenseApi.md#sense_get_pastel_registration_ticket_from_txid) | **GET** /api/v1/sense/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket By Its Txid
+[**sense_get_pastel_registration_ticket_from_result**](SenseApi.md#sense_get_pastel_registration_ticket_from_result) | **GET** /api/v1/sense/pastel_registration_ticket/{gateway_result_id} | Get Pastel Sense Registration Ticket By Result Id
+[**sense_get_pastel_registration_ticket_from_media_file_hash**](SenseApi.md#sense_get_pastel_registration_ticket_from_media_file_hash) | **GET** /api/v1/sense/pastel_registration_ticket_from_media_file_hash/{media_file_sha256_hash} | Get Pastel Ticket Data From Media File Hash
+[**sense_get_raw_output_file_from_activation_ticket**](SenseApi.md#sense_get_raw_output_file_from_activation_ticket) | **GET** /api/v1/sense/raw_output_file_from_activation_ticket/{activation_ticket_txid} | Get Raw Output File By Activation Ticket
+[**sense_get_raw_output_file_from_pastel_id**](SenseApi.md#sense_get_raw_output_file_from_pastel_id) | **GET** /api/v1/sense/raw_output_file_from_pastel_id/{pastel_id_of_user} | Get Raw Output File By Pastel Id
+[**sense_get_raw_output_file_from_registration_ticket**](SenseApi.md#sense_get_raw_output_file_from_registration_ticket) | **GET** /api/v1/sense/raw_output_file_from_registration_ticket/{registration_ticket_txid} | Get Raw Output File By Registration Ticket
+[**sense_get_raw_output_file_from_result**](SenseApi.md#sense_get_raw_output_file_from_result) | **GET** /api/v1/sense/raw_output_file/{gateway_result_id} | Get Raw Output File By Result Id
+[**sense_get_request**](SenseApi.md#sense_get_request) | **GET** /api/v1/sense/gateway_requests/{gateway_request_id} | Get Request By Request Id
+[**sense_get_result**](SenseApi.md#sense_get_result) | **GET** /api/v1/sense/gateway_results/{gateway_result_id} | Get Result By Result Id
+[**sense_process_request**](SenseApi.md#sense_process_request) | **POST** /api/v1/sense | Process Request
 [**sense_transfer_pastel_ticket_to_another_pastelid**](SenseApi.md#sense_transfer_pastel_ticket_to_another_pastelid) | **GET** /api/v1/sense/result/transfer_pastel_ticket | Transfer Pastel Ticket To Another Pastelid
 
 
@@ -436,8 +436,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_originally_submitted_file_by_result_id**
-> object sense_get_originally_submitted_file_by_result_id(gateway_result_id)
+# **sense_get_originally_submitted_file_from_result**
+> object sense_get_originally_submitted_file_from_result(gateway_result_id)
 
 Get Originally Submitted File By Result Id
 
@@ -477,11 +477,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Originally Submitted File By Result Id
-        api_response = await api_instance.sense_get_originally_submitted_file_by_result_id(gateway_result_id)
-        print("The response of SenseApi->sense_get_originally_submitted_file_by_result_id:\n")
+        api_response = await api_instance.sense_get_originally_submitted_file_from_result(gateway_result_id)
+        print("The response of SenseApi->sense_get_originally_submitted_file_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_originally_submitted_file_by_result_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_originally_submitted_file_from_result: %s\n" % e)
 ```
 
 
@@ -515,8 +515,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_parsed_output_file_by_activation_ticket**
-> object sense_get_parsed_output_file_by_activation_ticket(activation_ticket_txid)
+# **sense_get_parsed_output_file_from_activation_ticket**
+> object sense_get_parsed_output_file_from_activation_ticket(activation_ticket_txid)
 
 Parsed Output File By Activation Ticket
 
@@ -545,11 +545,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Parsed Output File By Activation Ticket
-        api_response = await api_instance.sense_get_parsed_output_file_by_activation_ticket(activation_ticket_txid)
-        print("The response of SenseApi->sense_get_parsed_output_file_by_activation_ticket:\n")
+        api_response = await api_instance.sense_get_parsed_output_file_from_activation_ticket(activation_ticket_txid)
+        print("The response of SenseApi->sense_get_parsed_output_file_from_activation_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_parsed_output_file_by_activation_ticket: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_parsed_output_file_from_activation_ticket: %s\n" % e)
 ```
 
 
@@ -583,8 +583,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_parsed_output_file_by_pastel_id**
-> object sense_get_parsed_output_file_by_pastel_id(pastel_id_of_user)
+# **sense_get_parsed_output_file_from_pastel_id**
+> object sense_get_parsed_output_file_from_pastel_id(pastel_id_of_user)
 
 Parsed Output File By Pastel Id
 
@@ -613,11 +613,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Parsed Output File By Pastel Id
-        api_response = await api_instance.sense_get_parsed_output_file_by_pastel_id(pastel_id_of_user)
-        print("The response of SenseApi->sense_get_parsed_output_file_by_pastel_id:\n")
+        api_response = await api_instance.sense_get_parsed_output_file_from_pastel_id(pastel_id_of_user)
+        print("The response of SenseApi->sense_get_parsed_output_file_from_pastel_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_parsed_output_file_by_pastel_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_parsed_output_file_from_pastel_id: %s\n" % e)
 ```
 
 
@@ -651,8 +651,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_parsed_output_file_by_registration_ticket**
-> object sense_get_parsed_output_file_by_registration_ticket(registration_ticket_txid)
+# **sense_get_parsed_output_file_from_registration_ticket**
+> object sense_get_parsed_output_file_from_registration_ticket(registration_ticket_txid)
 
 Get Parsed Output File By Registration Ticket
 
@@ -681,11 +681,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Parsed Output File By Registration Ticket
-        api_response = await api_instance.sense_get_parsed_output_file_by_registration_ticket(registration_ticket_txid)
-        print("The response of SenseApi->sense_get_parsed_output_file_by_registration_ticket:\n")
+        api_response = await api_instance.sense_get_parsed_output_file_from_registration_ticket(registration_ticket_txid)
+        print("The response of SenseApi->sense_get_parsed_output_file_from_registration_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_parsed_output_file_by_registration_ticket: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_parsed_output_file_from_registration_ticket: %s\n" % e)
 ```
 
 
@@ -719,8 +719,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_parsed_output_file_by_result_id**
-> object sense_get_parsed_output_file_by_result_id(gateway_result_id)
+# **sense_get_parsed_output_file_from_result**
+> object sense_get_parsed_output_file_from_result(gateway_result_id)
 
 Get Parsed Output File By Result Id
 
@@ -760,11 +760,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Parsed Output File By Result Id
-        api_response = await api_instance.sense_get_parsed_output_file_by_result_id(gateway_result_id)
-        print("The response of SenseApi->sense_get_parsed_output_file_by_result_id:\n")
+        api_response = await api_instance.sense_get_parsed_output_file_from_result(gateway_result_id)
+        print("The response of SenseApi->sense_get_parsed_output_file_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_parsed_output_file_by_result_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_parsed_output_file_from_result: %s\n" % e)
 ```
 
 
@@ -798,8 +798,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_pastel_activation_ticket_by_its_txid**
-> object sense_get_pastel_activation_ticket_by_its_txid(activation_ticket_txid)
+# **sense_get_pastel_activation_ticket_from_txid**
+> object sense_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
 
 Get Pastel Activation Ticket By Its Txid
 
@@ -828,11 +828,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Activation Ticket By Its Txid
-        api_response = await api_instance.sense_get_pastel_activation_ticket_by_its_txid(activation_ticket_txid)
-        print("The response of SenseApi->sense_get_pastel_activation_ticket_by_its_txid:\n")
+        api_response = await api_instance.sense_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
+        print("The response of SenseApi->sense_get_pastel_activation_ticket_from_txid:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_pastel_activation_ticket_by_its_txid: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_pastel_activation_ticket_from_txid: %s\n" % e)
 ```
 
 
@@ -866,8 +866,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_pastel_activation_ticket_by_result_id**
-> object sense_get_pastel_activation_ticket_by_result_id(gateway_result_id)
+# **sense_get_pastel_activation_ticket_from_result**
+> object sense_get_pastel_activation_ticket_from_result(gateway_result_id)
 
 Get Pastel Sense Activation Ticket By Result Id
 
@@ -907,11 +907,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Sense Activation Ticket By Result Id
-        api_response = await api_instance.sense_get_pastel_activation_ticket_by_result_id(gateway_result_id)
-        print("The response of SenseApi->sense_get_pastel_activation_ticket_by_result_id:\n")
+        api_response = await api_instance.sense_get_pastel_activation_ticket_from_result(gateway_result_id)
+        print("The response of SenseApi->sense_get_pastel_activation_ticket_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_pastel_activation_ticket_by_result_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_pastel_activation_ticket_from_result: %s\n" % e)
 ```
 
 
@@ -945,8 +945,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_pastel_registration_ticket_by_its_txid**
-> object sense_get_pastel_registration_ticket_by_its_txid(registration_ticket_txid)
+# **sense_get_pastel_registration_ticket_from_txid**
+> object sense_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
 
 Get Pastel Registration Ticket By Its Txid
 
@@ -975,11 +975,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Registration Ticket By Its Txid
-        api_response = await api_instance.sense_get_pastel_registration_ticket_by_its_txid(registration_ticket_txid)
-        print("The response of SenseApi->sense_get_pastel_registration_ticket_by_its_txid:\n")
+        api_response = await api_instance.sense_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
+        print("The response of SenseApi->sense_get_pastel_registration_ticket_from_txid:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_by_its_txid: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_from_txid: %s\n" % e)
 ```
 
 
@@ -1013,8 +1013,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_pastel_registration_ticket_by_result_id**
-> object sense_get_pastel_registration_ticket_by_result_id(gateway_result_id)
+# **sense_get_pastel_registration_ticket_from_result**
+> object sense_get_pastel_registration_ticket_from_result(gateway_result_id)
 
 Get Pastel Sense Registration Ticket By Result Id
 
@@ -1054,11 +1054,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Sense Registration Ticket By Result Id
-        api_response = await api_instance.sense_get_pastel_registration_ticket_by_result_id(gateway_result_id)
-        print("The response of SenseApi->sense_get_pastel_registration_ticket_by_result_id:\n")
+        api_response = await api_instance.sense_get_pastel_registration_ticket_from_result(gateway_result_id)
+        print("The response of SenseApi->sense_get_pastel_registration_ticket_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_by_result_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_from_result: %s\n" % e)
 ```
 
 
@@ -1092,8 +1092,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_pastel_ticket_by_media_file_hash**
-> object sense_get_pastel_ticket_by_media_file_hash(media_file_sha256_hash)
+# **sense_get_pastel_registration_ticket_from_media_file_hash**
+> object sense_get_pastel_registration_ticket_from_media_file_hash(media_file_sha256_hash)
 
 Get Pastel Ticket Data From Media File Hash
 
@@ -1122,11 +1122,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Ticket Data From Media File Hash
-        api_response = await api_instance.sense_get_pastel_ticket_by_media_file_hash(media_file_sha256_hash)
-        print("The response of SenseApi->sense_get_pastel_ticket_by_media_file_hash:\n")
+        api_response = await api_instance.sense_get_pastel_registration_ticket_from_media_file_hash(media_file_sha256_hash)
+        print("The response of SenseApi->sense_get_pastel_registration_ticket_from_media_file_hash:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_pastel_ticket_by_media_file_hash: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_from_media_file_hash: %s\n" % e)
 ```
 
 
@@ -1160,8 +1160,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_raw_output_file_by_activation_ticket**
-> object sense_get_raw_output_file_by_activation_ticket(activation_ticket_txid)
+# **sense_get_raw_output_file_from_activation_ticket**
+> object sense_get_raw_output_file_from_activation_ticket(activation_ticket_txid)
 
 Get Raw Output File By Activation Ticket
 
@@ -1190,11 +1190,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Raw Output File By Activation Ticket
-        api_response = await api_instance.sense_get_raw_output_file_by_activation_ticket(activation_ticket_txid)
-        print("The response of SenseApi->sense_get_raw_output_file_by_activation_ticket:\n")
+        api_response = await api_instance.sense_get_raw_output_file_from_activation_ticket(activation_ticket_txid)
+        print("The response of SenseApi->sense_get_raw_output_file_from_activation_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_raw_output_file_by_activation_ticket: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_raw_output_file_from_activation_ticket: %s\n" % e)
 ```
 
 
@@ -1228,8 +1228,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_raw_output_file_by_pastel_id**
-> object sense_get_raw_output_file_by_pastel_id(pastel_id_of_user)
+# **sense_get_raw_output_file_from_pastel_id**
+> object sense_get_raw_output_file_from_pastel_id(pastel_id_of_user)
 
 Get Raw Output File By Pastel Id
 
@@ -1258,11 +1258,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Raw Output File By Pastel Id
-        api_response = await api_instance.sense_get_raw_output_file_by_pastel_id(pastel_id_of_user)
-        print("The response of SenseApi->sense_get_raw_output_file_by_pastel_id:\n")
+        api_response = await api_instance.sense_get_raw_output_file_from_pastel_id(pastel_id_of_user)
+        print("The response of SenseApi->sense_get_raw_output_file_from_pastel_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_raw_output_file_by_pastel_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_raw_output_file_from_pastel_id: %s\n" % e)
 ```
 
 
@@ -1296,8 +1296,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_raw_output_file_by_registration_ticket**
-> object sense_get_raw_output_file_by_registration_ticket(registration_ticket_txid)
+# **sense_get_raw_output_file_from_registration_ticket**
+> object sense_get_raw_output_file_from_registration_ticket(registration_ticket_txid)
 
 Get Raw Output File By Registration Ticket
 
@@ -1326,11 +1326,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Raw Output File By Registration Ticket
-        api_response = await api_instance.sense_get_raw_output_file_by_registration_ticket(registration_ticket_txid)
-        print("The response of SenseApi->sense_get_raw_output_file_by_registration_ticket:\n")
+        api_response = await api_instance.sense_get_raw_output_file_from_registration_ticket(registration_ticket_txid)
+        print("The response of SenseApi->sense_get_raw_output_file_from_registration_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_raw_output_file_by_registration_ticket: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_raw_output_file_from_registration_ticket: %s\n" % e)
 ```
 
 
@@ -1364,8 +1364,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_raw_output_file_by_result_id**
-> object sense_get_raw_output_file_by_result_id(gateway_result_id)
+# **sense_get_raw_output_file_from_result**
+> object sense_get_raw_output_file_from_result(gateway_result_id)
 
 Get Raw Output File By Result Id
 
@@ -1405,11 +1405,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Raw Output File By Result Id
-        api_response = await api_instance.sense_get_raw_output_file_by_result_id(gateway_result_id)
-        print("The response of SenseApi->sense_get_raw_output_file_by_result_id:\n")
+        api_response = await api_instance.sense_get_raw_output_file_from_result(gateway_result_id)
+        print("The response of SenseApi->sense_get_raw_output_file_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_raw_output_file_by_result_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_raw_output_file_from_result: %s\n" % e)
 ```
 
 
@@ -1443,8 +1443,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_request_by_id**
-> RequestResult sense_get_request_by_id(gateway_request_id)
+# **sense_get_request**
+> RequestResult sense_get_request(gateway_request_id)
 
 Get Request By Request Id
 
@@ -1485,11 +1485,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Request By Request Id
-        api_response = await api_instance.sense_get_request_by_id(gateway_request_id)
-        print("The response of SenseApi->sense_get_request_by_id:\n")
+        api_response = await api_instance.sense_get_request(gateway_request_id)
+        print("The response of SenseApi->sense_get_request:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_request_by_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_request: %s\n" % e)
 ```
 
 
@@ -1523,8 +1523,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_result_by_id**
-> ResultRegistrationResult sense_get_result_by_id(gateway_result_id)
+# **sense_get_result**
+> ResultRegistrationResult sense_get_result(gateway_result_id)
 
 Get Result By Result Id
 
@@ -1565,11 +1565,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Result By Result Id
-        api_response = await api_instance.sense_get_result_by_id(gateway_result_id)
-        print("The response of SenseApi->sense_get_result_by_id:\n")
+        api_response = await api_instance.sense_get_result(gateway_result_id)
+        print("The response of SenseApi->sense_get_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_result_by_id: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_result: %s\n" % e)
 ```
 
 
@@ -1603,8 +1603,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_submit_request**
-> RequestResult sense_submit_request(files, collection_act_txid=collection_act_txid, open_api_group_id=open_api_group_id, after_activation_transfer_to_pastelid=after_activation_transfer_to_pastelid)
+# **sense_process_request**
+> RequestResult sense_process_request(files, collection_act_txid=collection_act_txid, open_api_group_id=open_api_group_id, after_activation_transfer_to_pastelid=after_activation_transfer_to_pastelid)
 
 Process Request
 
@@ -1648,11 +1648,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Process Request
-        api_response = await api_instance.sense_submit_request(files, collection_act_txid=collection_act_txid, open_api_group_id=open_api_group_id, after_activation_transfer_to_pastelid=after_activation_transfer_to_pastelid)
-        print("The response of SenseApi->sense_submit_request:\n")
+        api_response = await api_instance.sense_process_request(files, collection_act_txid=collection_act_txid, open_api_group_id=open_api_group_id, after_activation_transfer_to_pastelid=after_activation_transfer_to_pastelid)
+        print("The response of SenseApi->sense_process_request:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_submit_request: %s\n" % e)
+        print("Exception when calling SenseApi->sense_process_request: %s\n" % e)
 ```
 
 

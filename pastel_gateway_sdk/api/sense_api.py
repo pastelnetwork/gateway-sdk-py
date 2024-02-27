@@ -50,7 +50,6 @@ class SenseApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-
     @validate_call
     async def sense_get_all_parsed_output_files_from_request(
         self,
@@ -95,7 +94,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_parsed_output_files_from_request_id_serialize(
+        _param = self._sense_get_all_parsed_output_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -117,9 +116,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_all_parsed_output_files_from_request_id_with_http_info(
+    async def sense_get_all_parsed_output_files_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -162,7 +160,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_parsed_output_files_from_request_id_serialize(
+        _param = self._sense_get_all_parsed_output_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -184,9 +182,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_all_parsed_output_files_from_request_id_without_preload_content(
+    async def sense_get_all_parsed_output_files_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -229,7 +226,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_parsed_output_files_from_request_id_serialize(
+        _param = self._sense_get_all_parsed_output_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -247,8 +244,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_all_parsed_output_files_from_request_id_serialize(
+    def _sense_get_all_parsed_output_files_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -277,14 +273,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -305,9 +299,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_all_pastel_registration_tickets_from_request(
@@ -353,7 +344,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._sense_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -375,9 +366,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_all_pastel_registration_tickets_from_request_id_with_http_info(
+    async def sense_get_all_pastel_registration_tickets_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -420,7 +410,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._sense_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -442,9 +432,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_all_pastel_registration_tickets_from_request_id_without_preload_content(
+    async def sense_get_all_pastel_registration_tickets_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -487,7 +476,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._sense_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -505,8 +494,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_all_pastel_registration_tickets_from_request_id_serialize(
+    def _sense_get_all_pastel_registration_tickets_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -535,14 +523,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -563,9 +549,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_all_raw_output_files_from_request(
@@ -611,7 +594,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_raw_output_files_from_request_id_serialize(
+        _param = self._sense_get_all_raw_output_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -633,9 +616,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_all_raw_output_files_from_request_id_with_http_info(
+    async def sense_get_all_raw_output_files_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -678,7 +660,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_raw_output_files_from_request_id_serialize(
+        _param = self._sense_get_all_raw_output_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -700,9 +682,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_all_raw_output_files_from_request_id_without_preload_content(
+    async def sense_get_all_raw_output_files_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -745,7 +726,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_all_raw_output_files_from_request_id_serialize(
+        _param = self._sense_get_all_raw_output_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -763,8 +744,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_all_raw_output_files_from_request_id_serialize(
+    def _sense_get_all_raw_output_files_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -793,14 +773,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -821,8 +799,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
 
 
     @validate_call
@@ -899,7 +875,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_all_requests_with_http_info(
         self,
@@ -974,7 +949,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_all_requests_without_preload_content(
         self,
@@ -1045,7 +1019,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_all_requests_serialize(
         self,
         status_requested,
@@ -1087,14 +1060,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1115,9 +1086,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_all_results(
@@ -1193,7 +1161,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_all_results_with_http_info(
         self,
@@ -1268,7 +1235,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_all_results_without_preload_content(
         self,
@@ -1339,7 +1305,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_all_results_serialize(
         self,
         status_requested,
@@ -1381,14 +1346,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1410,11 +1373,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_get_originally_submitted_file(
+    async def sense_get_originally_submitted_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1457,7 +1417,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_originally_submitted_file_serialize(
+        _param = self._sense_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1479,9 +1439,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_originally_submitted_file_with_http_info(
+    async def sense_get_originally_submitted_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1524,7 +1483,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_originally_submitted_file_serialize(
+        _param = self._sense_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1546,9 +1505,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_originally_submitted_file_without_preload_content(
+    async def sense_get_originally_submitted_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1591,7 +1549,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_originally_submitted_file_serialize(
+        _param = self._sense_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1609,8 +1567,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_originally_submitted_file_serialize(
+    def _sense_get_originally_submitted_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -1639,14 +1596,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1667,9 +1622,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_parsed_output_file_from_activation_ticket(
@@ -1737,7 +1689,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_parsed_output_file_from_activation_ticket_with_http_info(
         self,
@@ -1804,7 +1755,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_parsed_output_file_from_activation_ticket_without_preload_content(
         self,
@@ -1867,7 +1817,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_parsed_output_file_from_activation_ticket_serialize(
         self,
         activation_ticket_txid,
@@ -1897,14 +1846,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1924,9 +1871,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_parsed_output_file_from_pastel_id(
@@ -1994,7 +1938,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_parsed_output_file_from_pastel_id_with_http_info(
         self,
@@ -2061,7 +2004,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_parsed_output_file_from_pastel_id_without_preload_content(
         self,
@@ -2124,7 +2066,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_parsed_output_file_from_pastel_id_serialize(
         self,
         pastel_id_of_user,
@@ -2154,14 +2095,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2181,9 +2120,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_parsed_output_file_from_registration_ticket(
@@ -2251,7 +2187,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_parsed_output_file_from_registration_ticket_with_http_info(
         self,
@@ -2318,7 +2253,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_parsed_output_file_from_registration_ticket_without_preload_content(
         self,
@@ -2381,7 +2315,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_parsed_output_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
@@ -2411,14 +2344,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2439,11 +2370,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_get_parsed_output_file_from_result_id(
+    async def sense_get_parsed_output_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2486,7 +2414,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_from_result_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2508,9 +2436,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_parsed_output_file_from_result_id_with_http_info(
+    async def sense_get_parsed_output_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2553,7 +2480,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_from_result_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2575,9 +2502,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_parsed_output_file_from_result_id_without_preload_content(
+    async def sense_get_parsed_output_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2620,7 +2546,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_parsed_output_file_from_result_id_serialize(
+        _param = self._sense_get_parsed_output_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2638,8 +2564,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_parsed_output_file_from_result_id_serialize(
+    def _sense_get_parsed_output_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -2668,14 +2593,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2696,9 +2619,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_pastel_activation_ticket_from_txid(
@@ -2766,7 +2686,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_pastel_activation_ticket_from_txid_with_http_info(
         self,
@@ -2833,7 +2752,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_pastel_activation_ticket_from_txid_without_preload_content(
         self,
@@ -2896,7 +2814,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_pastel_activation_ticket_from_txid_serialize(
         self,
         activation_ticket_txid,
@@ -2926,14 +2843,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2954,11 +2869,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_get_pastel_activation_ticket_from_result_id(
+    async def sense_get_pastel_activation_ticket_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3001,7 +2913,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3023,9 +2935,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_pastel_activation_ticket_from_result_id_with_http_info(
+    async def sense_get_pastel_activation_ticket_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3068,7 +2979,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3090,9 +3001,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_pastel_activation_ticket_from_result_id_without_preload_content(
+    async def sense_get_pastel_activation_ticket_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3135,7 +3045,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._sense_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3153,8 +3063,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_pastel_activation_ticket_from_result_id_serialize(
+    def _sense_get_pastel_activation_ticket_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -3183,14 +3092,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3211,9 +3118,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_pastel_registration_ticket_from_txid(
@@ -3281,7 +3185,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_pastel_registration_ticket_from_txid_with_http_info(
         self,
@@ -3348,7 +3251,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_pastel_registration_ticket_from_txid_without_preload_content(
         self,
@@ -3411,7 +3313,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_pastel_registration_ticket_from_txid_serialize(
         self,
         registration_ticket_txid,
@@ -3441,14 +3342,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3469,11 +3368,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_get_pastel_registration_ticket_from_result_id(
+    async def sense_get_pastel_registration_ticket_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3516,7 +3412,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3538,9 +3434,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_pastel_registration_ticket_from_result_id_with_http_info(
+    async def sense_get_pastel_registration_ticket_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3583,7 +3478,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3605,9 +3500,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_pastel_registration_ticket_from_result_id_without_preload_content(
+    async def sense_get_pastel_registration_ticket_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3650,7 +3544,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3668,8 +3562,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_pastel_registration_ticket_from_result_id_serialize(
+    def _sense_get_pastel_registration_ticket_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -3698,14 +3591,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3727,11 +3618,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_get_pastel_ticket_from_media_file_hash(
+    async def sense_get_pastel_registration_ticket_from_media_file_hash(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -3774,7 +3662,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_ticket_from_media_file_hash_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3796,9 +3684,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_pastel_ticket_from_media_file_hash_with_http_info(
+    async def sense_get_pastel_registration_ticket_from_media_file_hash_with_http_info(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -3841,7 +3728,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_ticket_from_media_file_hash_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3863,9 +3750,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_pastel_ticket_from_media_file_hash_without_preload_content(
+    async def sense_get_pastel_registration_ticket_from_media_file_hash_without_preload_content(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -3908,7 +3794,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_pastel_ticket_from_media_file_hash_serialize(
+        _param = self._sense_get_pastel_registration_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3926,8 +3812,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_pastel_ticket_from_media_file_hash_serialize(
+    def _sense_get_pastel_registration_ticket_from_media_file_hash_serialize(
         self,
         media_file_sha256_hash,
         _request_auth,
@@ -3956,7 +3841,6 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
@@ -3964,14 +3848,13 @@ class SenseApi:
             ]
         )
 
-
         # authentication setting
         _auth_settings: List[str] = [
         ]
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/sense/pastel_ticket_from_media_file_hash/{media_file_sha256_hash}',
+            resource_path='/api/v1/sense/pastel_registration_ticket_from_media_file_hash/{media_file_sha256_hash}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -3983,9 +3866,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_raw_output_file_from_activation_ticket(
@@ -4053,7 +3933,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_raw_output_file_from_activation_ticket_with_http_info(
         self,
@@ -4120,7 +3999,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_raw_output_file_from_activation_ticket_without_preload_content(
         self,
@@ -4183,7 +4061,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_raw_output_file_from_activation_ticket_serialize(
         self,
         activation_ticket_txid,
@@ -4213,14 +4090,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -4240,9 +4115,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_raw_output_file_from_pastel_id(
@@ -4310,7 +4182,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_raw_output_file_from_pastel_id_with_http_info(
         self,
@@ -4377,7 +4248,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_raw_output_file_from_pastel_id_without_preload_content(
         self,
@@ -4440,7 +4310,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_raw_output_file_from_pastel_id_serialize(
         self,
         pastel_id_of_user,
@@ -4470,14 +4339,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -4497,9 +4364,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_get_raw_output_file_from_registration_ticket(
@@ -4567,7 +4431,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_get_raw_output_file_from_registration_ticket_with_http_info(
         self,
@@ -4634,7 +4497,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_get_raw_output_file_from_registration_ticket_without_preload_content(
         self,
@@ -4697,7 +4559,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_get_raw_output_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
@@ -4727,14 +4588,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -4755,11 +4614,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_get_raw_output_file_from_result_id(
+    async def sense_get_raw_output_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -4802,7 +4658,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_from_result_id_serialize(
+        _param = self._sense_get_raw_output_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4824,9 +4680,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_raw_output_file_from_result_id_with_http_info(
+    async def sense_get_raw_output_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -4869,7 +4724,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_from_result_id_serialize(
+        _param = self._sense_get_raw_output_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4891,9 +4746,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_raw_output_file_from_result_id_without_preload_content(
+    async def sense_get_raw_output_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -4936,7 +4790,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_raw_output_file_from_result_id_serialize(
+        _param = self._sense_get_raw_output_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4954,8 +4808,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_raw_output_file_from_result_id_serialize(
+    def _sense_get_raw_output_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -4984,14 +4837,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -5013,11 +4864,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_get_request_from_id(
+    async def sense_get_request(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5060,7 +4908,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_request_from_id_serialize(
+        _param = self._sense_get_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5082,9 +4930,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_request_from_id_with_http_info(
+    async def sense_get_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5127,7 +4974,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_request_from_id_serialize(
+        _param = self._sense_get_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5149,9 +4996,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_request_from_id_without_preload_content(
+    async def sense_get_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5194,7 +5040,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_request_from_id_serialize(
+        _param = self._sense_get_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5212,8 +5058,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_request_from_id_serialize(
+    def _sense_get_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -5242,14 +5087,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -5271,11 +5114,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_get_result_from_id(
+    async def sense_get_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5318,7 +5158,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_result_from_id_serialize(
+        _param = self._sense_get_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5340,9 +5180,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_get_result_from_id_with_http_info(
+    async def sense_get_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5385,7 +5224,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_result_from_id_serialize(
+        _param = self._sense_get_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5407,9 +5246,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_get_result_from_id_without_preload_content(
+    async def sense_get_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5452,7 +5290,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_get_result_from_id_serialize(
+        _param = self._sense_get_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5470,8 +5308,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_get_result_from_id_serialize(
+    def _sense_get_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -5500,14 +5337,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -5529,11 +5364,8 @@ class SenseApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def sense_submit_request(
+    async def sense_process_request(
         self,
         files: List[Union[StrictBytes, StrictStr]],
         collection_act_txid: Annotated[Optional[StrictStr], Field(description="Transaction ID of the collection, if any")] = None,
@@ -5585,7 +5417,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_submit_request_serialize(
+        _param = self._sense_process_request_serialize(
             files=files,
             collection_act_txid=collection_act_txid,
             open_api_group_id=open_api_group_id,
@@ -5610,9 +5442,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def sense_submit_request_with_http_info(
+    async def sense_process_request_with_http_info(
         self,
         files: List[Union[StrictBytes, StrictStr]],
         collection_act_txid: Annotated[Optional[StrictStr], Field(description="Transaction ID of the collection, if any")] = None,
@@ -5664,7 +5495,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_submit_request_serialize(
+        _param = self._sense_process_request_serialize(
             files=files,
             collection_act_txid=collection_act_txid,
             open_api_group_id=open_api_group_id,
@@ -5689,9 +5520,8 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def sense_submit_request_without_preload_content(
+    async def sense_process_request_without_preload_content(
         self,
         files: List[Union[StrictBytes, StrictStr]],
         collection_act_txid: Annotated[Optional[StrictStr], Field(description="Transaction ID of the collection, if any")] = None,
@@ -5743,7 +5573,7 @@ class SenseApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._sense_submit_request_serialize(
+        _param = self._sense_process_request_serialize(
             files=files,
             collection_act_txid=collection_act_txid,
             open_api_group_id=open_api_group_id,
@@ -5764,8 +5594,7 @@ class SenseApi:
         )
         return response_data.response
 
-
-    def _sense_submit_request_serialize(
+    def _sense_process_request_serialize(
         self,
         files,
         collection_act_txid,
@@ -5810,7 +5639,6 @@ class SenseApi:
             _files['files'] = files
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
@@ -5851,9 +5679,6 @@ class SenseApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def sense_transfer_pastel_ticket_to_another_pastelid(
@@ -5925,7 +5750,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def sense_transfer_pastel_ticket_to_another_pastelid_with_http_info(
         self,
@@ -5996,7 +5820,6 @@ class SenseApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def sense_transfer_pastel_ticket_to_another_pastelid_without_preload_content(
         self,
@@ -6063,7 +5886,6 @@ class SenseApi:
         )
         return response_data.response
 
-
     def _sense_transfer_pastel_ticket_to_another_pastelid_serialize(
         self,
         gateway_result_id,
@@ -6100,14 +5922,12 @@ class SenseApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [

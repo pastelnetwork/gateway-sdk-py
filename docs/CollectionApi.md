@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**collection_create_sense_collection**](CollectionApi.md#collection_create_sense_collection) | **POST** /api/v1/collection/sense | Create Sense Collection
 [**collection_get_all_nft_collections**](CollectionApi.md#collection_get_all_nft_collections) | **GET** /api/v1/collection/nft/collections | Get All Nft Collections
 [**collection_get_all_sense_collections**](CollectionApi.md#collection_get_all_sense_collections) | **GET** /api/v1/collection/sense/collections | Get All Sense Collections
-[**collection_get_nft_collections_by_collection_id**](CollectionApi.md#collection_get_nft_collections_by_collection_id) | **GET** /api/v1/collection/nft/collections/{collection_id} | Get Nft Collections By Collection Id
-[**collection_get_sense_collections_by_collection_id**](CollectionApi.md#collection_get_sense_collections_by_collection_id) | **GET** /api/v1/collection/sense/collections/{collection_id} | Get Sense Collections By Collection Id
+[**collection_get_nft_collections_from_collection_id**](CollectionApi.md#collection_get_nft_collections_from_collection_id) | **GET** /api/v1/collection/nft/collections/{collection_id} | Get Nft Collections By Collection Id
+[**collection_get_sense_collections_from_collection_id**](CollectionApi.md#collection_get_sense_collections_from_collection_id) | **GET** /api/v1/collection/sense/collections/{collection_id} | Get Sense Collections By Collection Id
 
 
 # **collection_create_nft_collection**
@@ -354,8 +354,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **collection_get_nft_collections_by_collection_id**
-> CollectionRegistrationResult collection_get_nft_collections_by_collection_id(collection_id)
+# **collection_get_nft_collections_from_collection_id**
+> CollectionRegistrationResult collection_get_nft_collections_from_collection_id(collection_id)
 
 Get Nft Collections By Collection Id
 
@@ -396,11 +396,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Nft Collections By Collection Id
-        api_response = await api_instance.collection_get_nft_collections_by_collection_id(collection_id)
-        print("The response of CollectionApi->collection_get_nft_collections_by_collection_id:\n")
+        api_response = await api_instance.collection_get_nft_collections_from_collection_id(collection_id)
+        print("The response of CollectionApi->collection_get_nft_collections_from_collection_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CollectionApi->collection_get_nft_collections_by_collection_id: %s\n" % e)
+        print("Exception when calling CollectionApi->collection_get_nft_collections_from_collection_id: %s\n" % e)
 ```
 
 
@@ -434,8 +434,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **collection_get_sense_collections_by_collection_id**
-> CollectionRegistrationResult collection_get_sense_collections_by_collection_id(collection_id)
+# **collection_get_sense_collections_from_collection_id**
+> CollectionRegistrationResult collection_get_sense_collections_from_collection_id(collection_id)
 
 Get Sense Collections By Collection Id
 
@@ -476,11 +476,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Sense Collections By Collection Id
-        api_response = await api_instance.collection_get_sense_collections_by_collection_id(collection_id)
-        print("The response of CollectionApi->collection_get_sense_collections_by_collection_id:\n")
+        api_response = await api_instance.collection_get_sense_collections_from_collection_id(collection_id)
+        print("The response of CollectionApi->collection_get_sense_collections_from_collection_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CollectionApi->collection_get_sense_collections_by_collection_id: %s\n" % e)
+        print("Exception when calling CollectionApi->collection_get_sense_collections_from_collection_id: %s\n" % e)
 ```
 
 

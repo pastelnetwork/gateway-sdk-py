@@ -50,7 +50,6 @@ class CascadeApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-
     @validate_call
     async def cascade_get_all_files_from_request(
         self,
@@ -95,7 +94,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_files_from_request_id_serialize(
+        _param = self._cascade_get_all_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -117,9 +116,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def cascade_get_all_files_from_request_id_with_http_info(
+    async def cascade_get_all_files_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -162,7 +160,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_files_from_request_id_serialize(
+        _param = self._cascade_get_all_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -184,9 +182,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def cascade_get_all_files_from_request_id_without_preload_content(
+    async def cascade_get_all_files_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -229,7 +226,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_files_from_request_id_serialize(
+        _param = self._cascade_get_all_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -247,8 +244,7 @@ class CascadeApi:
         )
         return response_data.response
 
-
-    def _cascade_get_all_files_from_request_id_serialize(
+    def _cascade_get_all_files_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -277,14 +273,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -305,9 +299,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_all_pastel_registration_tickets_from_request(
@@ -353,7 +344,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._cascade_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -375,9 +366,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def cascade_get_all_pastel_registration_tickets_from_request_id_with_http_info(
+    async def cascade_get_all_pastel_registration_tickets_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -420,7 +410,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._cascade_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -442,9 +432,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def cascade_get_all_pastel_registration_tickets_from_request_id_without_preload_content(
+    async def cascade_get_all_pastel_registration_tickets_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -487,7 +476,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._cascade_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -505,8 +494,7 @@ class CascadeApi:
         )
         return response_data.response
 
-
-    def _cascade_get_all_pastel_registration_tickets_from_request_id_serialize(
+    def _cascade_get_all_pastel_registration_tickets_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -535,14 +523,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -563,9 +549,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_all_requests(
@@ -642,7 +625,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_all_requests_with_http_info(
         self,
@@ -718,7 +700,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_all_requests_without_preload_content(
         self,
@@ -790,7 +771,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_all_requests_serialize(
         self,
         status_requested,
@@ -832,14 +812,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -860,9 +838,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_all_results(
@@ -938,7 +913,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_all_results_with_http_info(
         self,
@@ -1013,7 +987,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_all_results_without_preload_content(
         self,
@@ -1084,7 +1057,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_all_results_serialize(
         self,
         status_requested,
@@ -1126,14 +1098,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1155,11 +1125,8 @@ class CascadeApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def cascade_get_originally_submitted_file(
+    async def cascade_get_originally_submitted_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1202,7 +1169,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_originally_submitted_file_serialize(
+        _param = self._cascade_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1224,9 +1191,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def cascade_get_originally_submitted_file_with_http_info(
+    async def cascade_get_originally_submitted_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1269,7 +1235,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_originally_submitted_file_serialize(
+        _param = self._cascade_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1291,9 +1257,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def cascade_get_originally_submitted_file_without_preload_content(
+    async def cascade_get_originally_submitted_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1336,7 +1301,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_originally_submitted_file_serialize(
+        _param = self._cascade_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1354,8 +1319,7 @@ class CascadeApi:
         )
         return response_data.response
 
-
-    def _cascade_get_originally_submitted_file_serialize(
+    def _cascade_get_originally_submitted_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -1384,14 +1348,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1413,11 +1375,8 @@ class CascadeApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def cascade_get_pastel_activation_ticket_from_result_id(
+    async def cascade_get_pastel_activation_ticket_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1460,7 +1419,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._cascade_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1482,9 +1441,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def cascade_get_pastel_activation_ticket_from_result_id_with_http_info(
+    async def cascade_get_pastel_activation_ticket_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1527,7 +1485,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._cascade_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1549,9 +1507,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def cascade_get_pastel_activation_ticket_from_result_id_without_preload_content(
+    async def cascade_get_pastel_activation_ticket_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1594,7 +1551,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._cascade_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1612,8 +1569,7 @@ class CascadeApi:
         )
         return response_data.response
 
-
-    def _cascade_get_pastel_activation_ticket_from_result_id_serialize(
+    def _cascade_get_pastel_activation_ticket_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -1642,14 +1598,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1670,9 +1624,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_pastel_activation_ticket_from_txid(
@@ -1740,7 +1691,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_pastel_activation_ticket_from_txid_with_http_info(
         self,
@@ -1807,7 +1757,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_pastel_activation_ticket_from_txid_without_preload_content(
         self,
@@ -1870,7 +1819,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_pastel_activation_ticket_from_txid_serialize(
         self,
         activation_ticket_txid,
@@ -1900,14 +1848,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1928,11 +1874,8 @@ class CascadeApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def cascade_get_pastel_registration_ticket_from_result_id(
+    async def cascade_get_pastel_registration_ticket_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1975,7 +1918,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1997,9 +1940,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def cascade_get_pastel_registration_ticket_from_result_id_with_http_info(
+    async def cascade_get_pastel_registration_ticket_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2042,7 +1984,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2064,9 +2006,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def cascade_get_pastel_registration_ticket_from_result_id_without_preload_content(
+    async def cascade_get_pastel_registration_ticket_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2109,7 +2050,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2127,8 +2068,7 @@ class CascadeApi:
         )
         return response_data.response
 
-
-    def _cascade_get_pastel_registration_ticket_from_result_id_serialize(
+    def _cascade_get_pastel_registration_ticket_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -2157,14 +2097,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2185,9 +2123,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_pastel_registration_ticket_from_txid(
@@ -2255,7 +2190,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_pastel_registration_ticket_from_txid_with_http_info(
         self,
@@ -2322,7 +2256,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_pastel_registration_ticket_from_txid_without_preload_content(
         self,
@@ -2385,7 +2318,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_pastel_registration_ticket_from_txid_serialize(
         self,
         registration_ticket_txid,
@@ -2415,14 +2347,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2443,11 +2373,8 @@ class CascadeApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def cascade_get_pastel_ticket_from_stored_file_hash(
+    async def cascade_get_pastel_registration_ticket_from_stored_file_hash(
         self,
         stored_file_sha256_hash_as_hex: StrictStr,
         _request_timeout: Union[
@@ -2490,7 +2417,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_ticket_from_stored_file_hash_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_stored_file_hash_serialize(
             stored_file_sha256_hash_as_hex=stored_file_sha256_hash_as_hex,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2512,9 +2439,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def cascade_get_pastel_ticket_from_stored_file_hash_with_http_info(
+    async def cascade_get_pastel_registration_ticket_from_stored_file_hash_with_http_info(
         self,
         stored_file_sha256_hash_as_hex: StrictStr,
         _request_timeout: Union[
@@ -2557,7 +2483,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_ticket_from_stored_file_hash_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_stored_file_hash_serialize(
             stored_file_sha256_hash_as_hex=stored_file_sha256_hash_as_hex,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2579,9 +2505,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def cascade_get_pastel_ticket_from_stored_file_hash_without_preload_content(
+    async def cascade_get_pastel_registration_ticket_from_stored_file_hash_without_preload_content(
         self,
         stored_file_sha256_hash_as_hex: StrictStr,
         _request_timeout: Union[
@@ -2624,7 +2549,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_pastel_ticket_from_stored_file_hash_serialize(
+        _param = self._cascade_get_pastel_registration_ticket_from_stored_file_hash_serialize(
             stored_file_sha256_hash_as_hex=stored_file_sha256_hash_as_hex,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2642,8 +2567,7 @@ class CascadeApi:
         )
         return response_data.response
 
-
-    def _cascade_get_pastel_ticket_from_stored_file_hash_serialize(
+    def _cascade_get_pastel_registration_ticket_from_stored_file_hash_serialize(
         self,
         stored_file_sha256_hash_as_hex,
         _request_auth,
@@ -2672,7 +2596,6 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
@@ -2680,14 +2603,13 @@ class CascadeApi:
             ]
         )
 
-
         # authentication setting
         _auth_settings: List[str] = [
         ]
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/cascade/pastel_ticket_from_stored_file_hash/{stored_file_sha256_hash_as_hex}',
+            resource_path='/api/v1/cascade/pastel_registration_ticket_from_stored_file_hash/{stored_file_sha256_hash_as_hex}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2699,9 +2621,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_public_stored_file_from_registration_ticket(
@@ -2769,7 +2688,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_public_stored_file_from_registration_ticket_with_http_info(
         self,
@@ -2836,7 +2754,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_public_stored_file_from_registration_ticket_without_preload_content(
         self,
@@ -2899,7 +2816,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_public_stored_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
@@ -2929,14 +2845,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2956,9 +2870,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_request(
@@ -3027,7 +2938,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_request_with_http_info(
         self,
@@ -3095,7 +3005,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_request_without_preload_content(
         self,
@@ -3159,7 +3068,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_request_serialize(
         self,
         gateway_request_id,
@@ -3189,14 +3097,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3217,9 +3123,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_result(
@@ -3287,7 +3190,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_result_with_http_info(
         self,
@@ -3354,7 +3256,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_result_without_preload_content(
         self,
@@ -3417,7 +3318,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_result_serialize(
         self,
         gateway_result_id,
@@ -3447,14 +3347,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3476,11 +3374,8 @@ class CascadeApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def cascade_get_stored_file(
+    async def cascade_get_stored_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3523,7 +3418,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_stored_file_serialize(
+        _param = self._cascade_get_stored_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3545,9 +3440,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def cascade_get_stored_file_with_http_info(
+    async def cascade_get_stored_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3590,7 +3484,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_stored_file_serialize(
+        _param = self._cascade_get_stored_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3612,9 +3506,8 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def cascade_get_stored_file_without_preload_content(
+    async def cascade_get_stored_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3657,7 +3550,7 @@ class CascadeApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cascade_get_stored_file_serialize(
+        _param = self._cascade_get_stored_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3675,8 +3568,7 @@ class CascadeApi:
         )
         return response_data.response
 
-
-    def _cascade_get_stored_file_serialize(
+    def _cascade_get_stored_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -3705,14 +3597,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3733,9 +3623,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_stored_file_from_activation_ticket(
@@ -3803,7 +3690,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_stored_file_from_activation_ticket_with_http_info(
         self,
@@ -3870,7 +3756,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_stored_file_from_activation_ticket_without_preload_content(
         self,
@@ -3933,7 +3818,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_stored_file_from_activation_ticket_serialize(
         self,
         activation_ticket_txid,
@@ -3963,14 +3847,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3991,9 +3873,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_get_stored_file_from_registration_ticket(
@@ -4061,7 +3940,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_get_stored_file_from_registration_ticket_with_http_info(
         self,
@@ -4128,7 +4006,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_get_stored_file_from_registration_ticket_without_preload_content(
         self,
@@ -4191,7 +4068,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_get_stored_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
@@ -4221,14 +4097,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -4249,9 +4123,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_process_request(
@@ -4327,7 +4198,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_process_request_with_http_info(
         self,
@@ -4402,7 +4272,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_process_request_without_preload_content(
         self,
@@ -4473,7 +4342,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_process_request_serialize(
         self,
         files,
@@ -4513,7 +4381,6 @@ class CascadeApi:
         if files is not None:
             _files['files'] = files
         # process the body parameter
-
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
@@ -4555,9 +4422,6 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def cascade_transfer_pastel_ticket_to_another_pastelid(
@@ -4629,7 +4493,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def cascade_transfer_pastel_ticket_to_another_pastelid_with_http_info(
         self,
@@ -4700,7 +4563,6 @@ class CascadeApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def cascade_transfer_pastel_ticket_to_another_pastelid_without_preload_content(
         self,
@@ -4767,7 +4629,6 @@ class CascadeApi:
         )
         return response_data.response
 
-
     def _cascade_transfer_pastel_ticket_to_another_pastelid_serialize(
         self,
         gateway_result_id,
@@ -4804,14 +4665,12 @@ class CascadeApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -4832,5 +4691,3 @@ class CascadeApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-

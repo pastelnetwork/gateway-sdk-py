@@ -71,8 +71,8 @@ class TestNftApi(BaseTestCase):
         """
         pass
 
-    def test_nft_get_originally_submitted_file(self) -> None:
-        """Test case for nft_get_originally_submitted_file
+    def test_nft_get_originally_submitted_file_from_result(self) -> None:
+        """Test case for nft_get_originally_submitted_file_from_result
 
         Get Originally Submitted File By Result Id
         """
@@ -99,8 +99,8 @@ class TestNftApi(BaseTestCase):
         """
         pass
 
-    def test_nft_get_parsed_dd_result_file_from_result_id(self) -> None:
-        """Test case for nft_get_parsed_dd_result_file_from_result_id
+    def test_nft_get_parsed_dd_result_file_from_result(self) -> None:
+        """Test case for nft_get_parsed_dd_result_file_from_result
 
         Get Parsed Dd Result File By Result Id
         """
@@ -113,8 +113,8 @@ class TestNftApi(BaseTestCase):
         """
         pass
 
-    def test_nft_get_pastel_activation_ticket_from_result_id(self) -> None:
-        """Test case for nft_get_pastel_activation_ticket_from_result_id
+    def test_nft_get_pastel_activation_ticket_from_result(self) -> None:
+        """Test case for nft_get_pastel_activation_ticket_from_result
 
         Get Pastel Nft Activation Ticket By Result Id
         """
@@ -127,15 +127,15 @@ class TestNftApi(BaseTestCase):
         """
         pass
 
-    def test_nft_get_pastel_registration_ticket_from_result_id(self) -> None:
-        """Test case for nft_get_pastel_registration_ticket_from_result_id
+    def test_nft_get_pastel_registration_ticket_from_result(self) -> None:
+        """Test case for nft_get_pastel_registration_ticket_from_result
 
         Get Pastel Nft Registration Ticket from Result Id
         """
         pass
 
-    def test_nft_get_pastel_ticket_from_media_file_hash(self) -> None:
-        """Test case for nft_get_pastel_ticket_from_media_file_hash
+    def test_nft_get_pastel_registration_ticket_from_media_file_hash(self) -> None:
+        """Test case for nft_get_pastel_registration_ticket_from_media_file_hash
 
         Get Pastel Ticket Data From Media File Hash
         """
@@ -169,22 +169,22 @@ class TestNftApi(BaseTestCase):
         """
         pass
 
-    def test_nft_get_raw_dd_result_file_from_result_id(self) -> None:
-        """Test case for nft_get_raw_dd_result_file_from_result_id
+    def test_nft_get_raw_dd_result_file_from_result(self) -> None:
+        """Test case for nft_get_raw_dd_result_file_from_result
 
         Get Raw Dd Result File By Result Id
         """
         pass
 
-    def test_nft_get_request_from_request_id(self) -> None:
-        """Test case for nft_get_request_from_request_id
+    def test_nft_get_request(self) -> None:
+        """Test case for nft_get_request
 
         Get Request By Request Id
         """
         pass
 
-    def test_nft_get_result_from_result_id(self) -> None:
-        """Test case for nft_get_result_from_result_id
+    def test_nft_get_result(self) -> None:
+        """Test case for nft_get_result
 
         Get Result By Result Id
         """
@@ -204,8 +204,8 @@ class TestNftApi(BaseTestCase):
         """
         pass
 
-    def test_nft_get_stored_file_from_result_id(self) -> None:
-        """Test case for nft_get_stored_file_from_result_id
+    def test_nft_get_stored_file_from_result(self) -> None:
+        """Test case for nft_get_stored_file_from_result
 
         Get Stored File By Result Id
         """

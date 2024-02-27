@@ -48,7 +48,6 @@ class CollectionApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-
     @validate_call
     async def collection_create_nft_collection(
         self,
@@ -146,7 +145,6 @@ class CollectionApi:
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     async def collection_create_nft_collection_with_http_info(
@@ -246,7 +244,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def collection_create_nft_collection_without_preload_content(
         self,
@@ -341,7 +338,6 @@ class CollectionApi:
         )
         return response_data.response
 
-
     def _collection_create_nft_collection_serialize(
         self,
         collection_name,
@@ -414,14 +410,12 @@ class CollectionApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -442,9 +436,6 @@ class CollectionApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def collection_create_sense_collection(
@@ -544,7 +535,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def collection_create_sense_collection_with_http_info(
         self,
@@ -643,7 +633,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def collection_create_sense_collection_without_preload_content(
         self,
@@ -738,7 +727,6 @@ class CollectionApi:
         )
         return response_data.response
 
-
     def _collection_create_sense_collection_serialize(
         self,
         collection_name,
@@ -811,14 +799,12 @@ class CollectionApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -839,9 +825,6 @@ class CollectionApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def collection_get_all_nft_collections(
@@ -904,7 +887,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def collection_get_all_nft_collections_with_http_info(
         self,
@@ -966,7 +948,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def collection_get_all_nft_collections_without_preload_content(
         self,
@@ -1024,7 +1005,6 @@ class CollectionApi:
         )
         return response_data.response
 
-
     def _collection_get_all_nft_collections_serialize(
         self,
         _request_auth,
@@ -1051,14 +1031,12 @@ class CollectionApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1079,9 +1057,6 @@ class CollectionApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def collection_get_all_sense_collections(
@@ -1144,7 +1119,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def collection_get_all_sense_collections_with_http_info(
         self,
@@ -1206,7 +1180,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def collection_get_all_sense_collections_without_preload_content(
         self,
@@ -1264,7 +1237,6 @@ class CollectionApi:
         )
         return response_data.response
 
-
     def _collection_get_all_sense_collections_serialize(
         self,
         _request_auth,
@@ -1291,14 +1263,12 @@ class CollectionApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1319,9 +1289,6 @@ class CollectionApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def collection_get_nft_collections_from_collection_id(
@@ -1389,7 +1356,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def collection_get_nft_collections_from_collection_id_with_http_info(
         self,
@@ -1456,7 +1422,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def collection_get_nft_collections_from_collection_id_without_preload_content(
         self,
@@ -1519,7 +1484,6 @@ class CollectionApi:
         )
         return response_data.response
 
-
     def _collection_get_nft_collections_from_collection_id_serialize(
         self,
         collection_id,
@@ -1577,9 +1541,6 @@ class CollectionApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def collection_get_sense_collections_from_collection_id(
@@ -1647,7 +1608,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def collection_get_sense_collections_from_collection_id_with_http_info(
         self,
@@ -1714,7 +1674,6 @@ class CollectionApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def collection_get_sense_collections_from_collection_id_without_preload_content(
         self,
@@ -1777,7 +1736,6 @@ class CollectionApi:
         )
         return response_data.response
 
-
     def _collection_get_sense_collections_from_collection_id_serialize(
         self,
         collection_id,
@@ -1807,14 +1765,12 @@ class CollectionApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [

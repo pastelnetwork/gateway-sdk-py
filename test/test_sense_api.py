@@ -64,8 +64,8 @@ class TestSenseApi(BaseTestCase):
         """
         pass
 
-    def test_sense_get_originally_submitted_file(self) -> None:
-        """Test case for sense_get_originally_submitted_file
+    def test_sense_get_originally_submitted_file_from_result(self) -> None:
+        """Test case for sense_get_originally_submitted_file_from_result
 
         Get Originally Submitted File By Result Id
         """
@@ -92,8 +92,8 @@ class TestSenseApi(BaseTestCase):
         """
         pass
 
-    def test_sense_get_parsed_output_file_from_result_id(self) -> None:
-        """Test case for sense_get_parsed_output_file_from_result_id
+    def test_sense_get_parsed_output_file_from_result(self) -> None:
+        """Test case for sense_get_parsed_output_file_from_result
 
         Get Parsed Output File By Result Id
         """
@@ -106,8 +106,8 @@ class TestSenseApi(BaseTestCase):
         """
         pass
 
-    def test_sense_get_pastel_activation_ticket_from_result_id(self) -> None:
-        """Test case for sense_get_pastel_activation_ticket_from_result_id
+    def test_sense_get_pastel_activation_ticket_from_result(self) -> None:
+        """Test case for sense_get_pastel_activation_ticket_from_result
 
         Get Pastel Sense Activation Ticket By Result Id
         """
@@ -120,15 +120,15 @@ class TestSenseApi(BaseTestCase):
         """
         pass
 
-    def test_sense_get_pastel_registration_ticket_from_result_id(self) -> None:
-        """Test case for sense_get_pastel_registration_ticket_from_result_id
+    def test_sense_get_pastel_registration_ticket_from_result(self) -> None:
+        """Test case for sense_get_pastel_registration_ticket_from_result
 
         Get Pastel Sense Registration Ticket From Result Id
         """
         pass
 
-    def test_sense_get_pastel_ticket_from_media_file_hash(self) -> None:
-        """Test case for sense_get_pastel_ticket_from_media_file_hash
+    def test_sense_get_pastel_registration_ticket_from_media_file_hash(self) -> None:
+        """Test case for sense_get_pastel_registration_ticket_from_media_file_hash
 
         Get Pastel Ticket Data From Media File Hash
         """
@@ -155,29 +155,29 @@ class TestSenseApi(BaseTestCase):
         """
         pass
 
-    def test_sense_get_raw_output_file_from_result_id(self) -> None:
-        """Test case for sense_get_raw_output_file_from_result_id
+    def test_sense_get_raw_output_file_from_result(self) -> None:
+        """Test case for sense_get_raw_output_file_from_result
 
         Get Raw Output File By Result Id
         """
         pass
 
-    def test_sense_get_request_from_id(self) -> None:
-        """Test case for sense_get_request_from_id
+    def test_sense_get_request(self) -> None:
+        """Test case for sense_get_request
 
         Get Request By Request Id
         """
         pass
 
-    def test_sense_get_result_from_id(self) -> None:
-        """Test case for sense_get_result_from_id
+    def test_sense_get_result(self) -> None:
+        """Test case for sense_get_result
 
         Get Result By Result Id
         """
         pass
 
-    def test_sense_submit_request(self) -> None:
-        """Test case for sense_submit_request
+    def test_sense_process_request(self) -> None:
+        """Test case for sense_process_request
 
         Process Request
         """

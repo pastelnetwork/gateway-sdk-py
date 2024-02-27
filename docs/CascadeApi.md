@@ -4,23 +4,26 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cascade_get_all_files_from_request**](CascadeApi.md#cascade_get_all_files_from_request) | **GET** /api/v1/cascade/all_files_from_request/{gateway_request_id} | Get All Files From Request
-[**cascade_get_all_pastel_registration_tickets_from_request**](CascadeApi.md#cascade_get_all_pastel_registration_tickets_from_request) | **GET** /api/v1/cascade/pastel_registration_tickets/{gateway_request_id} | Get All Pastel Cascade Registration Tickets From Request
+[**cascade_process_request**](CascadeApi.md#cascade_process_request) | **POST** /api/v1/cascade | Process Request
+
 [**cascade_get_all_requests**](CascadeApi.md#cascade_get_all_requests) | **GET** /api/v1/cascade/gateway_requests | Get All Requests
+[**cascade_get_request**](CascadeApi.md#cascade_get_request) | **GET** /api/v1/cascade/gateway_requests/{gateway_request_id} | Get Request From Request Id
 [**cascade_get_all_results**](CascadeApi.md#cascade_get_all_results) | **GET** /api/v1/cascade/gateway_results | Get All Results
-[**cascade_get_originally_submitted_file**](CascadeApi.md#cascade_get_originally_submitted_file) | **GET** /api/v1/cascade/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File By Result Id
+[**cascade_get_result**](CascadeApi.md#cascade_get_result) | **GET** /api/v1/cascade/gateway_results/{gateway_result_id} | Get Result From Result Id
+
+[**cascade_get_all_files_from_request**](CascadeApi.md#cascade_get_all_files_from_request) | **GET** /api/v1/cascade/all_files_from_request/{gateway_request_id} | Get All Files From Request
+[**cascade_get_stored_file_from_result**](CascadeApi.md#cascade_get_stored_file_from_result) | **GET** /api/v1/cascade/stored_file/{gateway_result_id} | Get Stored File By Result Id
+
+[**cascade_get_all_pastel_registration_tickets_from_request**](CascadeApi.md#cascade_get_all_pastel_registration_tickets_from_request) | **GET** /api/v1/cascade/pastel_registration_tickets/{gateway_request_id} | Get All Pastel Cascade Registration Tickets From Request
+[**cascade_get_originally_submitted_file_from_result**](CascadeApi.md#cascade_get_originally_submitted_file_from_result) | **GET** /api/v1/cascade/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File By Result Id
 [**cascade_get_pastel_activation_ticket_from_result**](CascadeApi.md#cascade_get_pastel_activation_ticket_from_result) | **GET** /api/v1/cascade/pastel_activation_ticket/{gateway_result_id} | Get Pastel Cascade Activation Ticket By Result Id
 [**cascade_get_pastel_activation_ticket_from_txid**](CascadeApi.md#cascade_get_pastel_activation_ticket_from_txid) | **GET** /api/v1/cascade/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket By Its Txid
 [**cascade_get_pastel_registration_ticket_from_result**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_result) | **GET** /api/v1/cascade/pastel_registration_ticket/{gateway_result_id} | Get Pastel Cascade Registration Ticket By Result Id
 [**cascade_get_pastel_registration_ticket_from_txid**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_txid) | **GET** /api/v1/cascade/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket By Its Txid
-[**cascade_get_pastel_ticket_from_stored_file_hash**](CascadeApi.md#cascade_get_pastel_ticket_from_stored_file_hash) | **GET** /api/v1/cascade/pastel_ticket_from_stored_file_hash/{stored_file_sha256_hash_as_hex} | Get Pastel Registration Ticket By Stored File Hash
+[**cascade_get_pastel_registration_ticket_from_stored_file_hash**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_stored_file_hash) | **GET** /api/v1/cascade/pastel_registration_ticket_from_stored_file_hash/{stored_file_sha256_hash_as_hex} | Get Pastel Registration Ticket By Stored File Hash
 [**cascade_get_public_stored_file_from_registration_ticket**](CascadeApi.md#cascade_get_public_stored_file_from_registration_ticket) | **GET** /api/v1/cascade/public_stored_file_from_registration_ticket/{registration_ticket_txid} | Get Public Stored File By Registration Ticket
-[**cascade_get_request**](CascadeApi.md#cascade_get_request) | **GET** /api/v1/cascade/gateway_requests/{gateway_request_id} | Get Request By Request Id
-[**cascade_get_result**](CascadeApi.md#cascade_get_result) | **GET** /api/v1/cascade/gateway_results/{gateway_result_id} | Get Result By Result Id
-[**cascade_get_stored_file**](CascadeApi.md#cascade_get_stored_file) | **GET** /api/v1/cascade/stored_file/{gateway_result_id} | Get Stored File By Result Id
 [**cascade_get_stored_file_from_activation_ticket**](CascadeApi.md#cascade_get_stored_file_from_activation_ticket) | **GET** /api/v1/cascade/stored_file_from_activation_ticket/{activation_ticket_txid} | Get Stored File By Activation Ticket
 [**cascade_get_stored_file_from_registration_ticket**](CascadeApi.md#cascade_get_stored_file_from_registration_ticket) | **GET** /api/v1/cascade/stored_file_from_registration_ticket/{registration_ticket_txid} | Get Stored File By Registration Ticket
-[**cascade_process_request**](CascadeApi.md#cascade_process_request) | **POST** /api/v1/cascade | Process Request
 [**cascade_transfer_pastel_ticket_to_another_pastelid**](CascadeApi.md#cascade_transfer_pastel_ticket_to_another_pastelid) | **GET** /api/v1/cascade/result/transfer_pastel_ticket | Transfer Pastel Ticket To Another Pastelid
 
 
@@ -354,8 +357,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cascade_get_originally_submitted_file**
-> object cascade_get_originally_submitted_file(gateway_result_id)
+# **cascade_get_originally_submitted_file_from_result**
+> object cascade_get_originally_submitted_file_from_result(gateway_result_id)
 
 Get Originally Submitted File By Result Id
 
@@ -395,11 +398,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Originally Submitted File By Result Id
-        api_response = await api_instance.cascade_get_originally_submitted_file(gateway_result_id)
-        print("The response of CascadeApi->cascade_get_originally_submitted_file:\n")
+        api_response = await api_instance.cascade_get_originally_submitted_file_from_result(gateway_result_id)
+        print("The response of CascadeApi->cascade_get_originally_submitted_file_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CascadeApi->cascade_get_originally_submitted_file: %s\n" % e)
+        print("Exception when calling CascadeApi->cascade_get_originally_submitted_file_from_result: %s\n" % e)
 ```
 
 
@@ -727,8 +730,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cascade_get_pastel_ticket_from_stored_file_hash**
-> object cascade_get_pastel_ticket_from_stored_file_hash(stored_file_sha256_hash_as_hex)
+# **cascade_get_pastel_registration_ticket_from_stored_file_hash**
+> object cascade_get_pastel_registration_ticket_from_stored_file_hash(stored_file_sha256_hash_as_hex)
 
 Get Pastel Registration Ticket By Stored File Hash
 
@@ -757,11 +760,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Registration Ticket By Stored File Hash
-        api_response = await api_instance.cascade_get_pastel_ticket_from_stored_file_hash(stored_file_sha256_hash_as_hex)
-        print("The response of CascadeApi->cascade_get_pastel_ticket_from_stored_file_hash:\n")
+        api_response = await api_instance.cascade_get_pastel_registration_ticket_from_stored_file_hash(stored_file_sha256_hash_as_hex)
+        print("The response of CascadeApi->cascade_get_pastel_registration_ticket_from_stored_file_hash:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CascadeApi->cascade_get_pastel_ticket_from_stored_file_hash: %s\n" % e)
+        print("Exception when calling CascadeApi->cascade_get_pastel_registration_ticket_from_stored_file_hash: %s\n" % e)
 ```
 
 
@@ -1025,8 +1028,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cascade_get_stored_file**
-> object cascade_get_stored_file(gateway_result_id)
+# **cascade_get_stored_file_from_result**
+> object cascade_get_stored_file_from_result(gateway_result_id)
 
 Get Stored File By Result Id
 
@@ -1066,11 +1069,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Stored File By Result Id
-        api_response = await api_instance.cascade_get_stored_file(gateway_result_id)
-        print("The response of CascadeApi->cascade_get_stored_file:\n")
+        api_response = await api_instance.cascade_get_stored_file_from_result(gateway_result_id)
+        print("The response of CascadeApi->cascade_get_stored_file_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CascadeApi->cascade_get_stored_file: %s\n" % e)
+        print("Exception when calling CascadeApi->cascade_get_stored_file_from_result: %s\n" % e)
 ```
 
 

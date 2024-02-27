@@ -10,26 +10,26 @@ Method | HTTP request | Description
 [**nft_get_all_raw_dd_result_files_from_request**](NftApi.md#nft_get_all_raw_dd_result_files_from_request) | **GET** /api/v1/nft/all_raw_dd_result_files_from_request/{gateway_request_id} | Get All Raw Dd Result Files From Request
 [**nft_get_all_requests**](NftApi.md#nft_get_all_requests) | **GET** /api/v1/nft/gateway_requests | Get All Requests
 [**nft_get_all_results**](NftApi.md#nft_get_all_results) | **GET** /api/v1/nft/gateway_results | Get All Results
-[**nft_get_originally_submitted_file_by_result_id**](NftApi.md#nft_get_originally_submitted_file_by_result_id) | **GET** /api/v1/nft/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File By Result Id
-[**nft_get_parsed_dd_result_file_by_activation_txid**](NftApi.md#nft_get_parsed_dd_result_file_by_activation_txid) | **GET** /api/v1/nft/parsed_dd_result_file_by_activation_txid/{activation_ticket_txid} | Get Parsed Dd Result File By Activation Txid
-[**nft_get_parsed_dd_result_file_by_pastel_id**](NftApi.md#nft_get_parsed_dd_result_file_by_pastel_id) | **GET** /api/v1/nft/parsed_dd_result_file_by_pastel_id/{pastel_id_of_user} | Get Parsed Dd Result File By Pastel Id
-[**nft_get_parsed_dd_result_file_by_registration_ticket**](NftApi.md#nft_get_parsed_dd_result_file_by_registration_ticket) | **GET** /api/v1/nft/parsed_dd_result_file_by_registration_ticket/{registration_ticket_txid} | Get Parsed Dd Result File By Registration Ticket
-[**nft_get_parsed_dd_result_file_by_result_id**](NftApi.md#nft_get_parsed_dd_result_file_by_result_id) | **GET** /api/v1/nft/parsed_dd_result_file/{gateway_result_id} | Get Parsed Dd Result File By Result Id
-[**nft_get_pastel_activation_ticket_by_its_txid**](NftApi.md#nft_get_pastel_activation_ticket_by_its_txid) | **GET** /api/v1/nft/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket By Its Txid
-[**nft_get_pastel_activation_ticket_by_result_id**](NftApi.md#nft_get_pastel_activation_ticket_by_result_id) | **GET** /api/v1/nft/pastel_activation_ticket/{gateway_result_id} | Get Pastel Nft Activation Ticket By Result Id
-[**nft_get_pastel_registration_ticket_by_its_txid**](NftApi.md#nft_get_pastel_registration_ticket_by_its_txid) | **GET** /api/v1/nft/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket By Its Txid
-[**nft_get_pastel_registration_ticket_by_result_id**](NftApi.md#nft_get_pastel_registration_ticket_by_result_id) | **GET** /api/v1/nft/pastel_registration_ticket/{gateway_result_id} | Get Pastel Nft Registration Ticket By Result Id
-[**nft_get_pastel_ticket_by_media_file_hash**](NftApi.md#nft_get_pastel_ticket_by_media_file_hash) | **GET** /api/v1/nft/pastel_ticket_by_media_file_hash/{media_file_sha256_hash} | Get Pastel Ticket Data From Media File Hash
-[**nft_get_public_stored_file_by_registration_ticket**](NftApi.md#nft_get_public_stored_file_by_registration_ticket) | **GET** /api/v1/nft/public_stored_file_from_registration_ticket/{registration_ticket_txid} | Get Public Stored File By Registration Ticket
-[**nft_get_raw_dd_result_file_by_activation_ticket**](NftApi.md#nft_get_raw_dd_result_file_by_activation_ticket) | **GET** /api/v1/nft/raw_dd_result_file_by_activation_ticket/{activation_ticket_txid} | Get Raw Dd Result File By Activation Ticket
-[**nft_get_raw_dd_result_file_by_pastel_id**](NftApi.md#nft_get_raw_dd_result_file_by_pastel_id) | **GET** /api/v1/nft/raw_dd_result_file_by_pastel_id/{pastel_id_of_user} | Get Raw Dd Result File By Pastel Id
-[**nft_get_raw_dd_result_file_by_registration_ticket**](NftApi.md#nft_get_raw_dd_result_file_by_registration_ticket) | **GET** /api/v1/nft/raw_dd_result_file_by_registration_ticket/{registration_ticket_txid} | Get Raw Dd Result File By Registration Ticket
-[**nft_get_raw_dd_result_file_by_result_id**](NftApi.md#nft_get_raw_dd_result_file_by_result_id) | **GET** /api/v1/nft/raw_dd_result_file/{gateway_result_id} | Get Raw Dd Result File By Result Id
-[**nft_get_request_by_request_id**](NftApi.md#nft_get_request_by_request_id) | **GET** /api/v1/nft/gateway_requests/{gateway_request_id} | Get Request By Request Id
-[**nft_get_result_by_result_id**](NftApi.md#nft_get_result_by_result_id) | **GET** /api/v1/nft/gateway_results/{gateway_result_id} | Get Result By Result Id
-[**nft_get_stored_file_by_activation_ticket**](NftApi.md#nft_get_stored_file_by_activation_ticket) | **GET** /api/v1/nft/stored_file_from_activation_ticket/{activation_ticket_txid} | Get Stored File By Activation Ticket
-[**nft_get_stored_file_by_registration_ticket**](NftApi.md#nft_get_stored_file_by_registration_ticket) | **GET** /api/v1/nft/stored_file_from_registration_ticket/{registration_ticket_txid} | Get Stored File By Registration Ticket
-[**nft_get_stored_file_by_result_id**](NftApi.md#nft_get_stored_file_by_result_id) | **GET** /api/v1/nft/stored_file/{gateway_result_id} | Get Stored File By Result Id
+[**nft_get_originally_submitted_file_from_result_from_result**](NftApi.md#nft_get_originally_submitted_file_from_result_from_result) | **GET** /api/v1/nft/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File By Result Id
+[**nft_get_parsed_dd_result_file_from_activation_ticket**](NftApi.md#nft_get_parsed_dd_result_file_from_activation_ticket) | **GET** /api/v1/nft/parsed_dd_result_file_from_activation_ticket/{activation_ticket_txid} | Get Parsed Dd Result File By Activation Txid
+[**nft_get_parsed_dd_result_file_from_pastel_id**](NftApi.md#nft_get_parsed_dd_result_file_from_pastel_id) | **GET** /api/v1/nft/parsed_dd_result_file_from_pastel_id/{pastel_id_of_user} | Get Parsed Dd Result File By Pastel Id
+[**nft_get_parsed_dd_result_file_from_registration_ticket**](NftApi.md#nft_get_parsed_dd_result_file_from_registration_ticket) | **GET** /api/v1/nft/parsed_dd_result_file_from_registration_ticket/{registration_ticket_txid} | Get Parsed Dd Result File By Registration Ticket
+[**nft_get_parsed_dd_result_file_from_result**](NftApi.md#nft_get_parsed_dd_result_file_from_result) | **GET** /api/v1/nft/parsed_dd_result_file/{gateway_result_id} | Get Parsed Dd Result File By Result Id
+[**nft_get_pastel_activation_ticket_from_txid**](NftApi.md#nft_get_pastel_activation_ticket_from_txid) | **GET** /api/v1/nft/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket By Its Txid
+[**nft_get_pastel_activation_ticket_from_result**](NftApi.md#nft_get_pastel_activation_ticket_from_result) | **GET** /api/v1/nft/pastel_activation_ticket/{gateway_result_id} | Get Pastel Nft Activation Ticket By Result Id
+[**nft_get_pastel_registration_ticket_from_txid**](NftApi.md#nft_get_pastel_registration_ticket_from_txid) | **GET** /api/v1/nft/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket By Its Txid
+[**nft_get_pastel_registration_ticket_from_result**](NftApi.md#nft_get_pastel_registration_ticket_from_result) | **GET** /api/v1/nft/pastel_registration_ticket/{gateway_result_id} | Get Pastel Nft Registration Ticket By Result Id
+[**nft_get_pastel_registration_ticket_from_media_file_hash**](NftApi.md#nft_get_pastel_registration_ticket_from_media_file_hash) | **GET** /api/v1/nft/pastel_registration_ticket_from_media_file_hash/{media_file_sha256_hash} | Get Pastel Ticket Data From Media File Hash
+[**nft_get_public_stored_file_from_registration_ticket**](NftApi.md#nft_get_public_stored_file_from_registration_ticket) | **GET** /api/v1/nft/public_stored_file_from_registration_ticket/{registration_ticket_txid} | Get Public Stored File By Registration Ticket
+[**nft_get_raw_dd_result_file_from_activation_ticket**](NftApi.md#nft_get_raw_dd_result_file_from_activation_ticket) | **GET** /api/v1/nft/raw_dd_result_file_from_activation_ticket/{activation_ticket_txid} | Get Raw Dd Result File By Activation Ticket
+[**nft_get_raw_dd_result_file_from_pastel_id**](NftApi.md#nft_get_raw_dd_result_file_from_pastel_id) | **GET** /api/v1/nft/raw_dd_result_file_from_pastel_id/{pastel_id_of_user} | Get Raw Dd Result File By Pastel Id
+[**nft_get_raw_dd_result_file_from_registration_ticket**](NftApi.md#nft_get_raw_dd_result_file_from_registration_ticket) | **GET** /api/v1/nft/raw_dd_result_file_from_registration_ticket/{registration_ticket_txid} | Get Raw Dd Result File By Registration Ticket
+[**nft_get_raw_dd_result_file_from_result**](NftApi.md#nft_get_raw_dd_result_file_from_result) | **GET** /api/v1/nft/raw_dd_result_file/{gateway_result_id} | Get Raw Dd Result File By Result Id
+[**nft_get_request**](NftApi.md#nft_get_request) | **GET** /api/v1/nft/gateway_requests/{gateway_request_id} | Get Request By Request Id
+[**nft_get_result**](NftApi.md#nft_get_result) | **GET** /api/v1/nft/gateway_results/{gateway_result_id} | Get Result By Result Id
+[**nft_get_stored_file_from_activation_ticket**](NftApi.md#nft_get_stored_file_from_activation_ticket) | **GET** /api/v1/nft/stored_file_from_activation_ticket/{activation_ticket_txid} | Get Stored File By Activation Ticket
+[**nft_get_stored_file_from_registration_ticket**](NftApi.md#nft_get_stored_file_from_registration_ticket) | **GET** /api/v1/nft/stored_file_from_registration_ticket/{registration_ticket_txid} | Get Stored File By Registration Ticket
+[**nft_get_stored_file_from_result**](NftApi.md#nft_get_stored_file_from_result) | **GET** /api/v1/nft/stored_file/{gateway_result_id} | Get Stored File By Result Id
 [**nft_process_request**](NftApi.md#nft_process_request) | **POST** /api/v1/nft | Process Request
 [**nft_step1_upload_image_file**](NftApi.md#nft_step1_upload_image_file) | **POST** /api/v1/nft/step_1_upload_image_file | Step 1 Upload Image File
 [**nft_step2_process_nft**](NftApi.md#nft_step2_process_nft) | **POST** /api/v1/nft/step_2_process_nft | Step 2 Process Nft
@@ -522,8 +522,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_originally_submitted_file_by_result_id**
-> object nft_get_originally_submitted_file_by_result_id(gateway_result_id)
+# **nft_get_originally_submitted_file_from_result_from_result**
+> object nft_get_originally_submitted_file_from_result_from_result(gateway_result_id)
 
 Get Originally Submitted File By Result Id
 
@@ -563,11 +563,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Originally Submitted File By Result Id
-        api_response = await api_instance.nft_get_originally_submitted_file_by_result_id(gateway_result_id)
-        print("The response of NftApi->nft_get_originally_submitted_file_by_result_id:\n")
+        api_response = await api_instance.nft_get_originally_submitted_file_from_result_from_result(gateway_result_id)
+        print("The response of NftApi->nft_get_originally_submitted_file_from_result_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_originally_submitted_file_by_result_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_originally_submitted_file_from_result_from_result: %s\n" % e)
 ```
 
 
@@ -601,8 +601,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_parsed_dd_result_file_by_activation_txid**
-> object nft_get_parsed_dd_result_file_by_activation_txid(activation_ticket_txid)
+# **nft_get_parsed_dd_result_file_from_activation_ticket**
+> object nft_get_parsed_dd_result_file_from_activation_ticket(activation_ticket_txid)
 
 Get Parsed Dd Result File By Activation Txid
 
@@ -631,11 +631,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Parsed Dd Result File By Activation Txid
-        api_response = await api_instance.nft_get_parsed_dd_result_file_by_activation_txid(activation_ticket_txid)
-        print("The response of NftApi->nft_get_parsed_dd_result_file_by_activation_txid:\n")
+        api_response = await api_instance.nft_get_parsed_dd_result_file_from_activation_ticket(activation_ticket_txid)
+        print("The response of NftApi->nft_get_parsed_dd_result_file_from_activation_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_parsed_dd_result_file_by_activation_txid: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_parsed_dd_result_file_from_activation_ticket: %s\n" % e)
 ```
 
 
@@ -669,8 +669,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_parsed_dd_result_file_by_pastel_id**
-> object nft_get_parsed_dd_result_file_by_pastel_id(pastel_id_of_user)
+# **nft_get_parsed_dd_result_file_from_pastel_id**
+> object nft_get_parsed_dd_result_file_from_pastel_id(pastel_id_of_user)
 
 Get Parsed Dd Result File By Pastel Id
 
@@ -699,11 +699,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Parsed Dd Result File By Pastel Id
-        api_response = await api_instance.nft_get_parsed_dd_result_file_by_pastel_id(pastel_id_of_user)
-        print("The response of NftApi->nft_get_parsed_dd_result_file_by_pastel_id:\n")
+        api_response = await api_instance.nft_get_parsed_dd_result_file_from_pastel_id(pastel_id_of_user)
+        print("The response of NftApi->nft_get_parsed_dd_result_file_from_pastel_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_parsed_dd_result_file_by_pastel_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_parsed_dd_result_file_from_pastel_id: %s\n" % e)
 ```
 
 
@@ -737,8 +737,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_parsed_dd_result_file_by_registration_ticket**
-> object nft_get_parsed_dd_result_file_by_registration_ticket(registration_ticket_txid)
+# **nft_get_parsed_dd_result_file_from_registration_ticket**
+> object nft_get_parsed_dd_result_file_from_registration_ticket(registration_ticket_txid)
 
 Get Parsed Dd Result File By Registration Ticket
 
@@ -767,11 +767,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Parsed Dd Result File By Registration Ticket
-        api_response = await api_instance.nft_get_parsed_dd_result_file_by_registration_ticket(registration_ticket_txid)
-        print("The response of NftApi->nft_get_parsed_dd_result_file_by_registration_ticket:\n")
+        api_response = await api_instance.nft_get_parsed_dd_result_file_from_registration_ticket(registration_ticket_txid)
+        print("The response of NftApi->nft_get_parsed_dd_result_file_from_registration_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_parsed_dd_result_file_by_registration_ticket: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_parsed_dd_result_file_from_registration_ticket: %s\n" % e)
 ```
 
 
@@ -805,8 +805,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_parsed_dd_result_file_by_result_id**
-> object nft_get_parsed_dd_result_file_by_result_id(gateway_result_id)
+# **nft_get_parsed_dd_result_file_from_result**
+> object nft_get_parsed_dd_result_file_from_result(gateway_result_id)
 
 Get Parsed Dd Result File By Result Id
 
@@ -846,11 +846,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Parsed Dd Result File By Result Id
-        api_response = await api_instance.nft_get_parsed_dd_result_file_by_result_id(gateway_result_id)
-        print("The response of NftApi->nft_get_parsed_dd_result_file_by_result_id:\n")
+        api_response = await api_instance.nft_get_parsed_dd_result_file_from_result(gateway_result_id)
+        print("The response of NftApi->nft_get_parsed_dd_result_file_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_parsed_dd_result_file_by_result_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_parsed_dd_result_file_from_result: %s\n" % e)
 ```
 
 
@@ -884,8 +884,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_pastel_activation_ticket_by_its_txid**
-> object nft_get_pastel_activation_ticket_by_its_txid(activation_ticket_txid)
+# **nft_get_pastel_activation_ticket_from_txid**
+> object nft_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
 
 Get Pastel Activation Ticket By Its Txid
 
@@ -914,11 +914,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Activation Ticket By Its Txid
-        api_response = await api_instance.nft_get_pastel_activation_ticket_by_its_txid(activation_ticket_txid)
-        print("The response of NftApi->nft_get_pastel_activation_ticket_by_its_txid:\n")
+        api_response = await api_instance.nft_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
+        print("The response of NftApi->nft_get_pastel_activation_ticket_from_txid:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_pastel_activation_ticket_by_its_txid: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_pastel_activation_ticket_from_txid: %s\n" % e)
 ```
 
 
@@ -952,8 +952,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_pastel_activation_ticket_by_result_id**
-> object nft_get_pastel_activation_ticket_by_result_id(gateway_result_id)
+# **nft_get_pastel_activation_ticket_from_result**
+> object nft_get_pastel_activation_ticket_from_result(gateway_result_id)
 
 Get Pastel Nft Activation Ticket By Result Id
 
@@ -993,11 +993,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Nft Activation Ticket By Result Id
-        api_response = await api_instance.nft_get_pastel_activation_ticket_by_result_id(gateway_result_id)
-        print("The response of NftApi->nft_get_pastel_activation_ticket_by_result_id:\n")
+        api_response = await api_instance.nft_get_pastel_activation_ticket_from_result(gateway_result_id)
+        print("The response of NftApi->nft_get_pastel_activation_ticket_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_pastel_activation_ticket_by_result_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_pastel_activation_ticket_from_result: %s\n" % e)
 ```
 
 
@@ -1031,8 +1031,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_pastel_registration_ticket_by_its_txid**
-> object nft_get_pastel_registration_ticket_by_its_txid(registration_ticket_txid)
+# **nft_get_pastel_registration_ticket_from_txid**
+> object nft_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
 
 Get Pastel Registration Ticket By Its Txid
 
@@ -1061,11 +1061,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Registration Ticket By Its Txid
-        api_response = await api_instance.nft_get_pastel_registration_ticket_by_its_txid(registration_ticket_txid)
-        print("The response of NftApi->nft_get_pastel_registration_ticket_by_its_txid:\n")
+        api_response = await api_instance.nft_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
+        print("The response of NftApi->nft_get_pastel_registration_ticket_from_txid:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_pastel_registration_ticket_by_its_txid: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_pastel_registration_ticket_from_txid: %s\n" % e)
 ```
 
 
@@ -1099,8 +1099,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_pastel_registration_ticket_by_result_id**
-> object nft_get_pastel_registration_ticket_by_result_id(gateway_result_id)
+# **nft_get_pastel_registration_ticket_from_result**
+> object nft_get_pastel_registration_ticket_from_result(gateway_result_id)
 
 Get Pastel Nft Registration Ticket By Result Id
 
@@ -1140,11 +1140,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Nft Registration Ticket By Result Id
-        api_response = await api_instance.nft_get_pastel_registration_ticket_by_result_id(gateway_result_id)
-        print("The response of NftApi->nft_get_pastel_registration_ticket_by_result_id:\n")
+        api_response = await api_instance.nft_get_pastel_registration_ticket_from_result(gateway_result_id)
+        print("The response of NftApi->nft_get_pastel_registration_ticket_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_pastel_registration_ticket_by_result_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_pastel_registration_ticket_from_result: %s\n" % e)
 ```
 
 
@@ -1178,8 +1178,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_pastel_ticket_by_media_file_hash**
-> object nft_get_pastel_ticket_by_media_file_hash(media_file_sha256_hash)
+# **nft_get_pastel_registration_ticket_from_media_file_hash**
+> object nft_get_pastel_registration_ticket_from_media_file_hash(media_file_sha256_hash)
 
 Get Pastel Ticket Data From Media File Hash
 
@@ -1208,11 +1208,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Pastel Ticket Data From Media File Hash
-        api_response = await api_instance.nft_get_pastel_ticket_by_media_file_hash(media_file_sha256_hash)
-        print("The response of NftApi->nft_get_pastel_ticket_by_media_file_hash:\n")
+        api_response = await api_instance.nft_get_pastel_registration_ticket_from_media_file_hash(media_file_sha256_hash)
+        print("The response of NftApi->nft_get_pastel_registration_ticket_from_media_file_hash:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_pastel_ticket_by_media_file_hash: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_pastel_registration_ticket_from_media_file_hash: %s\n" % e)
 ```
 
 
@@ -1246,8 +1246,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_public_stored_file_by_registration_ticket**
-> object nft_get_public_stored_file_by_registration_ticket(registration_ticket_txid)
+# **nft_get_public_stored_file_from_registration_ticket**
+> object nft_get_public_stored_file_from_registration_ticket(registration_ticket_txid)
 
 Get Public Stored File By Registration Ticket
 
@@ -1276,11 +1276,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Public Stored File By Registration Ticket
-        api_response = await api_instance.nft_get_public_stored_file_by_registration_ticket(registration_ticket_txid)
-        print("The response of NftApi->nft_get_public_stored_file_by_registration_ticket:\n")
+        api_response = await api_instance.nft_get_public_stored_file_from_registration_ticket(registration_ticket_txid)
+        print("The response of NftApi->nft_get_public_stored_file_from_registration_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_public_stored_file_by_registration_ticket: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_public_stored_file_from_registration_ticket: %s\n" % e)
 ```
 
 
@@ -1314,8 +1314,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_raw_dd_result_file_by_activation_ticket**
-> object nft_get_raw_dd_result_file_by_activation_ticket(activation_ticket_txid)
+# **nft_get_raw_dd_result_file_from_activation_ticket**
+> object nft_get_raw_dd_result_file_from_activation_ticket(activation_ticket_txid)
 
 Get Raw Dd Result File By Activation Ticket
 
@@ -1344,11 +1344,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Raw Dd Result File By Activation Ticket
-        api_response = await api_instance.nft_get_raw_dd_result_file_by_activation_ticket(activation_ticket_txid)
-        print("The response of NftApi->nft_get_raw_dd_result_file_by_activation_ticket:\n")
+        api_response = await api_instance.nft_get_raw_dd_result_file_from_activation_ticket(activation_ticket_txid)
+        print("The response of NftApi->nft_get_raw_dd_result_file_from_activation_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_raw_dd_result_file_by_activation_ticket: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_raw_dd_result_file_from_activation_ticket: %s\n" % e)
 ```
 
 
@@ -1382,8 +1382,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_raw_dd_result_file_by_pastel_id**
-> object nft_get_raw_dd_result_file_by_pastel_id(pastel_id_of_user)
+# **nft_get_raw_dd_result_file_from_pastel_id**
+> object nft_get_raw_dd_result_file_from_pastel_id(pastel_id_of_user)
 
 Get Raw Dd Result File By Pastel Id
 
@@ -1412,11 +1412,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Raw Dd Result File By Pastel Id
-        api_response = await api_instance.nft_get_raw_dd_result_file_by_pastel_id(pastel_id_of_user)
-        print("The response of NftApi->nft_get_raw_dd_result_file_by_pastel_id:\n")
+        api_response = await api_instance.nft_get_raw_dd_result_file_from_pastel_id(pastel_id_of_user)
+        print("The response of NftApi->nft_get_raw_dd_result_file_from_pastel_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_raw_dd_result_file_by_pastel_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_raw_dd_result_file_from_pastel_id: %s\n" % e)
 ```
 
 
@@ -1450,8 +1450,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_raw_dd_result_file_by_registration_ticket**
-> object nft_get_raw_dd_result_file_by_registration_ticket(registration_ticket_txid)
+# **nft_get_raw_dd_result_file_from_registration_ticket**
+> object nft_get_raw_dd_result_file_from_registration_ticket(registration_ticket_txid)
 
 Get Raw Dd Result File By Registration Ticket
 
@@ -1480,11 +1480,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Raw Dd Result File By Registration Ticket
-        api_response = await api_instance.nft_get_raw_dd_result_file_by_registration_ticket(registration_ticket_txid)
-        print("The response of NftApi->nft_get_raw_dd_result_file_by_registration_ticket:\n")
+        api_response = await api_instance.nft_get_raw_dd_result_file_from_registration_ticket(registration_ticket_txid)
+        print("The response of NftApi->nft_get_raw_dd_result_file_from_registration_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_raw_dd_result_file_by_registration_ticket: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_raw_dd_result_file_from_registration_ticket: %s\n" % e)
 ```
 
 
@@ -1518,8 +1518,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_raw_dd_result_file_by_result_id**
-> object nft_get_raw_dd_result_file_by_result_id(gateway_result_id)
+# **nft_get_raw_dd_result_file_from_result**
+> object nft_get_raw_dd_result_file_from_result(gateway_result_id)
 
 Get Raw Dd Result File By Result Id
 
@@ -1559,11 +1559,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Raw Dd Result File By Result Id
-        api_response = await api_instance.nft_get_raw_dd_result_file_by_result_id(gateway_result_id)
-        print("The response of NftApi->nft_get_raw_dd_result_file_by_result_id:\n")
+        api_response = await api_instance.nft_get_raw_dd_result_file_from_result(gateway_result_id)
+        print("The response of NftApi->nft_get_raw_dd_result_file_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_raw_dd_result_file_by_result_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_raw_dd_result_file_from_result: %s\n" % e)
 ```
 
 
@@ -1597,8 +1597,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_request_by_request_id**
-> RequestResult nft_get_request_by_request_id(gateway_request_id)
+# **nft_get_request**
+> RequestResult nft_get_request(gateway_request_id)
 
 Get Request By Request Id
 
@@ -1639,11 +1639,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Request By Request Id
-        api_response = await api_instance.nft_get_request_by_request_id(gateway_request_id)
-        print("The response of NftApi->nft_get_request_by_request_id:\n")
+        api_response = await api_instance.nft_get_request(gateway_request_id)
+        print("The response of NftApi->nft_get_request:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_request_by_request_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_request: %s\n" % e)
 ```
 
 
@@ -1677,8 +1677,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_result_by_result_id**
-> ResultRegistrationResult nft_get_result_by_result_id(gateway_result_id)
+# **nft_get_result**
+> ResultRegistrationResult nft_get_result(gateway_result_id)
 
 Get Result By Result Id
 
@@ -1719,11 +1719,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Result By Result Id
-        api_response = await api_instance.nft_get_result_by_result_id(gateway_result_id)
-        print("The response of NftApi->nft_get_result_by_result_id:\n")
+        api_response = await api_instance.nft_get_result(gateway_result_id)
+        print("The response of NftApi->nft_get_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_result_by_result_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_result: %s\n" % e)
 ```
 
 
@@ -1757,8 +1757,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_stored_file_by_activation_ticket**
-> object nft_get_stored_file_by_activation_ticket(activation_ticket_txid)
+# **nft_get_stored_file_from_activation_ticket**
+> object nft_get_stored_file_from_activation_ticket(activation_ticket_txid)
 
 Get Stored File By Activation Ticket
 
@@ -1798,11 +1798,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Stored File By Activation Ticket
-        api_response = await api_instance.nft_get_stored_file_by_activation_ticket(activation_ticket_txid)
-        print("The response of NftApi->nft_get_stored_file_by_activation_ticket:\n")
+        api_response = await api_instance.nft_get_stored_file_from_activation_ticket(activation_ticket_txid)
+        print("The response of NftApi->nft_get_stored_file_from_activation_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_stored_file_by_activation_ticket: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_stored_file_from_activation_ticket: %s\n" % e)
 ```
 
 
@@ -1836,8 +1836,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_stored_file_by_registration_ticket**
-> object nft_get_stored_file_by_registration_ticket(registration_ticket_txid)
+# **nft_get_stored_file_from_registration_ticket**
+> object nft_get_stored_file_from_registration_ticket(registration_ticket_txid)
 
 Get Stored File By Registration Ticket
 
@@ -1877,11 +1877,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Stored File By Registration Ticket
-        api_response = await api_instance.nft_get_stored_file_by_registration_ticket(registration_ticket_txid)
-        print("The response of NftApi->nft_get_stored_file_by_registration_ticket:\n")
+        api_response = await api_instance.nft_get_stored_file_from_registration_ticket(registration_ticket_txid)
+        print("The response of NftApi->nft_get_stored_file_from_registration_ticket:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_stored_file_by_registration_ticket: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_stored_file_from_registration_ticket: %s\n" % e)
 ```
 
 
@@ -1915,8 +1915,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **nft_get_stored_file_by_result_id**
-> object nft_get_stored_file_by_result_id(gateway_result_id)
+# **nft_get_stored_file_from_result**
+> object nft_get_stored_file_from_result(gateway_result_id)
 
 Get Stored File By Result Id
 
@@ -1956,11 +1956,11 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
     try:
         # Get Stored File By Result Id
-        api_response = await api_instance.nft_get_stored_file_by_result_id(gateway_result_id)
-        print("The response of NftApi->nft_get_stored_file_by_result_id:\n")
+        api_response = await api_instance.nft_get_stored_file_from_result(gateway_result_id)
+        print("The response of NftApi->nft_get_stored_file_from_result:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NftApi->nft_get_stored_file_by_result_id: %s\n" % e)
+        print("Exception when calling NftApi->nft_get_stored_file_from_result: %s\n" % e)
 ```
 
 

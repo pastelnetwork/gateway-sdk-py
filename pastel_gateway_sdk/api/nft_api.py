@@ -51,7 +51,6 @@ class NftApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-
     @validate_call
     async def nft_get_all_files_from_request(
         self,
@@ -96,7 +95,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_files_from_request_id_serialize(
+        _param = self._nft_get_all_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -118,9 +117,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_all_files_from_request_id_with_http_info(
+    async def nft_get_all_files_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -163,7 +161,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_files_from_request_id_serialize(
+        _param = self._nft_get_all_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -185,9 +183,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_all_files_from_request_id_without_preload_content(
+    async def nft_get_all_files_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -230,7 +227,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_files_from_request_id_serialize(
+        _param = self._nft_get_all_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -248,8 +245,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_all_files_from_request_id_serialize(
+    def _nft_get_all_files_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -278,14 +274,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -306,9 +300,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_all_parsed_dd_result_files_from_request(
@@ -354,7 +345,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_parsed_dd_result_files_from_request_id_serialize(
+        _param = self._nft_get_all_parsed_dd_result_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -376,9 +367,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_all_parsed_dd_result_files_from_request_id_with_http_info(
+    async def nft_get_all_parsed_dd_result_files_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -421,7 +411,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_parsed_dd_result_files_from_request_id_serialize(
+        _param = self._nft_get_all_parsed_dd_result_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -443,9 +433,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_all_parsed_dd_result_files_from_request_id_without_preload_content(
+    async def nft_get_all_parsed_dd_result_files_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -488,7 +477,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_parsed_dd_result_files_from_request_id_serialize(
+        _param = self._nft_get_all_parsed_dd_result_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -506,8 +495,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_all_parsed_dd_result_files_from_request_id_serialize(
+    def _nft_get_all_parsed_dd_result_files_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -536,14 +524,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -564,9 +550,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_all_pastel_registration_tickets_from_request(
@@ -612,7 +595,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._nft_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -634,9 +617,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_all_pastel_registration_tickets_from_request_id_with_http_info(
+    async def nft_get_all_pastel_registration_tickets_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -679,7 +661,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._nft_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -701,9 +683,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_all_pastel_registration_tickets_from_request_id_without_preload_content(
+    async def nft_get_all_pastel_registration_tickets_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -746,7 +727,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_pastel_registration_tickets_from_request_id_serialize(
+        _param = self._nft_get_all_pastel_registration_tickets_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -764,8 +745,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_all_pastel_registration_tickets_from_request_id_serialize(
+    def _nft_get_all_pastel_registration_tickets_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -794,14 +774,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -822,9 +800,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_all_raw_dd_result_files_from_request(
@@ -870,7 +845,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_raw_dd_result_files_from_request_id_serialize(
+        _param = self._nft_get_all_raw_dd_result_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -892,9 +867,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_all_raw_dd_result_files_from_request_id_with_http_info(
+    async def nft_get_all_raw_dd_result_files_from_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -937,7 +911,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_raw_dd_result_files_from_request_id_serialize(
+        _param = self._nft_get_all_raw_dd_result_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -959,9 +933,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_all_raw_dd_result_files_from_request_id_without_preload_content(
+    async def nft_get_all_raw_dd_result_files_from_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -1004,7 +977,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_all_raw_dd_result_files_from_request_id_serialize(
+        _param = self._nft_get_all_raw_dd_result_files_from_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1022,8 +995,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_all_raw_dd_result_files_from_request_id_serialize(
+    def _nft_get_all_raw_dd_result_files_from_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -1052,14 +1024,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1080,9 +1050,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_all_requests(
@@ -1158,7 +1125,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_all_requests_with_http_info(
         self,
@@ -1233,7 +1199,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_all_requests_without_preload_content(
         self,
@@ -1304,7 +1269,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_all_requests_serialize(
         self,
         status_requested,
@@ -1346,14 +1310,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1374,9 +1336,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_all_results(
@@ -1452,7 +1411,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_all_results_with_http_info(
         self,
@@ -1527,7 +1485,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_all_results_without_preload_content(
         self,
@@ -1598,7 +1555,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_all_results_serialize(
         self,
         status_requested,
@@ -1640,14 +1596,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1669,11 +1623,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_originally_submitted_file(
+    async def nft_get_originally_submitted_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1716,7 +1667,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_originally_submitted_file_serialize(
+        _param = self._nft_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1738,9 +1689,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_originally_submitted_file_with_http_info(
+    async def nft_get_originally_submitted_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1783,7 +1733,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_originally_submitted_file_serialize(
+        _param = self._nft_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1805,9 +1755,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_originally_submitted_file_without_preload_content(
+    async def nft_get_originally_submitted_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -1850,7 +1799,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_originally_submitted_file_serialize(
+        _param = self._nft_get_originally_submitted_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1868,8 +1817,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_originally_submitted_file_serialize(
+    def _nft_get_originally_submitted_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -1898,14 +1846,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -1926,9 +1872,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_parsed_dd_result_file_from_activation_ticket(
@@ -1996,7 +1939,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_parsed_dd_result_file_from_activation_ticket_with_http_info(
         self,
@@ -2063,7 +2005,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_parsed_dd_result_file_from_activation_ticket_without_preload_content(
         self,
@@ -2126,7 +2067,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_parsed_dd_result_file_from_activation_ticket_serialize(
         self,
         activation_ticket_txid,
@@ -2156,14 +2096,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2183,9 +2121,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_parsed_dd_result_file_from_pastel_id(
@@ -2253,7 +2188,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_parsed_dd_result_file_from_pastel_id_with_http_info(
         self,
@@ -2320,7 +2254,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_parsed_dd_result_file_from_pastel_id_without_preload_content(
         self,
@@ -2383,7 +2316,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_parsed_dd_result_file_from_pastel_id_serialize(
         self,
         pastel_id_of_user,
@@ -2413,14 +2345,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2440,9 +2370,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_parsed_dd_result_file_from_registration_ticket(
@@ -2510,7 +2437,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_parsed_dd_result_file_from_registration_ticket_with_http_info(
         self,
@@ -2577,7 +2503,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_parsed_dd_result_file_from_registration_ticket_without_preload_content(
         self,
@@ -2640,7 +2565,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_parsed_dd_result_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
@@ -2670,14 +2594,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2698,11 +2620,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_parsed_dd_result_file_from_result_id(
+    async def nft_get_parsed_dd_result_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2745,7 +2664,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_parsed_dd_result_file_from_result_id_serialize(
+        _param = self._nft_get_parsed_dd_result_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2767,9 +2686,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_parsed_dd_result_file_from_result_id_with_http_info(
+    async def nft_get_parsed_dd_result_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2812,7 +2730,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_parsed_dd_result_file_from_result_id_serialize(
+        _param = self._nft_get_parsed_dd_result_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2834,9 +2752,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_parsed_dd_result_file_from_result_id_without_preload_content(
+    async def nft_get_parsed_dd_result_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -2879,7 +2796,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_parsed_dd_result_file_from_result_id_serialize(
+        _param = self._nft_get_parsed_dd_result_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2897,8 +2814,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_parsed_dd_result_file_from_result_id_serialize(
+    def _nft_get_parsed_dd_result_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -2927,14 +2843,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -2955,9 +2869,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_pastel_activation_ticket_from_txid(
@@ -3025,7 +2936,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_pastel_activation_ticket_from_txid_with_http_info(
         self,
@@ -3092,7 +3002,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_pastel_activation_ticket_from_txid_without_preload_content(
         self,
@@ -3155,7 +3064,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_pastel_activation_ticket_from_txid_serialize(
         self,
         activation_ticket_txid,
@@ -3185,14 +3093,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3213,11 +3119,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_pastel_activation_ticket_from_result_id(
+    async def nft_get_pastel_activation_ticket_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3260,7 +3163,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._nft_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3282,9 +3185,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_pastel_activation_ticket_from_result_id_with_http_info(
+    async def nft_get_pastel_activation_ticket_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3327,7 +3229,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._nft_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3349,9 +3251,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_pastel_activation_ticket_from_result_id_without_preload_content(
+    async def nft_get_pastel_activation_ticket_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3394,7 +3295,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_activation_ticket_from_result_id_serialize(
+        _param = self._nft_get_pastel_activation_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3412,8 +3313,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_pastel_activation_ticket_from_result_id_serialize(
+    def _nft_get_pastel_activation_ticket_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -3442,14 +3342,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3470,9 +3368,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_pastel_registration_ticket_from_txid(
@@ -3540,7 +3435,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_pastel_registration_ticket_from_txid_with_http_info(
         self,
@@ -3607,7 +3501,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_pastel_registration_ticket_from_txid_without_preload_content(
         self,
@@ -3670,7 +3563,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_pastel_registration_ticket_from_txid_serialize(
         self,
         registration_ticket_txid,
@@ -3700,14 +3592,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3728,11 +3618,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_pastel_registration_ticket_from_result_id(
+    async def nft_get_pastel_registration_ticket_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3775,7 +3662,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._nft_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3797,9 +3684,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_pastel_registration_ticket_from_result_id_with_http_info(
+    async def nft_get_pastel_registration_ticket_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3842,7 +3728,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._nft_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3864,9 +3750,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_pastel_registration_ticket_from_result_id_without_preload_content(
+    async def nft_get_pastel_registration_ticket_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -3909,7 +3794,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_registration_ticket_from_result_id_serialize(
+        _param = self._nft_get_pastel_registration_ticket_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3927,8 +3812,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_pastel_registration_ticket_from_result_id_serialize(
+    def _nft_get_pastel_registration_ticket_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -3957,14 +3841,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -3986,11 +3868,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_pastel_ticket_from_media_file_hash(
+    async def nft_get_pastel_registration_ticket_from_media_file_hash(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -4033,7 +3912,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_ticket_from_media_file_hash_serialize(
+        _param = self._nft_get_pastel_registration_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4055,9 +3934,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_pastel_ticket_from_media_file_hash_with_http_info(
+    async def nft_get_pastel_registration_ticket_from_media_file_hash_with_http_info(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -4100,7 +3978,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_ticket_from_media_file_hash_serialize(
+        _param = self._nft_get_pastel_registration_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4122,9 +4000,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_pastel_ticket_from_media_file_hash_without_preload_content(
+    async def nft_get_pastel_registration_ticket_from_media_file_hash_without_preload_content(
         self,
         media_file_sha256_hash: StrictStr,
         _request_timeout: Union[
@@ -4167,7 +4044,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_pastel_ticket_from_media_file_hash_serialize(
+        _param = self._nft_get_pastel_registration_ticket_from_media_file_hash_serialize(
             media_file_sha256_hash=media_file_sha256_hash,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4185,8 +4062,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_pastel_ticket_from_media_file_hash_serialize(
+    def _nft_get_pastel_registration_ticket_from_media_file_hash_serialize(
         self,
         media_file_sha256_hash,
         _request_auth,
@@ -4215,7 +4091,6 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
@@ -4223,14 +4098,13 @@ class NftApi:
             ]
         )
 
-
         # authentication setting
         _auth_settings: List[str] = [
         ]
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/nft/pastel_ticket_from_media_file_hash/{media_file_sha256_hash}',
+            resource_path='/api/v1/nft/pastel_registration_ticket_from_media_file_hash/{media_file_sha256_hash}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -4242,9 +4116,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_public_stored_file_from_registration_ticket(
@@ -4312,7 +4183,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_public_stored_file_from_registration_ticket_with_http_info(
         self,
@@ -4379,7 +4249,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_public_stored_file_from_registration_ticket_without_preload_content(
         self,
@@ -4442,7 +4311,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_public_stored_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
@@ -4472,14 +4340,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -4499,9 +4365,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_raw_dd_result_file_from_activation_ticket(
@@ -4569,7 +4432,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_raw_dd_result_file_from_activation_ticket_with_http_info(
         self,
@@ -4636,7 +4498,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_raw_dd_result_file_from_activation_ticket_without_preload_content(
         self,
@@ -4699,7 +4560,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_raw_dd_result_file_from_activation_ticket_serialize(
         self,
         activation_ticket_txid,
@@ -4729,14 +4589,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -4756,9 +4614,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_raw_dd_result_file_from_pastel_id(
@@ -4826,7 +4681,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_raw_dd_result_file_from_pastel_id_with_http_info(
         self,
@@ -4893,7 +4747,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_raw_dd_result_file_from_pastel_id_without_preload_content(
         self,
@@ -4956,7 +4809,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_raw_dd_result_file_from_pastel_id_serialize(
         self,
         pastel_id_of_user,
@@ -4986,14 +4838,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -5013,9 +4863,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_raw_dd_result_file_from_registration_ticket(
@@ -5083,7 +4930,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_raw_dd_result_file_from_registration_ticket_with_http_info(
         self,
@@ -5150,7 +4996,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_raw_dd_result_file_from_registration_ticket_without_preload_content(
         self,
@@ -5213,7 +5058,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_raw_dd_result_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
@@ -5243,14 +5087,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -5271,11 +5113,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_raw_dd_result_file_from_result_id(
+    async def nft_get_raw_dd_result_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5318,7 +5157,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_raw_dd_result_file_from_result_id_serialize(
+        _param = self._nft_get_raw_dd_result_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5340,9 +5179,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_raw_dd_result_file_from_result_id_with_http_info(
+    async def nft_get_raw_dd_result_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5385,7 +5223,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_raw_dd_result_file_from_result_id_serialize(
+        _param = self._nft_get_raw_dd_result_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5407,9 +5245,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_raw_dd_result_file_from_result_id_without_preload_content(
+    async def nft_get_raw_dd_result_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5452,7 +5289,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_raw_dd_result_file_from_result_id_serialize(
+        _param = self._nft_get_raw_dd_result_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5470,8 +5307,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_raw_dd_result_file_from_result_id_serialize(
+    def _nft_get_raw_dd_result_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -5500,14 +5336,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -5529,11 +5363,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_request_from_request_id(
+    async def nft_get_request(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5576,7 +5407,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_request_from_request_id_serialize(
+        _param = self._nft_get_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5598,9 +5429,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_request_from_request_id_with_http_info(
+    async def nft_get_request_with_http_info(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5643,7 +5473,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_request_from_request_id_serialize(
+        _param = self._nft_get_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5665,9 +5495,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_request_from_request_id_without_preload_content(
+    async def nft_get_request_without_preload_content(
         self,
         gateway_request_id: StrictStr,
         _request_timeout: Union[
@@ -5710,7 +5539,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_request_from_request_id_serialize(
+        _param = self._nft_get_request_serialize(
             gateway_request_id=gateway_request_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5728,8 +5557,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_request_from_request_id_serialize(
+    def _nft_get_request_serialize(
         self,
         gateway_request_id,
         _request_auth,
@@ -5758,14 +5586,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -5787,11 +5613,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_result_from_result_id(
+    async def nft_get_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5834,7 +5657,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_result_from_result_id_serialize(
+        _param = self._nft_get_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5856,9 +5679,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_result_from_result_id_with_http_info(
+    async def nft_get_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5901,7 +5723,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_result_from_result_id_serialize(
+        _param = self._nft_get_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5923,9 +5745,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_result_from_result_id_without_preload_content(
+    async def nft_get_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -5968,7 +5789,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_result_from_result_id_serialize(
+        _param = self._nft_get_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5986,8 +5807,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_result_from_result_id_serialize(
+    def _nft_get_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -6016,14 +5836,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -6044,9 +5862,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_stored_file_from_activation_ticket(
@@ -6114,7 +5929,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_stored_file_from_activation_ticket_with_http_info(
         self,
@@ -6181,7 +5995,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_stored_file_from_activation_ticket_without_preload_content(
         self,
@@ -6244,7 +6057,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_stored_file_from_activation_ticket_serialize(
         self,
         activation_ticket_txid,
@@ -6274,14 +6086,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -6302,9 +6112,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_get_stored_file_from_registration_ticket(
@@ -6372,7 +6179,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_get_stored_file_from_registration_ticket_with_http_info(
         self,
@@ -6439,7 +6245,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_get_stored_file_from_registration_ticket_without_preload_content(
         self,
@@ -6502,7 +6307,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_get_stored_file_from_registration_ticket_serialize(
         self,
         registration_ticket_txid,
@@ -6532,14 +6336,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -6561,11 +6363,8 @@ class NftApi:
             _request_auth=_request_auth
         )
 
-
-
-
     @validate_call
-    async def nft_get_stored_file_from_result_id(
+    async def nft_get_stored_file_from_result(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -6608,7 +6407,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_stored_file_from_result_id_serialize(
+        _param = self._nft_get_stored_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -6630,9 +6429,8 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def nft_get_stored_file_from_result_id_with_http_info(
+    async def nft_get_stored_file_from_result_with_http_info(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -6675,7 +6473,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_stored_file_from_result_id_serialize(
+        _param = self._nft_get_stored_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -6697,9 +6495,8 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def nft_get_stored_file_from_result_id_without_preload_content(
+    async def nft_get_stored_file_from_result_without_preload_content(
         self,
         gateway_result_id: StrictStr,
         _request_timeout: Union[
@@ -6742,7 +6539,7 @@ class NftApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._nft_get_stored_file_from_result_id_serialize(
+        _param = self._nft_get_stored_file_from_result_serialize(
             gateway_result_id=gateway_result_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -6760,8 +6557,7 @@ class NftApi:
         )
         return response_data.response
 
-
-    def _nft_get_stored_file_from_result_id_serialize(
+    def _nft_get_stored_file_from_result_serialize(
         self,
         gateway_result_id,
         _request_auth,
@@ -6790,14 +6586,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -6818,9 +6612,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_process_request(
@@ -6908,7 +6699,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_process_request_with_http_info(
         self,
@@ -6995,7 +6785,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_process_request_without_preload_content(
         self,
@@ -7078,7 +6867,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_process_request_serialize(
         self,
         file,
@@ -7131,7 +6919,6 @@ class NftApi:
             _form_params.append(('nft_details_payload', nft_details_payload))
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
@@ -7172,9 +6959,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_step1_upload_image_file(
@@ -7242,7 +7026,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_step1_upload_image_file_with_http_info(
         self,
@@ -7309,7 +7092,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_step1_upload_image_file_without_preload_content(
         self,
@@ -7372,7 +7154,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_step1_upload_image_file_serialize(
         self,
         file,
@@ -7401,7 +7182,6 @@ class NftApi:
         if file is not None:
             _files['file'] = file
         # process the body parameter
-
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
@@ -7443,9 +7223,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_step2_process_nft(
@@ -7533,7 +7310,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_step2_process_nft_with_http_info(
         self,
@@ -7620,7 +7396,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_step2_process_nft_without_preload_content(
         self,
@@ -7703,7 +7478,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_step2_process_nft_serialize(
         self,
         nft_properties_external,
@@ -7758,7 +7532,6 @@ class NftApi:
         if nft_properties_external is not None:
             _body_params = nft_properties_external
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
@@ -7799,9 +7572,6 @@ class NftApi:
             _host=_host,
             _request_auth=_request_auth
         )
-
-
-
 
     @validate_call
     async def nft_transfer_pastel_ticket_to_another_pastelid(
@@ -7873,7 +7643,6 @@ class NftApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def nft_transfer_pastel_ticket_to_another_pastelid_with_http_info(
         self,
@@ -7944,7 +7713,6 @@ class NftApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def nft_transfer_pastel_ticket_to_another_pastelid_without_preload_content(
         self,
@@ -8011,7 +7779,6 @@ class NftApi:
         )
         return response_data.response
 
-
     def _nft_transfer_pastel_ticket_to_another_pastelid_serialize(
         self,
         gateway_result_id,
@@ -8048,14 +7815,12 @@ class NftApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
                 'application/json'
             ]
         )
-
 
         # authentication setting
         _auth_settings: List[str] = [
