@@ -39,14 +39,16 @@ class GatewayApiClientAsync(ApiClient):
         token = await login_api.login_access_token(username=username, password=password)
         if not token or type(token) is not Token or not token.access_token:
             return False
-        self.configuration.access_token = token.access_token
-        self._token = token.access_token
+        self.set_token(token.access_token)
         return True
+
+    def set_token(self, token: str | None):
+        self.configuration.access_token = token
+        self._token = token
 
     async def logout(self):
         self.clear_auth_api_key()
-        self.configuration.access_token = None
-        self._token = None
+        self.set_token(None)
         self._account_api = None
         self._api_keys_api = None
         self._users_api = None
