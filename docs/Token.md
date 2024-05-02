@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.token import Token
+from pastel_gateway_sdk.models.token import Token
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of Token from a JSON string
 token_instance = Token.from_json(json)
 # print the JSON string representation of the object
-print Token.to_json()
+print(Token.to_json())
 
 # convert the object into a dict
 token_dict = token_instance.to_dict()

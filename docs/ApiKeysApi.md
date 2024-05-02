@@ -1,4 +1,4 @@
-# gateway_client.ApiKeysApi
+# pastel_gateway_sdk.ApiKeysApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,17 +22,15 @@ Create new api key.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.api_key import ApiKey
-from gateway_client.models.api_key_create import ApiKeyCreate
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.api_key import ApiKey
+from pastel_gateway_sdk.models.api_key_create import ApiKeyCreate
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -44,10 +42,10 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.ApiKeysApi(api_client)
-    api_key_create = gateway_client.ApiKeyCreate() # ApiKeyCreate | 
+    api_instance = pastel_gateway_sdk.ApiKeysApi(api_client)
+    api_key_create = pastel_gateway_sdk.ApiKeyCreate() # ApiKeyCreate | 
 
     try:
         # Create Apikey
@@ -101,16 +99,14 @@ Delete an api key.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.api_key import ApiKey
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.api_key import ApiKey
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -122,9 +118,9 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.ApiKeysApi(api_client)
+    api_instance = pastel_gateway_sdk.ApiKeysApi(api_client)
     api_key = 'api_key_example' # str | 
 
     try:
@@ -179,16 +175,14 @@ Get api key by apikey.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.api_key import ApiKey
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.api_key import ApiKey
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -200,9 +194,9 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.ApiKeysApi(api_client)
+    api_instance = pastel_gateway_sdk.ApiKeysApi(api_client)
     api_key = 'api_key_example' # str | 
 
     try:
@@ -257,16 +251,14 @@ Retrieve api key of the user.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.api_key import ApiKey
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.api_key import ApiKey
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -278,9 +270,9 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.ApiKeysApi(api_client)
+    api_instance = pastel_gateway_sdk.ApiKeysApi(api_client)
     skip = 0 # int |  (optional) (default to 0)
     limit = 100 # int |  (optional) (default to 100)
 

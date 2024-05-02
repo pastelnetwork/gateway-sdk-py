@@ -11,29 +11,20 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
-import io
 import warnings
-
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
-from typing import Dict, List, Optional, Tuple, Union, Any
-
-try:
-    from typing import Annotated
-except ImportError:
-    from typing_extensions import Annotated
+from typing import Any, Dict, List, Optional, Tuple, Union
+from typing_extensions import Annotated
 
 from pydantic import StrictInt
-
-from typing import List, Optional
-
+from typing import Optional
 from pastel_gateway_sdk.models.body_users_create_user_open import BodyUsersCreateUserOpen
 from pastel_gateway_sdk.models.body_users_update_user_me import BodyUsersUpdateUserMe
 from pastel_gateway_sdk.models.user import User
 from pastel_gateway_sdk.models.user_create import UserCreate
 from pastel_gateway_sdk.models.user_update import UserUpdate
 
-from pastel_gateway_sdk.api_client import ApiClient
+from pastel_gateway_sdk.api_client import ApiClient, RequestSerialized
 from pastel_gateway_sdk.api_response import ApiResponse
 from pastel_gateway_sdk.rest import RESTResponseType
 
@@ -50,19 +41,16 @@ class UsersApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-
     @validate_call
     async def users_create_user(
         self,
         user_create: UserCreate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -96,41 +84,34 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_create_user_serialize(
-            user_create=user_create,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_create_user_serialize(user_create=user_create,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def users_create_user_with_http_info(
         self,
         user_create: UserCreate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -164,41 +145,34 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_create_user_serialize(
-            user_create=user_create,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_create_user_serialize(user_create=user_create,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def users_create_user_without_preload_content(
         self,
         user_create: UserCreate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -232,24 +206,19 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_create_user_serialize(
-            user_create=user_create,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_create_user_serialize(user_create=user_create,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _users_create_user_serialize(
         self,
@@ -258,12 +227,11 @@ class UsersApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -280,13 +248,9 @@ class UsersApi:
         if user_create is not None:
             _body_params = user_create
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -294,18 +258,12 @@ class UsersApi:
         else:
             _default_content_type = (
                 self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
+                    ['application/json']))
             if _default_content_type is not None:
                 _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='POST',
@@ -319,24 +277,18 @@ class UsersApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def users_create_user_open(
         self,
         body_users_create_user_open: BodyUsersCreateUserOpen,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -375,36 +327,30 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def users_create_user_open_with_http_info(
         self,
         body_users_create_user_open: BodyUsersCreateUserOpen,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -443,36 +389,30 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def users_create_user_open_without_preload_content(
         self,
         body_users_create_user_open: BodyUsersCreateUserOpen,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -511,19 +451,15 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _users_create_user_open_serialize(
         self,
@@ -532,12 +468,11 @@ class UsersApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -554,13 +489,9 @@ class UsersApi:
         if body_users_create_user_open is not None:
             _body_params = body_users_create_user_open
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -568,17 +499,12 @@ class UsersApi:
         else:
             _default_content_type = (
                 self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
+                    ['application/json']))
             if _default_content_type is not None:
                 _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = [
-        ]
+        _auth_settings: List[str] = []
 
         return self.api_client.param_serialize(
             method='POST',
@@ -592,24 +518,18 @@ class UsersApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def users_delete_user(
         self,
         user_id: StrictInt,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -643,41 +563,34 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_delete_user_serialize(
-            user_id=user_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_delete_user_serialize(user_id=user_id,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def users_delete_user_with_http_info(
         self,
         user_id: StrictInt,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -711,41 +624,34 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_delete_user_serialize(
-            user_id=user_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_delete_user_serialize(user_id=user_id,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def users_delete_user_without_preload_content(
         self,
         user_id: StrictInt,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -779,24 +685,19 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_delete_user_serialize(
-            user_id=user_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_delete_user_serialize(user_id=user_id,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _users_delete_user_serialize(
         self,
@@ -805,12 +706,11 @@ class UsersApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -827,19 +727,12 @@ class UsersApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='DELETE',
@@ -853,24 +746,18 @@ class UsersApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
-    async def users_read_user_from_id(
+    async def users_read_user_by_id(
         self,
         user_id: StrictInt,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -904,41 +791,35 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_read_user_from_id_serialize(
+        _param = self._users_read_user_by_id_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
-    async def users_read_user_from_id_with_http_info(
+    async def users_read_user_by_id_with_http_info(
         self,
         user_id: StrictInt,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -972,41 +853,35 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_read_user_from_id_serialize(
+        _param = self._users_read_user_by_id_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
-    async def users_read_user_from_id_without_preload_content(
+    async def users_read_user_by_id_without_preload_content(
         self,
         user_id: StrictInt,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1040,38 +915,33 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_read_user_from_id_serialize(
+        _param = self._users_read_user_by_id_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
 
-
-    def _users_read_user_from_id_serialize(
+    def _users_read_user_by_id_serialize(
         self,
         user_id,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1088,19 +958,12 @@ class UsersApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='GET',
@@ -1114,23 +977,17 @@ class UsersApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def users_read_user_me(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1166,34 +1023,28 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def users_read_user_me_with_http_info(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1229,34 +1080,28 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def users_read_user_me_without_preload_content(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1292,18 +1137,14 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _users_read_user_me_serialize(
         self,
@@ -1311,12 +1152,11 @@ class UsersApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1331,19 +1171,12 @@ class UsersApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='GET',
@@ -1357,25 +1190,19 @@ class UsersApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def users_read_users(
         self,
         skip: Optional[StrictInt] = None,
         limit: Optional[StrictInt] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1411,43 +1238,36 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_read_users_serialize(
-            skip=skip,
-            limit=limit,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_read_users_serialize(skip=skip,
+                                                  limit=limit,
+                                                  _request_auth=_request_auth,
+                                                  _content_type=_content_type,
+                                                  _headers=_headers,
+                                                  _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[User]",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def users_read_users_with_http_info(
         self,
         skip: Optional[StrictInt] = None,
         limit: Optional[StrictInt] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1483,43 +1303,36 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_read_users_serialize(
-            skip=skip,
-            limit=limit,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_read_users_serialize(skip=skip,
+                                                  limit=limit,
+                                                  _request_auth=_request_auth,
+                                                  _content_type=_content_type,
+                                                  _headers=_headers,
+                                                  _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[User]",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def users_read_users_without_preload_content(
         self,
         skip: Optional[StrictInt] = None,
         limit: Optional[StrictInt] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1555,25 +1368,20 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_read_users_serialize(
-            skip=skip,
-            limit=limit,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_read_users_serialize(skip=skip,
+                                                  limit=limit,
+                                                  _request_auth=_request_auth,
+                                                  _content_type=_content_type,
+                                                  _headers=_headers,
+                                                  _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[User]",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _users_read_users_serialize(
         self,
@@ -1583,12 +1391,11 @@ class UsersApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1600,30 +1407,23 @@ class UsersApi:
         # process the path parameters
         # process the query parameters
         if skip is not None:
-            
+
             _query_params.append(('skip', skip))
-            
+
         if limit is not None:
-            
+
             _query_params.append(('limit', limit))
-            
+
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='GET',
@@ -1637,25 +1437,19 @@ class UsersApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def users_update_user(
         self,
         user_id: StrictInt,
         user_update: UserUpdate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1691,43 +1485,36 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_update_user_serialize(
-            user_id=user_id,
-            user_update=user_update,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_update_user_serialize(user_id=user_id,
+                                                   user_update=user_update,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def users_update_user_with_http_info(
         self,
         user_id: StrictInt,
         user_update: UserUpdate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1763,43 +1550,36 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_update_user_serialize(
-            user_id=user_id,
-            user_update=user_update,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_update_user_serialize(user_id=user_id,
+                                                   user_update=user_update,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def users_update_user_without_preload_content(
         self,
         user_id: StrictInt,
         user_update: UserUpdate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1835,25 +1615,20 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._users_update_user_serialize(
-            user_id=user_id,
-            user_update=user_update,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
+        _param = self._users_update_user_serialize(user_id=user_id,
+                                                   user_update=user_update,
+                                                   _request_auth=_request_auth,
+                                                   _content_type=_content_type,
+                                                   _headers=_headers,
+                                                   _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _users_update_user_serialize(
         self,
@@ -1863,12 +1638,11 @@ class UsersApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1887,13 +1661,9 @@ class UsersApi:
         if user_update is not None:
             _body_params = user_update
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1901,18 +1671,12 @@ class UsersApi:
         else:
             _default_content_type = (
                 self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
+                    ['application/json']))
             if _default_content_type is not None:
                 _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='PUT',
@@ -1926,24 +1690,18 @@ class UsersApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def users_update_user_me(
         self,
         body_users_update_user_me: Optional[BodyUsersUpdateUserMe] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1982,36 +1740,30 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def users_update_user_me_with_http_info(
         self,
         body_users_update_user_me: Optional[BodyUsersUpdateUserMe] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -2050,36 +1802,30 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def users_update_user_me_without_preload_content(
         self,
         body_users_update_user_me: Optional[BodyUsersUpdateUserMe] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -2118,19 +1864,15 @@ class UsersApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "User",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _users_update_user_me_serialize(
         self,
@@ -2139,12 +1881,11 @@ class UsersApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -2161,13 +1902,9 @@ class UsersApi:
         if body_users_update_user_me is not None:
             _body_params = body_users_update_user_me
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -2175,18 +1912,12 @@ class UsersApi:
         else:
             _default_content_type = (
                 self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
+                    ['application/json']))
             if _default_content_type is not None:
                 _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='PUT',
@@ -2200,7 +1931,4 @@ class UsersApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
+            _request_auth=_request_auth)

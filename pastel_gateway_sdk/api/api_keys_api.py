@@ -11,26 +11,17 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
-import io
 import warnings
-
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
-from typing import Dict, List, Optional, Tuple, Union, Any
-
-try:
-    from typing import Annotated
-except ImportError:
-    from typing_extensions import Annotated
+from typing import Any, Dict, List, Optional, Tuple, Union
+from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-
-from typing import List, Optional
-
+from typing import Optional
 from pastel_gateway_sdk.models.api_key import ApiKey
 from pastel_gateway_sdk.models.api_key_create import ApiKeyCreate
 
-from pastel_gateway_sdk.api_client import ApiClient
+from pastel_gateway_sdk.api_client import ApiClient, RequestSerialized
 from pastel_gateway_sdk.api_response import ApiResponse
 from pastel_gateway_sdk.rest import RESTResponseType
 
@@ -47,19 +38,16 @@ class ApiKeysApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-
     @validate_call
     async def api_keys_create_apikey(
         self,
         api_key_create: ApiKeyCreate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -98,36 +86,30 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def api_keys_create_apikey_with_http_info(
         self,
         api_key_create: ApiKeyCreate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -166,36 +148,30 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def api_keys_create_apikey_without_preload_content(
         self,
         api_key_create: ApiKeyCreate,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -234,19 +210,15 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _api_keys_create_apikey_serialize(
         self,
@@ -255,12 +227,11 @@ class ApiKeysApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -277,13 +248,9 @@ class ApiKeysApi:
         if api_key_create is not None:
             _body_params = api_key_create
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -291,18 +258,12 @@ class ApiKeysApi:
         else:
             _default_content_type = (
                 self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
+                    ['application/json']))
             if _default_content_type is not None:
                 _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='POST',
@@ -316,24 +277,18 @@ class ApiKeysApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def api_keys_delete_apikey(
         self,
         api_key: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -372,36 +327,30 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def api_keys_delete_apikey_with_http_info(
         self,
         api_key: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -440,36 +389,30 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def api_keys_delete_apikey_without_preload_content(
         self,
         api_key: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -508,19 +451,15 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _api_keys_delete_apikey_serialize(
         self,
@@ -529,12 +468,11 @@ class ApiKeysApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -551,19 +489,12 @@ class ApiKeysApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='DELETE',
@@ -577,24 +508,18 @@ class ApiKeysApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def api_keys_read_apikey(
         self,
         api_key: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -633,36 +558,30 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def api_keys_read_apikey_with_http_info(
         self,
         api_key: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -701,36 +620,30 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def api_keys_read_apikey_without_preload_content(
         self,
         api_key: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -769,19 +682,15 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ApiKey",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _api_keys_read_apikey_serialize(
         self,
@@ -790,12 +699,11 @@ class ApiKeysApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -812,19 +720,12 @@ class ApiKeysApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='GET',
@@ -838,25 +739,19 @@ class ApiKeysApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
+            _request_auth=_request_auth)
 
     @validate_call
     async def api_keys_read_apikeys(
         self,
         skip: Optional[StrictInt] = None,
         limit: Optional[StrictInt] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -898,37 +793,31 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ApiKey]",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     async def api_keys_read_apikeys_with_http_info(
         self,
         skip: Optional[StrictInt] = None,
         limit: Optional[StrictInt] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -970,37 +859,31 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ApiKey]",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     async def api_keys_read_apikeys_without_preload_content(
         self,
         skip: Optional[StrictInt] = None,
         limit: Optional[StrictInt] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1042,19 +925,15 @@ class ApiKeysApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ApiKey]",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
-
 
     def _api_keys_read_apikeys_serialize(
         self,
@@ -1064,12 +943,11 @@ class ApiKeysApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1081,30 +959,23 @@ class ApiKeysApi:
         # process the path parameters
         # process the query parameters
         if skip is not None:
-            
+
             _query_params.append(('skip', skip))
-            
+
         if limit is not None:
-            
+
             _query_params.append(('limit', limit))
-            
+
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'OAuth2PasswordBearer'
-        ]
+        _auth_settings: List[str] = ['OAuth2PasswordBearer']
 
         return self.api_client.param_serialize(
             method='GET',
@@ -1118,7 +989,4 @@ class ApiKeysApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
+            _request_auth=_request_auth)

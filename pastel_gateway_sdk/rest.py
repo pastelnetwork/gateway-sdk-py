@@ -11,11 +11,11 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 import io
 import json
 import re
 import ssl
+from typing import Optional, Union
 
 import aiohttp
 import aiohttp_retry
@@ -24,7 +24,9 @@ from pastel_gateway_sdk.exceptions import ApiException, ApiValueError
 
 RESTResponseType = aiohttp.ClientResponse
 
-ALLOW_RETRY_METHODS = frozenset({'DELETE', 'GET', 'HEAD', 'OPTIONS', 'PUT', 'TRACE'})
+ALLOW_RETRY_METHODS = frozenset(
+    {'DELETE', 'GET', 'HEAD', 'OPTIONS', 'PUT', 'TRACE'})
+
 
 class RESTResponse(io.IOBase):
 
@@ -56,32 +58,26 @@ class RESTClientObject:
         maxsize = configuration.connection_pool_maxsize
 
         ssl_context = ssl.create_default_context(
-            cafile=configuration.ssl_ca_cert
-        )
+            cafile=configuration.ssl_ca_cert)
         if configuration.cert_file:
-            ssl_context.load_cert_chain(
-                configuration.cert_file, keyfile=configuration.key_file
-            )
+            ssl_context.load_cert_chain(configuration.cert_file,
+                                        keyfile=configuration.key_file)
 
         if not configuration.verify_ssl:
             ssl_context.check_hostname = False
             ssl_context.verify_mode = ssl.CERT_NONE
 
-        connector = aiohttp.TCPConnector(
-            limit=maxsize,
-            ssl=ssl_context
-        )
+        connector = aiohttp.TCPConnector(limit=maxsize, ssl=ssl_context)
 
         self.proxy = configuration.proxy
         self.proxy_headers = configuration.proxy_headers
 
         # https pool manager
-        self.pool_manager = aiohttp.ClientSession(
-            connector=connector,
-            trust_env=True
-        )
+        self.pool_manager = aiohttp.ClientSession(connector=connector,
+                                                  trust_env=True)
 
         retries = configuration.retries
+        self.retry_client: Optional[aiohttp_retry.RetryClient]
         if retries is not None:
             self.retry_client = aiohttp_retry.RetryClient(
                 client_session=self.pool_manager,
@@ -89,9 +85,7 @@ class RESTClientObject:
                     attempts=retries,
                     factor=0.0,
                     start_timeout=0.0,
-                    max_timeout=120.0
-                )
-            )
+                    max_timeout=120.0))
         else:
             self.retry_client = None
 
@@ -100,15 +94,13 @@ class RESTClientObject:
         if self.retry_client is not None:
             await self.retry_client.close()
 
-    async def request(
-        self,
-        method,
-        url,
-        headers=None,
-        body=None,
-        post_params=None,
-        _request_timeout=None
-    ):
+    async def request(self,
+                      method,
+                      url,
+                      headers=None,
+                      body=None,
+                      post_params=None,
+                      _request_timeout=None):
         """Execute request
 
         :param method: http request method
@@ -125,19 +117,12 @@ class RESTClientObject:
         """
         method = method.upper()
         assert method in [
-            'GET',
-            'HEAD',
-            'DELETE',
-            'POST',
-            'PUT',
-            'PATCH',
-            'OPTIONS'
+            'GET', 'HEAD', 'DELETE', 'POST', 'PUT', 'PATCH', 'OPTIONS'
         ]
 
         if post_params and body:
             raise ApiValueError(
-                "body parameter cannot be used with post_params parameter."
-            )
+                "body parameter cannot be used with post_params parameter.")
 
         post_params = post_params or {}
         headers = headers or {}
@@ -165,7 +150,8 @@ class RESTClientObject:
                 if body is not None:
                     body = json.dumps(body)
                 args["data"] = body
-            elif headers['Content-Type'] == 'application/x-www-form-urlencoded':
+            elif headers[
+                    'Content-Type'] == 'application/x-www-form-urlencoded':
                 args["data"] = aiohttp.FormData(post_params)
             elif headers['Content-Type'] == 'multipart/form-data':
                 # must del headers['Content-Type'], or the correct
@@ -175,12 +161,10 @@ class RESTClientObject:
                 for param in post_params:
                     k, v = param
                     if isinstance(v, tuple) and len(v) == 3:
-                        data.add_field(
-                            k,
-                            value=v[1],
-                            filename=v[0],
-                            content_type=v[2]
-                        )
+                        data.add_field(k,
+                                       value=v[1],
+                                       filename=v[0],
+                                       content_type=v[2])
                     else:
                         data.add_field(k, v)
                 args["data"] = data
@@ -197,6 +181,7 @@ class RESTClientObject:
                          declared content type."""
                 raise ApiException(status=0, reason=msg)
 
+        pool_manager: Union[aiohttp.ClientSession, aiohttp_retry.RetryClient]
         if self.retry_client is not None and method in ALLOW_RETRY_METHODS:
             pool_manager = self.retry_client
         else:
@@ -205,8 +190,3 @@ class RESTClientObject:
         r = await pool_manager.request(**args)
 
         return RESTResponse(r)
-
-
-
-
-

@@ -1,30 +1,30 @@
-# gateway_client.SenseApi
+# pastel_gateway_sdk.SenseApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**sense_get_all_parsed_output_files_from_request**](SenseApi.md#sense_get_all_parsed_output_files_from_request) | **GET** /api/v1/sense/all_parsed_output_files_from_request/{gateway_request_id} | Get All Parsed Output Files From Request
-[**sense_get_all_pastel_registration_tickets_from_request**](SenseApi.md#sense_get_all_pastel_registration_tickets_from_request) | **GET** /api/v1/sense/pastel_registration_tickets/{gateway_request_id} | Get All Pastel Sense Registration Tickets From Request
+[**sense_get_all_pastel_registration_tickets_from_request**](SenseApi.md#sense_get_all_pastel_registration_tickets_from_request) | **GET** /api/v1/sense/pastel_registration_tickets/{gateway_request_id} | Get All Pastel Registration Tickets From Request
 [**sense_get_all_raw_output_files_from_request**](SenseApi.md#sense_get_all_raw_output_files_from_request) | **GET** /api/v1/sense/all_raw_output_files_from_request/{gateway_request_id} | Get All Raw Output Files From Request
 [**sense_get_all_requests**](SenseApi.md#sense_get_all_requests) | **GET** /api/v1/sense/gateway_requests | Get All Requests
 [**sense_get_all_results**](SenseApi.md#sense_get_all_results) | **GET** /api/v1/sense/gateway_results | Get All Results
-[**sense_get_originally_submitted_file_from_result**](SenseApi.md#sense_get_originally_submitted_file_from_result) | **GET** /api/v1/sense/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File By Result Id
-[**sense_get_parsed_output_file_from_activation_ticket**](SenseApi.md#sense_get_parsed_output_file_from_activation_ticket) | **GET** /api/v1/sense/parsed_output_file_from_activation_ticket/{activation_ticket_txid} | Parsed Output File By Activation Ticket
-[**sense_get_parsed_output_file_from_pastel_id**](SenseApi.md#sense_get_parsed_output_file_from_pastel_id) | **GET** /api/v1/sense/parsed_output_file_from_pastel_id/{pastel_id_of_user} | Parsed Output File By Pastel Id
-[**sense_get_parsed_output_file_from_registration_ticket**](SenseApi.md#sense_get_parsed_output_file_from_registration_ticket) | **GET** /api/v1/sense/parsed_output_file_from_registration_ticket/{registration_ticket_txid} | Get Parsed Output File By Registration Ticket
-[**sense_get_parsed_output_file_from_result**](SenseApi.md#sense_get_parsed_output_file_from_result) | **GET** /api/v1/sense/parsed_output_file/{gateway_result_id} | Get Parsed Output File By Result Id
-[**sense_get_pastel_activation_ticket_from_txid**](SenseApi.md#sense_get_pastel_activation_ticket_from_txid) | **GET** /api/v1/sense/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket By Its Txid
-[**sense_get_pastel_activation_ticket_from_result**](SenseApi.md#sense_get_pastel_activation_ticket_from_result) | **GET** /api/v1/sense/pastel_activation_ticket/{gateway_result_id} | Get Pastel Sense Activation Ticket By Result Id
-[**sense_get_pastel_registration_ticket_from_txid**](SenseApi.md#sense_get_pastel_registration_ticket_from_txid) | **GET** /api/v1/sense/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket By Its Txid
-[**sense_get_pastel_registration_ticket_from_result**](SenseApi.md#sense_get_pastel_registration_ticket_from_result) | **GET** /api/v1/sense/pastel_registration_ticket/{gateway_result_id} | Get Pastel Sense Registration Ticket By Result Id
-[**sense_get_pastel_registration_ticket_from_media_file_hash**](SenseApi.md#sense_get_pastel_registration_ticket_from_media_file_hash) | **GET** /api/v1/sense/pastel_registration_ticket_from_media_file_hash/{media_file_sha256_hash} | Get Pastel Ticket Data From Media File Hash
-[**sense_get_raw_output_file_from_activation_ticket**](SenseApi.md#sense_get_raw_output_file_from_activation_ticket) | **GET** /api/v1/sense/raw_output_file_from_activation_ticket/{activation_ticket_txid} | Get Raw Output File By Activation Ticket
-[**sense_get_raw_output_file_from_pastel_id**](SenseApi.md#sense_get_raw_output_file_from_pastel_id) | **GET** /api/v1/sense/raw_output_file_from_pastel_id/{pastel_id_of_user} | Get Raw Output File By Pastel Id
-[**sense_get_raw_output_file_from_registration_ticket**](SenseApi.md#sense_get_raw_output_file_from_registration_ticket) | **GET** /api/v1/sense/raw_output_file_from_registration_ticket/{registration_ticket_txid} | Get Raw Output File By Registration Ticket
-[**sense_get_raw_output_file_from_result**](SenseApi.md#sense_get_raw_output_file_from_result) | **GET** /api/v1/sense/raw_output_file/{gateway_result_id} | Get Raw Output File By Result Id
-[**sense_get_request**](SenseApi.md#sense_get_request) | **GET** /api/v1/sense/gateway_requests/{gateway_request_id} | Get Request By Request Id
-[**sense_get_result**](SenseApi.md#sense_get_result) | **GET** /api/v1/sense/gateway_results/{gateway_result_id} | Get Result By Result Id
+[**sense_get_originally_submitted_file_from_result**](SenseApi.md#sense_get_originally_submitted_file_from_result) | **GET** /api/v1/sense/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File From Result
+[**sense_get_parsed_output_file_from_activation_ticket**](SenseApi.md#sense_get_parsed_output_file_from_activation_ticket) | **GET** /api/v1/sense/parsed_output_file_from_activation_ticket/{activation_ticket_txid} | Parsed Output File From Activation Ticket
+[**sense_get_parsed_output_file_from_pastel_id**](SenseApi.md#sense_get_parsed_output_file_from_pastel_id) | **GET** /api/v1/sense/parsed_output_file_from_pastel_id/{pastel_id_of_user} | Parsed Output File From Pastel Id
+[**sense_get_parsed_output_file_from_registration_ticket**](SenseApi.md#sense_get_parsed_output_file_from_registration_ticket) | **GET** /api/v1/sense/parsed_output_file_from_registration_ticket/{registration_ticket_txid} | Get Parsed Output File From Registration Ticket
+[**sense_get_parsed_output_file_from_result**](SenseApi.md#sense_get_parsed_output_file_from_result) | **GET** /api/v1/sense/parsed_output_file/{gateway_result_id} | Get Parsed Output File From Result
+[**sense_get_pastel_activation_ticket_from_result**](SenseApi.md#sense_get_pastel_activation_ticket_from_result) | **GET** /api/v1/sense/pastel_activation_ticket/{gateway_result_id} | Get Pastel Activation Ticket From Result
+[**sense_get_pastel_activation_ticket_from_txid**](SenseApi.md#sense_get_pastel_activation_ticket_from_txid) | **GET** /api/v1/sense/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket From Txid
+[**sense_get_pastel_registration_ticket_from_media_file_hash**](SenseApi.md#sense_get_pastel_registration_ticket_from_media_file_hash) | **GET** /api/v1/sense/pastel_registration_ticket_from_media_file_hash/{media_file_sha256_hash} | Get Pastel Registration Ticket Data From Media File Hash
+[**sense_get_pastel_registration_ticket_from_result**](SenseApi.md#sense_get_pastel_registration_ticket_from_result) | **GET** /api/v1/sense/pastel_registration_ticket/{gateway_result_id} | Get Pastel Registration Ticket From Result
+[**sense_get_pastel_registration_ticket_from_txid**](SenseApi.md#sense_get_pastel_registration_ticket_from_txid) | **GET** /api/v1/sense/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket From Txid
+[**sense_get_raw_output_file_from_activation_ticket**](SenseApi.md#sense_get_raw_output_file_from_activation_ticket) | **GET** /api/v1/sense/raw_output_file_from_activation_ticket/{activation_ticket_txid} | Get Raw Output File From Activation Ticket
+[**sense_get_raw_output_file_from_pastel_id**](SenseApi.md#sense_get_raw_output_file_from_pastel_id) | **GET** /api/v1/sense/raw_output_file_from_pastel_id/{pastel_id_of_user} | Get Raw Output File From Pastel Id
+[**sense_get_raw_output_file_from_registration_ticket**](SenseApi.md#sense_get_raw_output_file_from_registration_ticket) | **GET** /api/v1/sense/raw_output_file_from_registration_ticket/{registration_ticket_txid} | Get Raw Output File From Registration Ticket
+[**sense_get_raw_output_file_from_result**](SenseApi.md#sense_get_raw_output_file_from_result) | **GET** /api/v1/sense/raw_output_file/{gateway_result_id} | Get Raw Output File From Result
+[**sense_get_request**](SenseApi.md#sense_get_request) | **GET** /api/v1/sense/gateway_requests/{gateway_request_id} | Get Request
+[**sense_get_result**](SenseApi.md#sense_get_result) | **GET** /api/v1/sense/gateway_results/{gateway_result_id} | Get Result
 [**sense_process_request**](SenseApi.md#sense_process_request) | **POST** /api/v1/sense | Process Request
 [**sense_transfer_pastel_ticket_to_another_pastelid**](SenseApi.md#sense_transfer_pastel_ticket_to_another_pastelid) | **GET** /api/v1/sense/result/transfer_pastel_ticket | Transfer Pastel Ticket To Another Pastelid
 
@@ -39,15 +39,13 @@ Get All Parsed Output Files From Request
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -63,9 +61,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_request_id = 'gateway_request_id_example' # str | 
 
     try:
@@ -111,22 +109,20 @@ Name | Type | Description  | Notes
 # **sense_get_all_pastel_registration_tickets_from_request**
 > object sense_get_all_pastel_registration_tickets_from_request(gateway_request_id)
 
-Get All Pastel Sense Registration Tickets From Request
+Get All Pastel Registration Tickets From Request
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -142,13 +138,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_request_id = 'gateway_request_id_example' # str | 
 
     try:
-        # Get All Pastel Sense Registration Tickets From Request
+        # Get All Pastel Registration Tickets From Request
         api_response = await api_instance.sense_get_all_pastel_registration_tickets_from_request(gateway_request_id)
         print("The response of SenseApi->sense_get_all_pastel_registration_tickets_from_request:\n")
         pprint(api_response)
@@ -197,15 +193,13 @@ Get All Raw Output Files From Request
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -221,9 +215,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_request_id = 'gateway_request_id_example' # str | 
 
     try:
@@ -276,17 +270,15 @@ Get All Requests
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.req_status import ReqStatus
-from gateway_client.models.request_result import RequestResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.req_status import ReqStatus
+from pastel_gateway_sdk.models.request_result import RequestResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -302,10 +294,10 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
-    status_requested = gateway_client.ReqStatus() # ReqStatus |  (optional)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
+    status_requested = pastel_gateway_sdk.ReqStatus() # ReqStatus |  (optional)
     offset = 0 # int |  (optional) (default to 0)
     limit = 10000 # int |  (optional) (default to 10000)
 
@@ -361,17 +353,15 @@ Get All Results
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.req_status import ReqStatus
-from gateway_client.models.result_registration_result import ResultRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.req_status import ReqStatus
+from pastel_gateway_sdk.models.result_registration_result import ResultRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -387,10 +377,10 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
-    status_requested = gateway_client.ReqStatus() # ReqStatus |  (optional)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
+    status_requested = pastel_gateway_sdk.ReqStatus() # ReqStatus |  (optional)
     offset = 0 # int |  (optional) (default to 0)
     limit = 10000 # int |  (optional) (default to 10000)
 
@@ -439,22 +429,20 @@ Name | Type | Description  | Notes
 # **sense_get_originally_submitted_file_from_result**
 > object sense_get_originally_submitted_file_from_result(gateway_result_id)
 
-Get Originally Submitted File By Result Id
+Get Originally Submitted File From Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -470,13 +458,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Originally Submitted File By Result Id
+        # Get Originally Submitted File From Result
         api_response = await api_instance.sense_get_originally_submitted_file_from_result(gateway_result_id)
         print("The response of SenseApi->sense_get_originally_submitted_file_from_result:\n")
         pprint(api_response)
@@ -518,33 +506,31 @@ Name | Type | Description  | Notes
 # **sense_get_parsed_output_file_from_activation_ticket**
 > object sense_get_parsed_output_file_from_activation_ticket(activation_ticket_txid)
 
-Parsed Output File By Activation Ticket
+Parsed Output File From Activation Ticket
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     activation_ticket_txid = 'activation_ticket_txid_example' # str | 
 
     try:
-        # Parsed Output File By Activation Ticket
+        # Parsed Output File From Activation Ticket
         api_response = await api_instance.sense_get_parsed_output_file_from_activation_ticket(activation_ticket_txid)
         print("The response of SenseApi->sense_get_parsed_output_file_from_activation_ticket:\n")
         pprint(api_response)
@@ -586,33 +572,31 @@ No authorization required
 # **sense_get_parsed_output_file_from_pastel_id**
 > object sense_get_parsed_output_file_from_pastel_id(pastel_id_of_user)
 
-Parsed Output File By Pastel Id
+Parsed Output File From Pastel Id
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     pastel_id_of_user = 'pastel_id_of_user_example' # str | 
 
     try:
-        # Parsed Output File By Pastel Id
+        # Parsed Output File From Pastel Id
         api_response = await api_instance.sense_get_parsed_output_file_from_pastel_id(pastel_id_of_user)
         print("The response of SenseApi->sense_get_parsed_output_file_from_pastel_id:\n")
         pprint(api_response)
@@ -654,33 +638,31 @@ No authorization required
 # **sense_get_parsed_output_file_from_registration_ticket**
 > object sense_get_parsed_output_file_from_registration_ticket(registration_ticket_txid)
 
-Get Parsed Output File By Registration Ticket
+Get Parsed Output File From Registration Ticket
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     registration_ticket_txid = 'registration_ticket_txid_example' # str | 
 
     try:
-        # Get Parsed Output File By Registration Ticket
+        # Get Parsed Output File From Registration Ticket
         api_response = await api_instance.sense_get_parsed_output_file_from_registration_ticket(registration_ticket_txid)
         print("The response of SenseApi->sense_get_parsed_output_file_from_registration_ticket:\n")
         pprint(api_response)
@@ -722,22 +704,20 @@ No authorization required
 # **sense_get_parsed_output_file_from_result**
 > object sense_get_parsed_output_file_from_result(gateway_result_id)
 
-Get Parsed Output File By Result Id
+Get Parsed Output File From Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -753,13 +733,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Parsed Output File By Result Id
+        # Get Parsed Output File From Result
         api_response = await api_instance.sense_get_parsed_output_file_from_result(gateway_result_id)
         print("The response of SenseApi->sense_get_parsed_output_file_from_result:\n")
         pprint(api_response)
@@ -798,93 +778,23 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_pastel_activation_ticket_from_txid**
-> object sense_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
-
-Get Pastel Activation Ticket By Its Txid
-
-### Example
-
-
-```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
-    activation_ticket_txid = 'activation_ticket_txid_example' # str | 
-
-    try:
-        # Get Pastel Activation Ticket By Its Txid
-        api_response = await api_instance.sense_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
-        print("The response of SenseApi->sense_get_pastel_activation_ticket_from_txid:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling SenseApi->sense_get_pastel_activation_ticket_from_txid: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **activation_ticket_txid** | **str**|  | 
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sense_get_pastel_activation_ticket_from_result**
 > object sense_get_pastel_activation_ticket_from_result(gateway_result_id)
 
-Get Pastel Sense Activation Ticket By Result Id
+Get Pastel Activation Ticket From Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -900,13 +810,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Pastel Sense Activation Ticket By Result Id
+        # Get Pastel Activation Ticket From Result
         api_response = await api_instance.sense_get_pastel_activation_ticket_from_result(gateway_result_id)
         print("The response of SenseApi->sense_get_pastel_activation_ticket_from_result:\n")
         pprint(api_response)
@@ -945,41 +855,39 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_pastel_registration_ticket_from_txid**
-> object sense_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
+# **sense_get_pastel_activation_ticket_from_txid**
+> object sense_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
 
-Get Pastel Registration Ticket By Its Txid
+Get Pastel Activation Ticket From Txid
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
-    registration_ticket_txid = 'registration_ticket_txid_example' # str | 
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
+    activation_ticket_txid = 'activation_ticket_txid_example' # str | 
 
     try:
-        # Get Pastel Registration Ticket By Its Txid
-        api_response = await api_instance.sense_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
-        print("The response of SenseApi->sense_get_pastel_registration_ticket_from_txid:\n")
+        # Get Pastel Activation Ticket From Txid
+        api_response = await api_instance.sense_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
+        print("The response of SenseApi->sense_get_pastel_activation_ticket_from_txid:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_from_txid: %s\n" % e)
+        print("Exception when calling SenseApi->sense_get_pastel_activation_ticket_from_txid: %s\n" % e)
 ```
 
 
@@ -989,7 +897,7 @@ async with gateway_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **registration_ticket_txid** | **str**|  | 
+ **activation_ticket_txid** | **str**|  | 
 
 ### Return type
 
@@ -1013,115 +921,34 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_pastel_registration_ticket_from_result**
-> object sense_get_pastel_registration_ticket_from_result(gateway_result_id)
-
-Get Pastel Sense Registration Ticket By Result Id
-
-### Example
-
-* Api Key Authentication (APIKeyHeader):
-
-```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: APIKeyHeader
-configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
-    gateway_result_id = 'gateway_result_id_example' # str | 
-
-    try:
-        # Get Pastel Sense Registration Ticket By Result Id
-        api_response = await api_instance.sense_get_pastel_registration_ticket_from_result(gateway_result_id)
-        print("The response of SenseApi->sense_get_pastel_registration_ticket_from_result:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_from_result: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **gateway_result_id** | **str**|  | 
-
-### Return type
-
-**object**
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sense_get_pastel_registration_ticket_from_media_file_hash**
 > object sense_get_pastel_registration_ticket_from_media_file_hash(media_file_sha256_hash)
 
-Get Pastel Ticket Data From Media File Hash
+Get Pastel Registration Ticket Data From Media File Hash
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     media_file_sha256_hash = 'media_file_sha256_hash_example' # str | 
 
     try:
-        # Get Pastel Ticket Data From Media File Hash
+        # Get Pastel Registration Ticket Data From Media File Hash
         api_response = await api_instance.sense_get_pastel_registration_ticket_from_media_file_hash(media_file_sha256_hash)
         print("The response of SenseApi->sense_get_pastel_registration_ticket_from_media_file_hash:\n")
         pprint(api_response)
@@ -1160,36 +987,177 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sense_get_raw_output_file_from_activation_ticket**
-> object sense_get_raw_output_file_from_activation_ticket(activation_ticket_txid)
+# **sense_get_pastel_registration_ticket_from_result**
+> object sense_get_pastel_registration_ticket_from_result(gateway_result_id)
 
-Get Raw Output File By Activation Ticket
+Get Pastel Registration Ticket From Result
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+
+```python
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pastel_gateway_sdk.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
+    gateway_result_id = 'gateway_result_id_example' # str | 
+
+    try:
+        # Get Pastel Registration Ticket From Result
+        api_response = await api_instance.sense_get_pastel_registration_ticket_from_result(gateway_result_id)
+        print("The response of SenseApi->sense_get_pastel_registration_ticket_from_result:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_from_result: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gateway_result_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sense_get_pastel_registration_ticket_from_txid**
+> object sense_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
+
+Get Pastel Registration Ticket From Txid
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
+    registration_ticket_txid = 'registration_ticket_txid_example' # str | 
+
+    try:
+        # Get Pastel Registration Ticket From Txid
+        api_response = await api_instance.sense_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
+        print("The response of SenseApi->sense_get_pastel_registration_ticket_from_txid:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SenseApi->sense_get_pastel_registration_ticket_from_txid: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **registration_ticket_txid** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sense_get_raw_output_file_from_activation_ticket**
+> object sense_get_raw_output_file_from_activation_ticket(activation_ticket_txid)
+
+Get Raw Output File From Activation Ticket
+
+### Example
+
+
+```python
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pastel_gateway_sdk.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     activation_ticket_txid = 'activation_ticket_txid_example' # str | 
 
     try:
-        # Get Raw Output File By Activation Ticket
+        # Get Raw Output File From Activation Ticket
         api_response = await api_instance.sense_get_raw_output_file_from_activation_ticket(activation_ticket_txid)
         print("The response of SenseApi->sense_get_raw_output_file_from_activation_ticket:\n")
         pprint(api_response)
@@ -1231,33 +1199,31 @@ No authorization required
 # **sense_get_raw_output_file_from_pastel_id**
 > object sense_get_raw_output_file_from_pastel_id(pastel_id_of_user)
 
-Get Raw Output File By Pastel Id
+Get Raw Output File From Pastel Id
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     pastel_id_of_user = 'pastel_id_of_user_example' # str | 
 
     try:
-        # Get Raw Output File By Pastel Id
+        # Get Raw Output File From Pastel Id
         api_response = await api_instance.sense_get_raw_output_file_from_pastel_id(pastel_id_of_user)
         print("The response of SenseApi->sense_get_raw_output_file_from_pastel_id:\n")
         pprint(api_response)
@@ -1299,33 +1265,31 @@ No authorization required
 # **sense_get_raw_output_file_from_registration_ticket**
 > object sense_get_raw_output_file_from_registration_ticket(registration_ticket_txid)
 
-Get Raw Output File By Registration Ticket
+Get Raw Output File From Registration Ticket
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     registration_ticket_txid = 'registration_ticket_txid_example' # str | 
 
     try:
-        # Get Raw Output File By Registration Ticket
+        # Get Raw Output File From Registration Ticket
         api_response = await api_instance.sense_get_raw_output_file_from_registration_ticket(registration_ticket_txid)
         print("The response of SenseApi->sense_get_raw_output_file_from_registration_ticket:\n")
         pprint(api_response)
@@ -1367,22 +1331,20 @@ No authorization required
 # **sense_get_raw_output_file_from_result**
 > object sense_get_raw_output_file_from_result(gateway_result_id)
 
-Get Raw Output File By Result Id
+Get Raw Output File From Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1398,13 +1360,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Raw Output File By Result Id
+        # Get Raw Output File From Result
         api_response = await api_instance.sense_get_raw_output_file_from_result(gateway_result_id)
         print("The response of SenseApi->sense_get_raw_output_file_from_result:\n")
         pprint(api_response)
@@ -1446,23 +1408,21 @@ Name | Type | Description  | Notes
 # **sense_get_request**
 > RequestResult sense_get_request(gateway_request_id)
 
-Get Request By Request Id
+Get Request
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.request_result import RequestResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.request_result import RequestResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1478,13 +1438,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_request_id = 'gateway_request_id_example' # str | 
 
     try:
-        # Get Request By Request Id
+        # Get Request
         api_response = await api_instance.sense_get_request(gateway_request_id)
         print("The response of SenseApi->sense_get_request:\n")
         pprint(api_response)
@@ -1526,23 +1486,21 @@ Name | Type | Description  | Notes
 # **sense_get_result**
 > ResultRegistrationResult sense_get_result(gateway_result_id)
 
-Get Result By Result Id
+Get Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.result_registration_result import ResultRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.result_registration_result import ResultRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1558,13 +1516,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Result By Result Id
+        # Get Result
         api_response = await api_instance.sense_get_result(gateway_result_id)
         print("The response of SenseApi->sense_get_result:\n")
         pprint(api_response)
@@ -1613,16 +1571,14 @@ Process Request
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.request_result import RequestResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.request_result import RequestResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1638,9 +1594,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     files = None # List[bytearray] | 
     collection_act_txid = 'collection_act_txid_example' # str | Transaction ID of the collection, if any (optional)
     open_api_group_id = 'open_api_group_id_example' # str | Group ID for the NFT, in most cases you don't need to change it (optional)
@@ -1699,15 +1655,13 @@ Transfer Pastel Ticket To Another Pastelid
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1723,9 +1677,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.SenseApi(api_client)
+    api_instance = pastel_gateway_sdk.SenseApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
     pastel_id = 'pastel_id_example' # str | 
 

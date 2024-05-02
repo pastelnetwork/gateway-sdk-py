@@ -11,33 +11,34 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 from __future__ import annotations
 import pprint
 import re  # noqa: F401
 import json
 
 from datetime import datetime
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictBool, StrictInt, StrictStr
 from pastel_gateway_sdk.models.collection_registration_result_status_messages_inner import CollectionRegistrationResultStatusMessagesInner
 from pastel_gateway_sdk.models.status import Status
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
+
 
 class CollectionRegistrationResult(BaseModel):
     """
     CollectionRegistrationResult
-    """ # noqa: E501
+    """
+
+  # noqa: E501
     result_status: Status
     file_name: Optional[StrictStr] = None
     file_type: Optional[StrictStr] = None
     file_id: Optional[StrictStr] = None
     created_at: Optional[datetime] = None
     last_updated_at: Optional[datetime] = None
-    status_messages: Optional[List[CollectionRegistrationResultStatusMessagesInner]] = None
+    status_messages: Optional[
+        List[CollectionRegistrationResultStatusMessagesInner]] = None
     retry_num: Optional[StrictInt] = None
     registration_ticket_txid: Optional[StrictStr] = None
     activation_ticket_txid: Optional[StrictStr] = None
@@ -50,14 +51,21 @@ class CollectionRegistrationResult(BaseModel):
     offer_ticket_intended_rcpt_pastel_id: Optional[StrictStr] = None
     error: Optional[StrictStr] = None
     collection_id: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["result_status", "file_name", "file_type", "file_id", "created_at", "last_updated_at", "status_messages", "retry_num", "registration_ticket_txid", "activation_ticket_txid", "original_file_ipfs_link", "stored_file_ipfs_link", "stored_file_aws_link", "stored_file_other_links", "make_publicly_accessible", "offer_ticket_txid", "offer_ticket_intended_rcpt_pastel_id", "error", "collection_id"]
+    __properties: ClassVar[List[str]] = [
+        "result_status", "file_name", "file_type", "file_id", "created_at",
+        "last_updated_at", "status_messages", "retry_num",
+        "registration_ticket_txid", "activation_ticket_txid",
+        "original_file_ipfs_link", "stored_file_ipfs_link",
+        "stored_file_aws_link", "stored_file_other_links",
+        "make_publicly_accessible", "offer_ticket_txid",
+        "offer_ticket_intended_rcpt_pastel_id", "error", "collection_id"
+    ]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
-
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -69,7 +77,7 @@ class CollectionRegistrationResult(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of CollectionRegistrationResult from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -83,10 +91,11 @@ class CollectionRegistrationResult(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of each item in status_messages (list)
@@ -189,7 +198,7 @@ class CollectionRegistrationResult(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of CollectionRegistrationResult from a dict"""
         if obj is None:
             return None
@@ -198,26 +207,45 @@ class CollectionRegistrationResult(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "result_status": obj.get("result_status"),
-            "file_name": obj.get("file_name"),
-            "file_type": obj.get("file_type"),
-            "file_id": obj.get("file_id"),
-            "created_at": obj.get("created_at"),
-            "last_updated_at": obj.get("last_updated_at"),
-            "status_messages": [CollectionRegistrationResultStatusMessagesInner.from_dict(_item) for _item in obj.get("status_messages")] if obj.get("status_messages") is not None else None,
-            "retry_num": obj.get("retry_num"),
-            "registration_ticket_txid": obj.get("registration_ticket_txid"),
-            "activation_ticket_txid": obj.get("activation_ticket_txid"),
-            "original_file_ipfs_link": obj.get("original_file_ipfs_link"),
-            "stored_file_ipfs_link": obj.get("stored_file_ipfs_link"),
-            "stored_file_aws_link": obj.get("stored_file_aws_link"),
-            "stored_file_other_links": obj.get("stored_file_other_links"),
-            "make_publicly_accessible": obj.get("make_publicly_accessible"),
-            "offer_ticket_txid": obj.get("offer_ticket_txid"),
-            "offer_ticket_intended_rcpt_pastel_id": obj.get("offer_ticket_intended_rcpt_pastel_id"),
-            "error": obj.get("error"),
-            "collection_id": obj.get("collection_id")
+            "result_status":
+            obj.get("result_status"),
+            "file_name":
+            obj.get("file_name"),
+            "file_type":
+            obj.get("file_type"),
+            "file_id":
+            obj.get("file_id"),
+            "created_at":
+            obj.get("created_at"),
+            "last_updated_at":
+            obj.get("last_updated_at"),
+            "status_messages": [
+                CollectionRegistrationResultStatusMessagesInner.from_dict(
+                    _item) for _item in obj["status_messages"]
+            ] if obj.get("status_messages") is not None else None,
+            "retry_num":
+            obj.get("retry_num"),
+            "registration_ticket_txid":
+            obj.get("registration_ticket_txid"),
+            "activation_ticket_txid":
+            obj.get("activation_ticket_txid"),
+            "original_file_ipfs_link":
+            obj.get("original_file_ipfs_link"),
+            "stored_file_ipfs_link":
+            obj.get("stored_file_ipfs_link"),
+            "stored_file_aws_link":
+            obj.get("stored_file_aws_link"),
+            "stored_file_other_links":
+            obj.get("stored_file_other_links"),
+            "make_publicly_accessible":
+            obj.get("make_publicly_accessible"),
+            "offer_ticket_txid":
+            obj.get("offer_ticket_txid"),
+            "offer_ticket_intended_rcpt_pastel_id":
+            obj.get("offer_ticket_intended_rcpt_pastel_id"),
+            "error":
+            obj.get("error"),
+            "collection_id":
+            obj.get("collection_id")
         })
         return _obj
-
-

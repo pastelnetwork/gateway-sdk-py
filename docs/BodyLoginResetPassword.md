@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.body_login_reset_password import BodyLoginResetPassword
+from pastel_gateway_sdk.models.body_login_reset_password import BodyLoginResetPassword
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of BodyLoginResetPassword from a JSON string
 body_login_reset_password_instance = BodyLoginResetPassword.from_json(json)
 # print the JSON string representation of the object
-print BodyLoginResetPassword.to_json()
+print(BodyLoginResetPassword.to_json())
 
 # convert the object into a dict
 body_login_reset_password_dict = body_login_reset_password_instance.to_dict()

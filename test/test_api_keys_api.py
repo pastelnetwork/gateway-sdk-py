@@ -13,11 +13,16 @@
 
 
 import unittest
-from base_test import BaseTestCase
+from pastel_gateway_sdk.api.api_keys_api import ApiKeysApi
+from .base_test import BaseTestCase
 
 
 class TestApiKeysApi(BaseTestCase):
     """ApiKeysApi unit test stubs"""
+
+    async def asyncSetUp(self) -> None:
+        await super().asyncSetUp()
+        self.api: ApiKeysApi = self.client.api_keys_api
 
     async def test_api_keys_create_apikey(self) -> None:
         """Test case for api_keys_create_apikey

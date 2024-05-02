@@ -1,4 +1,4 @@
-# gateway_client.UsersApi
+# pastel_gateway_sdk.UsersApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,17 +26,15 @@ Create new user, returns user object with funding address. limit=0 means no limi
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.user import User
-from gateway_client.models.user_create import UserCreate
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.models.user_create import UserCreate
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -48,10 +46,10 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.UsersApi(api_client)
-    user_create = gateway_client.UserCreate() # UserCreate | 
+    api_instance = pastel_gateway_sdk.UsersApi(api_client)
+    user_create = pastel_gateway_sdk.UserCreate() # UserCreate | 
 
     try:
         # Create User
@@ -104,26 +102,24 @@ Create new user without the need to be logged in.
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.body_users_create_user_open import BodyUsersCreateUserOpen
-from gateway_client.models.user import User
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.body_users_create_user_open import BodyUsersCreateUserOpen
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.UsersApi(api_client)
-    body_users_create_user_open = gateway_client.BodyUsersCreateUserOpen() # BodyUsersCreateUserOpen | 
+    api_instance = pastel_gateway_sdk.UsersApi(api_client)
+    body_users_create_user_open = pastel_gateway_sdk.BodyUsersCreateUserOpen() # BodyUsersCreateUserOpen | 
 
     try:
         # Create User Open
@@ -177,16 +173,14 @@ Delete user.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.user import User
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -198,9 +192,9 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.UsersApi(api_client)
+    api_instance = pastel_gateway_sdk.UsersApi(api_client)
     user_id = 56 # int | 
 
     try:
@@ -255,16 +249,14 @@ Get a specific user by id.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.user import User
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -276,9 +268,9 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.UsersApi(api_client)
+    api_instance = pastel_gateway_sdk.UsersApi(api_client)
     user_id = 56 # int | 
 
     try:
@@ -333,16 +325,14 @@ Get current user.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.user import User
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -354,9 +344,9 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.UsersApi(api_client)
+    api_instance = pastel_gateway_sdk.UsersApi(api_client)
 
     try:
         # Read User Me
@@ -406,16 +396,14 @@ Retrieve users.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.user import User
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -427,9 +415,9 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.UsersApi(api_client)
+    api_instance = pastel_gateway_sdk.UsersApi(api_client)
     skip = 0 # int |  (optional) (default to 0)
     limit = 100 # int |  (optional) (default to 100)
 
@@ -486,17 +474,15 @@ Update a user.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.user import User
-from gateway_client.models.user_update import UserUpdate
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.models.user_update import UserUpdate
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -508,11 +494,11 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.UsersApi(api_client)
+    api_instance = pastel_gateway_sdk.UsersApi(api_client)
     user_id = 56 # int | 
-    user_update = gateway_client.UserUpdate() # UserUpdate | 
+    user_update = pastel_gateway_sdk.UserUpdate() # UserUpdate | 
 
     try:
         # Update User
@@ -567,17 +553,15 @@ Update own user.
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.body_users_update_user_me import BodyUsersUpdateUserMe
-from gateway_client.models.user import User
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.body_users_update_user_me import BodyUsersUpdateUserMe
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -589,10 +573,10 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.UsersApi(api_client)
-    body_users_update_user_me = gateway_client.BodyUsersUpdateUserMe() # BodyUsersUpdateUserMe |  (optional)
+    api_instance = pastel_gateway_sdk.UsersApi(api_client)
+    body_users_update_user_me = pastel_gateway_sdk.BodyUsersUpdateUserMe() # BodyUsersUpdateUserMe |  (optional)
 
     try:
         # Update User Me

@@ -13,14 +13,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.body_users_create_user_open import BodyUsersCreateUserOpen
+from pastel_gateway_sdk.models.body_users_create_user_open import BodyUsersCreateUserOpen
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of BodyUsersCreateUserOpen from a JSON string
 body_users_create_user_open_instance = BodyUsersCreateUserOpen.from_json(json)
 # print the JSON string representation of the object
-print BodyUsersCreateUserOpen.to_json()
+print(BodyUsersCreateUserOpen.to_json())
 
 # convert the object into a dict
 body_users_create_user_open_dict = body_users_create_user_open_instance.to_dict()

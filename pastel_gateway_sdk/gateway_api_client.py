@@ -1,5 +1,6 @@
 from pastel_gateway_sdk.api import (LoginApi, AccountApi, ApiKeysApi, UsersApi,
-                                CascadeApi, CollectionApi, NftApi, SenseApi)
+                                    CascadeApi, CollectionApi, NftApi, SenseApi,
+                                    AdminApi, KeyAuthApi)
 from pastel_gateway_sdk import ApiClient, Configuration, Token
 
 
@@ -24,6 +25,8 @@ class GatewayApiClientAsync(ApiClient):
         self._collection_api = None
         self._nft_api = None
         self._sense_api = None
+        self._admin_api = None
+        self._key_auth_api = None
 
     @staticmethod
     def get_host(network, custom_url):
@@ -57,6 +60,8 @@ class GatewayApiClientAsync(ApiClient):
         self._collection_api = None
         self._nft_api = None
         self._sense_api = None
+        self._admin_api = None
+        self._key_auth_api = None
 
     async def test_token(self):
         api = self.login_api
@@ -122,3 +127,15 @@ class GatewayApiClientAsync(ApiClient):
         if self._sense_api is None:
             self._sense_api = SenseApi(self)
         return self._sense_api
+
+    @property
+    def admin_api(self):
+        if self._admin_api is None:
+            self._admin_api = AdminApi(self)
+        return self._admin_api
+
+    @property
+    def key_auth_api(self):
+        if self._key_auth_api is None:
+            self._key_auth_api = KeyAuthApi(self)
+        return self._key_auth_api

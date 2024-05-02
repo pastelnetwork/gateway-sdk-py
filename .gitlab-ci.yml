@@ -12,8 +12,14 @@ stages:
   script:
    - pip install -r requirements.txt
    - pip install -r test-requirements.txt
-   - pytest --cov=gateway_client
+   - pytest --cov=pastel_gateway_sdk
 
+pytest-3.7:
+  extends: .pytest
+  image: python:3.7-alpine
+pytest-3.8:
+  extends: .pytest
+  image: python:3.8-alpine
 pytest-3.9:
   extends: .pytest
   image: python:3.9-alpine

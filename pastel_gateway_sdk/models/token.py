@@ -11,34 +11,32 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 from __future__ import annotations
 import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List
-from pydantic import BaseModel, StrictStr
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
+
 
 class Token(BaseModel):
     """
     Token
-    """ # noqa: E501
+    """
+
+  # noqa: E501
     access_token: StrictStr
     token_type: StrictStr
     __properties: ClassVar[List[str]] = ["access_token", "token_type"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
-
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -50,7 +48,7 @@ class Token(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of Token from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -64,16 +62,17 @@ class Token(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of Token from a dict"""
         if obj is None:
             return None
@@ -86,5 +85,3 @@ class Token(BaseModel):
             "token_type": obj.get("token_type")
         })
         return _obj
-
-

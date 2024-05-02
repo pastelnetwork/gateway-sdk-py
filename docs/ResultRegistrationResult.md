@@ -28,14 +28,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.result_registration_result import ResultRegistrationResult
+from pastel_gateway_sdk.models.result_registration_result import ResultRegistrationResult
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of ResultRegistrationResult from a JSON string
 result_registration_result_instance = ResultRegistrationResult.from_json(json)
 # print the JSON string representation of the object
-print ResultRegistrationResult.to_json()
+print(ResultRegistrationResult.to_json())
 
 # convert the object into a dict
 result_registration_result_dict = result_registration_result_instance.to_dict()

@@ -11,27 +11,17 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
-import io
 import warnings
-
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
-from typing import Dict, List, Optional, Tuple, Union, Any
-
-try:
-    from typing import Annotated
-except ImportError:
-    from typing_extensions import Annotated
-
-from pydantic import Field
+from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
-from pydantic import StrictBool, StrictFloat, StrictInt, StrictStr
 
+from pydantic import Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import List, Optional, Union
-
+from typing_extensions import Annotated
 from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
 
-from pastel_gateway_sdk.api_client import ApiClient
+from pastel_gateway_sdk.api_client import ApiClient, RequestSerialized
 from pastel_gateway_sdk.api_response import ApiResponse
 from pastel_gateway_sdk.rest import RESTResponseType
 
@@ -51,23 +41,47 @@ class CollectionApi:
     @validate_call
     async def collection_create_nft_collection(
         self,
-        collection_name: Annotated[Optional[StrictStr], Field(description="Collection name")] = None,
-        max_collection_entries: Annotated[Optional[StrictInt], Field(description="Maximum number of items allowed in a collection")] = None,
-        collection_item_copy_count: Annotated[Optional[StrictInt], Field(description="Allowed number of copies for all items in a collection")] = None,
-        list_of_pastelids_of_authorized_contributors: Annotated[Optional[List[StrictStr]], Field(description="List of pastelids of authorized contributors")] = None,
-        max_permitted_open_nsfw_score: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Maximum permitted open NSFW score. Where: 0.0 means - 0% chance of NSFW content. 1.0 means - 100% chance of NSFW content")] = None,
-        minimum_similarity_score_to_first_entry_in_collection: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Minimum similarity score to first entry in collection. Where: 0.0 means - 0% similarity. And 1.0 means - 100% similarity")] = None,
-        no_of_days_to_finalize_collection: Annotated[Optional[StrictInt], Field(description="Number of days to finalize collection")] = None,
-        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Royalty percentage")] = None,
-        green: Annotated[Optional[StrictBool], Field(description="Green")] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        collection_name: Annotated[Optional[StrictStr],
+                                   Field(
+                                       description="Collection name")] = None,
+        max_collection_entries: Annotated[
+            Optional[StrictInt],
+            Field(description="Maximum number of items allowed in a collection"
+                  )] = None,
+        collection_item_copy_count: Annotated[
+            Optional[StrictInt],
+            Field(description=
+                  "Allowed number of copies for all items in a collection"
+                  )] = None,
+        list_of_pastelids_of_authorized_contributors: Annotated[
+            Optional[List[StrictStr]],
+            Field(description="List of pastelids of authorized contributors"
+                  )] = None,
+        max_permitted_open_nsfw_score: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(
+                description=
+                "Maximum permitted open NSFW score. Where: 0.0 means - 0% chance of NSFW content. 1.0 means - 100% chance of NSFW content"
+            )] = None,
+        minimum_similarity_score_to_first_entry_in_collection: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(
+                description=
+                "Minimum similarity score to first entry in collection. Where: 0.0 means - 0% similarity. And 1.0 means - 100% similarity"
+            )] = None,
+        no_of_days_to_finalize_collection: Annotated[
+            Optional[StrictInt],
+            Field(description="Number of days to finalize collection")] = None,
+        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]],
+                           Field(description="Royalty percentage")] = None,
+        green: Annotated[Optional[StrictBool],
+                         Field(description="Green")] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -120,26 +134,25 @@ class CollectionApi:
             collection_name=collection_name,
             max_collection_entries=max_collection_entries,
             collection_item_copy_count=collection_item_copy_count,
-            list_of_pastelids_of_authorized_contributors=list_of_pastelids_of_authorized_contributors,
+            list_of_pastelids_of_authorized_contributors=
+            list_of_pastelids_of_authorized_contributors,
             max_permitted_open_nsfw_score=max_permitted_open_nsfw_score,
-            minimum_similarity_score_to_first_entry_in_collection=minimum_similarity_score_to_first_entry_in_collection,
+            minimum_similarity_score_to_first_entry_in_collection=
+            minimum_similarity_score_to_first_entry_in_collection,
             no_of_days_to_finalize_collection=no_of_days_to_finalize_collection,
             royalty=royalty,
             green=green,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -149,23 +162,47 @@ class CollectionApi:
     @validate_call
     async def collection_create_nft_collection_with_http_info(
         self,
-        collection_name: Annotated[Optional[StrictStr], Field(description="Collection name")] = None,
-        max_collection_entries: Annotated[Optional[StrictInt], Field(description="Maximum number of items allowed in a collection")] = None,
-        collection_item_copy_count: Annotated[Optional[StrictInt], Field(description="Allowed number of copies for all items in a collection")] = None,
-        list_of_pastelids_of_authorized_contributors: Annotated[Optional[List[StrictStr]], Field(description="List of pastelids of authorized contributors")] = None,
-        max_permitted_open_nsfw_score: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Maximum permitted open NSFW score. Where: 0.0 means - 0% chance of NSFW content. 1.0 means - 100% chance of NSFW content")] = None,
-        minimum_similarity_score_to_first_entry_in_collection: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Minimum similarity score to first entry in collection. Where: 0.0 means - 0% similarity. And 1.0 means - 100% similarity")] = None,
-        no_of_days_to_finalize_collection: Annotated[Optional[StrictInt], Field(description="Number of days to finalize collection")] = None,
-        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Royalty percentage")] = None,
-        green: Annotated[Optional[StrictBool], Field(description="Green")] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        collection_name: Annotated[Optional[StrictStr],
+                                   Field(
+                                       description="Collection name")] = None,
+        max_collection_entries: Annotated[
+            Optional[StrictInt],
+            Field(description="Maximum number of items allowed in a collection"
+                  )] = None,
+        collection_item_copy_count: Annotated[
+            Optional[StrictInt],
+            Field(description=
+                  "Allowed number of copies for all items in a collection"
+                  )] = None,
+        list_of_pastelids_of_authorized_contributors: Annotated[
+            Optional[List[StrictStr]],
+            Field(description="List of pastelids of authorized contributors"
+                  )] = None,
+        max_permitted_open_nsfw_score: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(
+                description=
+                "Maximum permitted open NSFW score. Where: 0.0 means - 0% chance of NSFW content. 1.0 means - 100% chance of NSFW content"
+            )] = None,
+        minimum_similarity_score_to_first_entry_in_collection: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(
+                description=
+                "Minimum similarity score to first entry in collection. Where: 0.0 means - 0% similarity. And 1.0 means - 100% similarity"
+            )] = None,
+        no_of_days_to_finalize_collection: Annotated[
+            Optional[StrictInt],
+            Field(description="Number of days to finalize collection")] = None,
+        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]],
+                           Field(description="Royalty percentage")] = None,
+        green: Annotated[Optional[StrictBool],
+                         Field(description="Green")] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -218,26 +255,25 @@ class CollectionApi:
             collection_name=collection_name,
             max_collection_entries=max_collection_entries,
             collection_item_copy_count=collection_item_copy_count,
-            list_of_pastelids_of_authorized_contributors=list_of_pastelids_of_authorized_contributors,
+            list_of_pastelids_of_authorized_contributors=
+            list_of_pastelids_of_authorized_contributors,
             max_permitted_open_nsfw_score=max_permitted_open_nsfw_score,
-            minimum_similarity_score_to_first_entry_in_collection=minimum_similarity_score_to_first_entry_in_collection,
+            minimum_similarity_score_to_first_entry_in_collection=
+            minimum_similarity_score_to_first_entry_in_collection,
             no_of_days_to_finalize_collection=no_of_days_to_finalize_collection,
             royalty=royalty,
             green=green,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -247,23 +283,47 @@ class CollectionApi:
     @validate_call
     async def collection_create_nft_collection_without_preload_content(
         self,
-        collection_name: Annotated[Optional[StrictStr], Field(description="Collection name")] = None,
-        max_collection_entries: Annotated[Optional[StrictInt], Field(description="Maximum number of items allowed in a collection")] = None,
-        collection_item_copy_count: Annotated[Optional[StrictInt], Field(description="Allowed number of copies for all items in a collection")] = None,
-        list_of_pastelids_of_authorized_contributors: Annotated[Optional[List[StrictStr]], Field(description="List of pastelids of authorized contributors")] = None,
-        max_permitted_open_nsfw_score: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Maximum permitted open NSFW score. Where: 0.0 means - 0% chance of NSFW content. 1.0 means - 100% chance of NSFW content")] = None,
-        minimum_similarity_score_to_first_entry_in_collection: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Minimum similarity score to first entry in collection. Where: 0.0 means - 0% similarity. And 1.0 means - 100% similarity")] = None,
-        no_of_days_to_finalize_collection: Annotated[Optional[StrictInt], Field(description="Number of days to finalize collection")] = None,
-        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Royalty percentage")] = None,
-        green: Annotated[Optional[StrictBool], Field(description="Green")] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        collection_name: Annotated[Optional[StrictStr],
+                                   Field(
+                                       description="Collection name")] = None,
+        max_collection_entries: Annotated[
+            Optional[StrictInt],
+            Field(description="Maximum number of items allowed in a collection"
+                  )] = None,
+        collection_item_copy_count: Annotated[
+            Optional[StrictInt],
+            Field(description=
+                  "Allowed number of copies for all items in a collection"
+                  )] = None,
+        list_of_pastelids_of_authorized_contributors: Annotated[
+            Optional[List[StrictStr]],
+            Field(description="List of pastelids of authorized contributors"
+                  )] = None,
+        max_permitted_open_nsfw_score: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(
+                description=
+                "Maximum permitted open NSFW score. Where: 0.0 means - 0% chance of NSFW content. 1.0 means - 100% chance of NSFW content"
+            )] = None,
+        minimum_similarity_score_to_first_entry_in_collection: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(
+                description=
+                "Minimum similarity score to first entry in collection. Where: 0.0 means - 0% similarity. And 1.0 means - 100% similarity"
+            )] = None,
+        no_of_days_to_finalize_collection: Annotated[
+            Optional[StrictInt],
+            Field(description="Number of days to finalize collection")] = None,
+        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]],
+                           Field(description="Royalty percentage")] = None,
+        green: Annotated[Optional[StrictBool],
+                         Field(description="Green")] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -316,26 +376,25 @@ class CollectionApi:
             collection_name=collection_name,
             max_collection_entries=max_collection_entries,
             collection_item_copy_count=collection_item_copy_count,
-            list_of_pastelids_of_authorized_contributors=list_of_pastelids_of_authorized_contributors,
+            list_of_pastelids_of_authorized_contributors=
+            list_of_pastelids_of_authorized_contributors,
             max_permitted_open_nsfw_score=max_permitted_open_nsfw_score,
-            minimum_similarity_score_to_first_entry_in_collection=minimum_similarity_score_to_first_entry_in_collection,
+            minimum_similarity_score_to_first_entry_in_collection=
+            minimum_similarity_score_to_first_entry_in_collection,
             no_of_days_to_finalize_collection=no_of_days_to_finalize_collection,
             royalty=royalty,
             green=green,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
 
     def _collection_create_nft_collection_serialize(
@@ -353,7 +412,7 @@ class CollectionApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -371,56 +430,59 @@ class CollectionApi:
         # process the path parameters
         # process the query parameters
         if collection_name is not None:
-            
+
             _query_params.append(('collection_name', collection_name))
-            
+
         if max_collection_entries is not None:
-            
-            _query_params.append(('max_collection_entries', max_collection_entries))
-            
+
+            _query_params.append(
+                ('max_collection_entries', max_collection_entries))
+
         if collection_item_copy_count is not None:
-            
-            _query_params.append(('collection_item_copy_count', collection_item_copy_count))
-            
+
+            _query_params.append(
+                ('collection_item_copy_count', collection_item_copy_count))
+
         if list_of_pastelids_of_authorized_contributors is not None:
-            
-            _query_params.append(('list_of_pastelids_of_authorized_contributors', list_of_pastelids_of_authorized_contributors))
-            
+
+            _query_params.append(
+                ('list_of_pastelids_of_authorized_contributors',
+                 list_of_pastelids_of_authorized_contributors))
+
         if max_permitted_open_nsfw_score is not None:
-            
-            _query_params.append(('max_permitted_open_nsfw_score', max_permitted_open_nsfw_score))
-            
+
+            _query_params.append(('max_permitted_open_nsfw_score',
+                                  max_permitted_open_nsfw_score))
+
         if minimum_similarity_score_to_first_entry_in_collection is not None:
-            
-            _query_params.append(('minimum_similarity_score_to_first_entry_in_collection', minimum_similarity_score_to_first_entry_in_collection))
-            
+
+            _query_params.append(
+                ('minimum_similarity_score_to_first_entry_in_collection',
+                 minimum_similarity_score_to_first_entry_in_collection))
+
         if no_of_days_to_finalize_collection is not None:
-            
-            _query_params.append(('no_of_days_to_finalize_collection', no_of_days_to_finalize_collection))
-            
+
+            _query_params.append(('no_of_days_to_finalize_collection',
+                                  no_of_days_to_finalize_collection))
+
         if royalty is not None:
-            
+
             _query_params.append(('royalty', royalty))
-            
+
         if green is not None:
-            
+
             _query_params.append(('green', green))
-            
+
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'APIKeyHeader'
-        ]
+        _auth_settings: List[str] = ['APIKeyHeader']
 
         return self.api_client.param_serialize(
             method='POST',
@@ -434,29 +496,48 @@ class CollectionApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
+            _request_auth=_request_auth)
 
     @validate_call
     async def collection_create_sense_collection(
         self,
-        collection_name: Annotated[Optional[StrictStr], Field(description="Collection name")] = None,
-        max_collection_entries: Annotated[Optional[StrictInt], Field(description="Maximum number of items allowed in a collection")] = None,
-        collection_item_copy_count: Annotated[Optional[StrictInt], Field(description="Allowed number of copies for all items in a collection")] = None,
-        list_of_pastelids_of_authorized_contributors: Annotated[Optional[List[StrictStr]], Field(description="List of pastelids of authorized contributors")] = None,
-        max_permitted_open_nsfw_score: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Maximum permitted open NSFW score")] = None,
-        minimum_similarity_score_to_first_entry_in_collection: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Minimum similarity score to first entry in collection")] = None,
-        no_of_days_to_finalize_collection: Annotated[Optional[StrictInt], Field(description="Number of days to finalize collection")] = None,
-        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Royalty percentage")] = None,
-        green: Annotated[Optional[StrictBool], Field(description="Green")] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        collection_name: Annotated[Optional[StrictStr],
+                                   Field(
+                                       description="Collection name")] = None,
+        max_collection_entries: Annotated[
+            Optional[StrictInt],
+            Field(description="Maximum number of items allowed in a collection"
+                  )] = None,
+        collection_item_copy_count: Annotated[
+            Optional[StrictInt],
+            Field(description=
+                  "Allowed number of copies for all items in a collection"
+                  )] = None,
+        list_of_pastelids_of_authorized_contributors: Annotated[
+            Optional[List[StrictStr]],
+            Field(description="List of pastelids of authorized contributors"
+                  )] = None,
+        max_permitted_open_nsfw_score: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(description="Maximum permitted open NSFW score")] = None,
+        minimum_similarity_score_to_first_entry_in_collection: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(description=
+                  "Minimum similarity score to first entry in collection"
+                  )] = None,
+        no_of_days_to_finalize_collection: Annotated[
+            Optional[StrictInt],
+            Field(description="Number of days to finalize collection")] = None,
+        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]],
+                           Field(description="Royalty percentage")] = None,
+        green: Annotated[Optional[StrictBool],
+                         Field(description="Green")] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -509,26 +590,25 @@ class CollectionApi:
             collection_name=collection_name,
             max_collection_entries=max_collection_entries,
             collection_item_copy_count=collection_item_copy_count,
-            list_of_pastelids_of_authorized_contributors=list_of_pastelids_of_authorized_contributors,
+            list_of_pastelids_of_authorized_contributors=
+            list_of_pastelids_of_authorized_contributors,
             max_permitted_open_nsfw_score=max_permitted_open_nsfw_score,
-            minimum_similarity_score_to_first_entry_in_collection=minimum_similarity_score_to_first_entry_in_collection,
+            minimum_similarity_score_to_first_entry_in_collection=
+            minimum_similarity_score_to_first_entry_in_collection,
             no_of_days_to_finalize_collection=no_of_days_to_finalize_collection,
             royalty=royalty,
             green=green,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -538,23 +618,43 @@ class CollectionApi:
     @validate_call
     async def collection_create_sense_collection_with_http_info(
         self,
-        collection_name: Annotated[Optional[StrictStr], Field(description="Collection name")] = None,
-        max_collection_entries: Annotated[Optional[StrictInt], Field(description="Maximum number of items allowed in a collection")] = None,
-        collection_item_copy_count: Annotated[Optional[StrictInt], Field(description="Allowed number of copies for all items in a collection")] = None,
-        list_of_pastelids_of_authorized_contributors: Annotated[Optional[List[StrictStr]], Field(description="List of pastelids of authorized contributors")] = None,
-        max_permitted_open_nsfw_score: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Maximum permitted open NSFW score")] = None,
-        minimum_similarity_score_to_first_entry_in_collection: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Minimum similarity score to first entry in collection")] = None,
-        no_of_days_to_finalize_collection: Annotated[Optional[StrictInt], Field(description="Number of days to finalize collection")] = None,
-        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Royalty percentage")] = None,
-        green: Annotated[Optional[StrictBool], Field(description="Green")] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        collection_name: Annotated[Optional[StrictStr],
+                                   Field(
+                                       description="Collection name")] = None,
+        max_collection_entries: Annotated[
+            Optional[StrictInt],
+            Field(description="Maximum number of items allowed in a collection"
+                  )] = None,
+        collection_item_copy_count: Annotated[
+            Optional[StrictInt],
+            Field(description=
+                  "Allowed number of copies for all items in a collection"
+                  )] = None,
+        list_of_pastelids_of_authorized_contributors: Annotated[
+            Optional[List[StrictStr]],
+            Field(description="List of pastelids of authorized contributors"
+                  )] = None,
+        max_permitted_open_nsfw_score: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(description="Maximum permitted open NSFW score")] = None,
+        minimum_similarity_score_to_first_entry_in_collection: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(description=
+                  "Minimum similarity score to first entry in collection"
+                  )] = None,
+        no_of_days_to_finalize_collection: Annotated[
+            Optional[StrictInt],
+            Field(description="Number of days to finalize collection")] = None,
+        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]],
+                           Field(description="Royalty percentage")] = None,
+        green: Annotated[Optional[StrictBool],
+                         Field(description="Green")] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -607,26 +707,25 @@ class CollectionApi:
             collection_name=collection_name,
             max_collection_entries=max_collection_entries,
             collection_item_copy_count=collection_item_copy_count,
-            list_of_pastelids_of_authorized_contributors=list_of_pastelids_of_authorized_contributors,
+            list_of_pastelids_of_authorized_contributors=
+            list_of_pastelids_of_authorized_contributors,
             max_permitted_open_nsfw_score=max_permitted_open_nsfw_score,
-            minimum_similarity_score_to_first_entry_in_collection=minimum_similarity_score_to_first_entry_in_collection,
+            minimum_similarity_score_to_first_entry_in_collection=
+            minimum_similarity_score_to_first_entry_in_collection,
             no_of_days_to_finalize_collection=no_of_days_to_finalize_collection,
             royalty=royalty,
             green=green,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -636,23 +735,43 @@ class CollectionApi:
     @validate_call
     async def collection_create_sense_collection_without_preload_content(
         self,
-        collection_name: Annotated[Optional[StrictStr], Field(description="Collection name")] = None,
-        max_collection_entries: Annotated[Optional[StrictInt], Field(description="Maximum number of items allowed in a collection")] = None,
-        collection_item_copy_count: Annotated[Optional[StrictInt], Field(description="Allowed number of copies for all items in a collection")] = None,
-        list_of_pastelids_of_authorized_contributors: Annotated[Optional[List[StrictStr]], Field(description="List of pastelids of authorized contributors")] = None,
-        max_permitted_open_nsfw_score: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Maximum permitted open NSFW score")] = None,
-        minimum_similarity_score_to_first_entry_in_collection: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Minimum similarity score to first entry in collection")] = None,
-        no_of_days_to_finalize_collection: Annotated[Optional[StrictInt], Field(description="Number of days to finalize collection")] = None,
-        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Royalty percentage")] = None,
-        green: Annotated[Optional[StrictBool], Field(description="Green")] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        collection_name: Annotated[Optional[StrictStr],
+                                   Field(
+                                       description="Collection name")] = None,
+        max_collection_entries: Annotated[
+            Optional[StrictInt],
+            Field(description="Maximum number of items allowed in a collection"
+                  )] = None,
+        collection_item_copy_count: Annotated[
+            Optional[StrictInt],
+            Field(description=
+                  "Allowed number of copies for all items in a collection"
+                  )] = None,
+        list_of_pastelids_of_authorized_contributors: Annotated[
+            Optional[List[StrictStr]],
+            Field(description="List of pastelids of authorized contributors"
+                  )] = None,
+        max_permitted_open_nsfw_score: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(description="Maximum permitted open NSFW score")] = None,
+        minimum_similarity_score_to_first_entry_in_collection: Annotated[
+            Optional[Union[StrictFloat, StrictInt]],
+            Field(description=
+                  "Minimum similarity score to first entry in collection"
+                  )] = None,
+        no_of_days_to_finalize_collection: Annotated[
+            Optional[StrictInt],
+            Field(description="Number of days to finalize collection")] = None,
+        royalty: Annotated[Optional[Union[StrictFloat, StrictInt]],
+                           Field(description="Royalty percentage")] = None,
+        green: Annotated[Optional[StrictBool],
+                         Field(description="Green")] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -705,26 +824,25 @@ class CollectionApi:
             collection_name=collection_name,
             max_collection_entries=max_collection_entries,
             collection_item_copy_count=collection_item_copy_count,
-            list_of_pastelids_of_authorized_contributors=list_of_pastelids_of_authorized_contributors,
+            list_of_pastelids_of_authorized_contributors=
+            list_of_pastelids_of_authorized_contributors,
             max_permitted_open_nsfw_score=max_permitted_open_nsfw_score,
-            minimum_similarity_score_to_first_entry_in_collection=minimum_similarity_score_to_first_entry_in_collection,
+            minimum_similarity_score_to_first_entry_in_collection=
+            minimum_similarity_score_to_first_entry_in_collection,
             no_of_days_to_finalize_collection=no_of_days_to_finalize_collection,
             royalty=royalty,
             green=green,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
 
     def _collection_create_sense_collection_serialize(
@@ -742,7 +860,7 @@ class CollectionApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -760,56 +878,59 @@ class CollectionApi:
         # process the path parameters
         # process the query parameters
         if collection_name is not None:
-            
+
             _query_params.append(('collection_name', collection_name))
-            
+
         if max_collection_entries is not None:
-            
-            _query_params.append(('max_collection_entries', max_collection_entries))
-            
+
+            _query_params.append(
+                ('max_collection_entries', max_collection_entries))
+
         if collection_item_copy_count is not None:
-            
-            _query_params.append(('collection_item_copy_count', collection_item_copy_count))
-            
+
+            _query_params.append(
+                ('collection_item_copy_count', collection_item_copy_count))
+
         if list_of_pastelids_of_authorized_contributors is not None:
-            
-            _query_params.append(('list_of_pastelids_of_authorized_contributors', list_of_pastelids_of_authorized_contributors))
-            
+
+            _query_params.append(
+                ('list_of_pastelids_of_authorized_contributors',
+                 list_of_pastelids_of_authorized_contributors))
+
         if max_permitted_open_nsfw_score is not None:
-            
-            _query_params.append(('max_permitted_open_nsfw_score', max_permitted_open_nsfw_score))
-            
+
+            _query_params.append(('max_permitted_open_nsfw_score',
+                                  max_permitted_open_nsfw_score))
+
         if minimum_similarity_score_to_first_entry_in_collection is not None:
-            
-            _query_params.append(('minimum_similarity_score_to_first_entry_in_collection', minimum_similarity_score_to_first_entry_in_collection))
-            
+
+            _query_params.append(
+                ('minimum_similarity_score_to_first_entry_in_collection',
+                 minimum_similarity_score_to_first_entry_in_collection))
+
         if no_of_days_to_finalize_collection is not None:
-            
-            _query_params.append(('no_of_days_to_finalize_collection', no_of_days_to_finalize_collection))
-            
+
+            _query_params.append(('no_of_days_to_finalize_collection',
+                                  no_of_days_to_finalize_collection))
+
         if royalty is not None:
-            
+
             _query_params.append(('royalty', royalty))
-            
+
         if green is not None:
-            
+
             _query_params.append(('green', green))
-            
+
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'APIKeyHeader'
-        ]
+        _auth_settings: List[str] = ['APIKeyHeader']
 
         return self.api_client.param_serialize(
             method='POST',
@@ -823,20 +944,17 @@ class CollectionApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
+            _request_auth=_request_auth)
 
     @validate_call
     async def collection_get_all_nft_collections(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -871,16 +989,13 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CollectionRegistrationResult]",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -890,14 +1005,12 @@ class CollectionApi:
     @validate_call
     async def collection_get_all_nft_collections_with_http_info(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -932,16 +1045,13 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CollectionRegistrationResult]",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -951,14 +1061,12 @@ class CollectionApi:
     @validate_call
     async def collection_get_all_nft_collections_without_preload_content(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -993,16 +1101,13 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CollectionRegistrationResult]",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
 
     def _collection_get_all_nft_collections_serialize(
@@ -1011,12 +1116,11 @@ class CollectionApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1033,15 +1137,10 @@ class CollectionApi:
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'APIKeyHeader'
-        ]
+        _auth_settings: List[str] = ['APIKeyHeader']
 
         return self.api_client.param_serialize(
             method='GET',
@@ -1055,20 +1154,17 @@ class CollectionApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
+            _request_auth=_request_auth)
 
     @validate_call
     async def collection_get_all_sense_collections(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1103,16 +1199,13 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CollectionRegistrationResult]",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -1122,14 +1215,12 @@ class CollectionApi:
     @validate_call
     async def collection_get_all_sense_collections_with_http_info(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1164,16 +1255,13 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CollectionRegistrationResult]",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -1183,14 +1271,12 @@ class CollectionApi:
     @validate_call
     async def collection_get_all_sense_collections_without_preload_content(
         self,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
@@ -1225,16 +1311,13 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[CollectionRegistrationResult]",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
 
     def _collection_get_all_sense_collections_serialize(
@@ -1243,12 +1326,11 @@ class CollectionApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1265,15 +1347,10 @@ class CollectionApi:
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'APIKeyHeader'
-        ]
+        _auth_settings: List[str] = ['APIKeyHeader']
 
         return self.api_client.param_serialize(
             method='GET',
@@ -1287,27 +1364,24 @@ class CollectionApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
+            _request_auth=_request_auth)
 
     @validate_call
     async def collection_get_nft_collections_from_collection_id(
         self,
         collection_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> CollectionRegistrationResult:
-        """Get Nft Collections By Collection Id
+        """Get Nft Collections From Collection Id
 
 
         :param collection_id: (required)
@@ -1339,17 +1413,14 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -1360,20 +1431,18 @@ class CollectionApi:
     async def collection_get_nft_collections_from_collection_id_with_http_info(
         self,
         collection_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[CollectionRegistrationResult]:
-        """Get Nft Collections By Collection Id
+        """Get Nft Collections From Collection Id
 
 
         :param collection_id: (required)
@@ -1405,17 +1474,14 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -1426,20 +1492,18 @@ class CollectionApi:
     async def collection_get_nft_collections_from_collection_id_without_preload_content(
         self,
         collection_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get Nft Collections By Collection Id
+        """Get Nft Collections From Collection Id
 
 
         :param collection_id: (required)
@@ -1471,17 +1535,14 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
 
     def _collection_get_nft_collections_from_collection_id_serialize(
@@ -1491,12 +1552,11 @@ class CollectionApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1513,19 +1573,12 @@ class CollectionApi:
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
-
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'APIKeyHeader'
-        ]
+        _auth_settings: List[str] = ['APIKeyHeader']
 
         return self.api_client.param_serialize(
             method='GET',
@@ -1539,27 +1592,24 @@ class CollectionApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
+            _request_auth=_request_auth)
 
     @validate_call
     async def collection_get_sense_collections_from_collection_id(
         self,
         collection_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> CollectionRegistrationResult:
-        """Get Sense Collections By Collection Id
+        """Get Sense Collections From Collection Id
 
 
         :param collection_id: (required)
@@ -1591,17 +1641,14 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -1612,20 +1659,18 @@ class CollectionApi:
     async def collection_get_sense_collections_from_collection_id_with_http_info(
         self,
         collection_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[CollectionRegistrationResult]:
-        """Get Sense Collections By Collection Id
+        """Get Sense Collections From Collection Id
 
 
         :param collection_id: (required)
@@ -1657,17 +1702,14 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
@@ -1678,20 +1720,18 @@ class CollectionApi:
     async def collection_get_sense_collections_from_collection_id_without_preload_content(
         self,
         collection_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
+        _request_timeout: Union[None, Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                Tuple[Annotated[StrictFloat,
+                                                Field(gt=0)],
+                                      Annotated[StrictFloat,
+                                                Field(gt=0)]]] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get Sense Collections By Collection Id
+        """Get Sense Collections From Collection Id
 
 
         :param collection_id: (required)
@@ -1723,17 +1763,14 @@ class CollectionApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
-        )
+            _host_index=_host_index)
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "CollectionRegistrationResult",
             '422': "HTTPValidationError",
         }
         response_data = await self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
+            *_param, _request_timeout=_request_timeout)
         return response_data.response
 
     def _collection_get_sense_collections_from_collection_id_serialize(
@@ -1743,12 +1780,11 @@ class CollectionApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1767,19 +1803,15 @@ class CollectionApi:
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+            ['application/json'])
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'APIKeyHeader'
-        ]
+        _auth_settings: List[str] = ['APIKeyHeader']
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/collection/sense/collections/{collection_id}',
+            resource_path=
+            '/api/v1/collection/sense/collections/{collection_id}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1789,7 +1821,4 @@ class CollectionApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
-        )
-
-
+            _request_auth=_request_auth)

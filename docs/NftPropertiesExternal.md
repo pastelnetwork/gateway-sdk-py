@@ -20,14 +20,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.nft_properties_external import NftPropertiesExternal
+from pastel_gateway_sdk.models.nft_properties_external import NftPropertiesExternal
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of NftPropertiesExternal from a JSON string
 nft_properties_external_instance = NftPropertiesExternal.from_json(json)
 # print the JSON string representation of the object
-print NftPropertiesExternal.to_json()
+print(NftPropertiesExternal.to_json())
 
 # convert the object into a dict
 nft_properties_external_dict = nft_properties_external_instance.to_dict()

@@ -11,19 +11,20 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 import copy
 import logging
+from logging import FileHandler
 import sys
+from typing import Optional
 import urllib3
 
 import http.client as httplib
 
 JSON_SCHEMA_VALIDATION_KEYWORDS = {
-    'multipleOf', 'maximum', 'exclusiveMaximum',
-    'minimum', 'exclusiveMinimum', 'maxLength',
-    'minLength', 'pattern', 'maxItems', 'minItems'
+    'multipleOf', 'maximum', 'exclusiveMaximum', 'minimum', 'exclusiveMinimum',
+    'maxLength', 'minLength', 'pattern', 'maxItems', 'minItems'
 }
+
 
 class Configuration:
     """This class contains various settings of the API client.
@@ -76,14 +77,20 @@ conf = pastel_gateway_sdk.Configuration(
 
     _default = None
 
-    def __init__(self, host=None,
-                 api_key=None, api_key_prefix=None,
-                 username=None, password=None,
-                 access_token=None,
-                 server_index=None, server_variables=None,
-                 server_operation_index=None, server_operation_variables=None,
-                 ssl_ca_cert=None,
-                 ) -> None:
+    def __init__(
+        self,
+        host=None,
+        api_key=None,
+        api_key_prefix=None,
+        username=None,
+        password=None,
+        access_token=None,
+        server_index=None,
+        server_variables=None,
+        server_operation_index=None,
+        server_operation_variables=None,
+        ssl_ca_cert=None,
+    ) -> None:
         """Constructor
         """
         self._base_path = "http://localhost" if host is None else host
@@ -134,7 +141,7 @@ conf = pastel_gateway_sdk.Configuration(
         self.logger_stream_handler = None
         """Log stream handler
         """
-        self.logger_file_handler = None
+        self.logger_file_handler: Optional[FileHandler] = None
         """Log file handler
         """
         self.logger_file = None
@@ -171,7 +178,7 @@ conf = pastel_gateway_sdk.Configuration(
            Default values is 100, None means no-limit.
         """
 
-        self.proxy = None
+        self.proxy: Optional[str] = None
         """Proxy URL
         """
         self.proxy_headers = None
@@ -344,7 +351,9 @@ conf = pastel_gateway_sdk.Configuration(
         """
         if self.refresh_api_key_hook is not None:
             self.refresh_api_key_hook(self)
-        key = self.api_key.get(identifier, self.api_key.get(alias) if alias is not None else None)
+        key = self.api_key.get(
+            identifier,
+            self.api_key.get(alias) if alias is not None else None)
         if key:
             prefix = self.api_key_prefix.get(identifier)
             if prefix:
@@ -363,9 +372,8 @@ conf = pastel_gateway_sdk.Configuration(
         password = ""
         if self.password is not None:
             password = self.password
-        return urllib3.util.make_headers(
-            basic_auth=username + ':' + password
-        ).get('authorization')
+        return urllib3.util.make_headers(basic_auth=username + ':' +
+                                         password).get('authorization')
 
     def auth_settings(self):
         """Gets Auth Settings dict for api client.
@@ -385,9 +393,7 @@ conf = pastel_gateway_sdk.Configuration(
                 'type': 'api_key',
                 'in': 'header',
                 'key': 'api_key',
-                'value': self.get_api_key_with_prefix(
-                    'APIKeyHeader',
-                ),
+                'value': self.get_api_key_with_prefix('APIKeyHeader', ),
             }
         return auth
 
@@ -400,7 +406,7 @@ conf = pastel_gateway_sdk.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1.0.0\n"\
-               "SDK Package Version: 0.1.4".\
+               "SDK Package Version: 1.0.0".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
@@ -408,12 +414,10 @@ conf = pastel_gateway_sdk.Configuration(
 
         :return: An array of host settings
         """
-        return [
-            {
-                'url': "",
-                'description': "No description provided",
-            }
-        ]
+        return [{
+            'url': "",
+            'description': "No description provided",
+        }]
 
     def get_host_from_settings(self, index, variables=None, servers=None):
         """Gets host URL based on the index and variables
@@ -439,16 +443,16 @@ conf = pastel_gateway_sdk.Configuration(
 
         # go through variables and replace placeholders
         for variable_name, variable in server.get('variables', {}).items():
-            used_value = variables.get(
-                variable_name, variable['default_value'])
+            used_value = variables.get(variable_name,
+                                       variable['default_value'])
 
             if 'enum_values' in variable \
                     and used_value not in variable['enum_values']:
                 raise ValueError(
                     "The variable `{0}` in the host URL has invalid value "
-                    "{1}. Must be {2}.".format(
-                        variable_name, variables[variable_name],
-                        variable['enum_values']))
+                    "{1}. Must be {2}.".format(variable_name,
+                                               variables[variable_name],
+                                               variable['enum_values']))
 
             url = url.replace("{" + variable_name + "}", used_value)
 
@@ -457,7 +461,8 @@ conf = pastel_gateway_sdk.Configuration(
     @property
     def host(self):
         """Return generated host."""
-        return self.get_host_from_settings(self.server_index, variables=self.server_variables)
+        return self.get_host_from_settings(self.server_index,
+                                           variables=self.server_variables)
 
     @host.setter
     def host(self, value):

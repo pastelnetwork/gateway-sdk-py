@@ -1,6 +1,8 @@
 # ref: https://docs.travis-ci.com/user/languages/python
 language: python
 python:
+  - "3.7"
+  - "3.8"
   - "3.9"
   - "3.10"
   - "3.11"
@@ -12,4 +14,4 @@ install:
   - "pip install -r requirements.txt"
   - "pip install -r test-requirements.txt"
 # command to run tests
-script: pytest --cov=gateway_client
+script: pytest --cov=pastel_gateway_sdk

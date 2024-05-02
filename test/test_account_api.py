@@ -13,12 +13,16 @@
 
 
 import unittest
-
-from base_test import BaseTestCase
+from pastel_gateway_sdk import AccountApi
+from .base_test import BaseTestCase
 
 
 class TestAccountApi(BaseTestCase):
     """AccountApi unit test stubs"""
+
+    async def asyncSetUp(self) -> None:
+        await super().asyncSetUp()
+        self.api: AccountApi = self.client.account_api
 
     async def test_account_my_total_balance(self) -> None:
         """Test case for account_my_total_balance

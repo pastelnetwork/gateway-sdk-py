@@ -1,4 +1,4 @@
-# gateway_client.LoginApi
+# pastel_gateway_sdk.LoginApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,24 +21,22 @@ OAuth2 compatible token login, get an access token for future requests
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.token import Token
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.token import Token
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.LoginApi(api_client)
+    api_instance = pastel_gateway_sdk.LoginApi(api_client)
     username = 'username_example' # str | 
     password = 'password_example' # str | 
     grant_type = 'grant_type_example' # str |  (optional)
@@ -102,24 +100,22 @@ Password Recovery
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.msg import Msg
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.msg import Msg
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.LoginApi(api_client)
+    api_instance = pastel_gateway_sdk.LoginApi(api_client)
     email = 'email_example' # str | 
 
     try:
@@ -173,26 +169,24 @@ Reset password
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.body_login_reset_password import BodyLoginResetPassword
-from gateway_client.models.msg import Msg
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.body_login_reset_password import BodyLoginResetPassword
+from pastel_gateway_sdk.models.msg import Msg
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.LoginApi(api_client)
-    body_login_reset_password = gateway_client.BodyLoginResetPassword() # BodyLoginResetPassword | 
+    api_instance = pastel_gateway_sdk.LoginApi(api_client)
+    body_login_reset_password = pastel_gateway_sdk.BodyLoginResetPassword() # BodyLoginResetPassword | 
 
     try:
         # Reset Password
@@ -246,16 +240,14 @@ Test access token
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.user import User
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.user import User
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -267,9 +259,9 @@ configuration = gateway_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.LoginApi(api_client)
+    api_instance = pastel_gateway_sdk.LoginApi(api_client)
 
     try:
         # Test Token

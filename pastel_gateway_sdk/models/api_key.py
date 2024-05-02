@@ -11,24 +11,24 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 from __future__ import annotations
 import pprint
 import re  # noqa: F401
 import json
 
 from datetime import datetime
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictBool, StrictInt, StrictStr
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
+
 
 class ApiKey(BaseModel):
     """
     ApiKey
-    """ # noqa: E501
+    """
+
+  # noqa: E501
     can_nft: Optional[StrictBool] = None
     can_sense: Optional[StrictBool] = None
     can_cascade: Optional[StrictBool] = None
@@ -37,14 +37,16 @@ class ApiKey(BaseModel):
     created_at: datetime
     owner_id: StrictInt
     pastel_id: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["can_nft", "can_sense", "can_cascade", "id", "api_key", "created_at", "owner_id", "pastel_id"]
+    __properties: ClassVar[List[str]] = [
+        "can_nft", "can_sense", "can_cascade", "id", "api_key", "created_at",
+        "owner_id", "pastel_id"
+    ]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
-
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -56,7 +58,7 @@ class ApiKey(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of ApiKey from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -70,10 +72,11 @@ class ApiKey(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # set to None if can_nft (nullable) is None
@@ -104,7 +107,7 @@ class ApiKey(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of ApiKey from a dict"""
         if obj is None:
             return None
@@ -123,5 +126,3 @@ class ApiKey(BaseModel):
             "pastel_id": obj.get("pastel_id")
         })
         return _obj
-
-

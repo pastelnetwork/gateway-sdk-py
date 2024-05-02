@@ -1,4 +1,4 @@
-# gateway_client.CollectionApi
+# pastel_gateway_sdk.CollectionApi
 
 All URIs are relative to *http://localhost*
 
@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**collection_create_sense_collection**](CollectionApi.md#collection_create_sense_collection) | **POST** /api/v1/collection/sense | Create Sense Collection
 [**collection_get_all_nft_collections**](CollectionApi.md#collection_get_all_nft_collections) | **GET** /api/v1/collection/nft/collections | Get All Nft Collections
 [**collection_get_all_sense_collections**](CollectionApi.md#collection_get_all_sense_collections) | **GET** /api/v1/collection/sense/collections | Get All Sense Collections
-[**collection_get_nft_collections_from_collection_id**](CollectionApi.md#collection_get_nft_collections_from_collection_id) | **GET** /api/v1/collection/nft/collections/{collection_id} | Get Nft Collections By Collection Id
-[**collection_get_sense_collections_from_collection_id**](CollectionApi.md#collection_get_sense_collections_from_collection_id) | **GET** /api/v1/collection/sense/collections/{collection_id} | Get Sense Collections By Collection Id
+[**collection_get_nft_collections_from_collection_id**](CollectionApi.md#collection_get_nft_collections_from_collection_id) | **GET** /api/v1/collection/nft/collections/{collection_id} | Get Nft Collections From Collection Id
+[**collection_get_sense_collections_from_collection_id**](CollectionApi.md#collection_get_sense_collections_from_collection_id) | **GET** /api/v1/collection/sense/collections/{collection_id} | Get Sense Collections From Collection Id
 
 
 # **collection_create_nft_collection**
@@ -22,16 +22,14 @@ Create Nft Collection
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.collection_registration_result import CollectionRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -47,9 +45,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CollectionApi(api_client)
+    api_instance = pastel_gateway_sdk.CollectionApi(api_client)
     collection_name = '' # str | Collection name (optional) (default to '')
     max_collection_entries = 1 # int | Maximum number of items allowed in a collection (optional) (default to 1)
     collection_item_copy_count = 1 # int | Allowed number of copies for all items in a collection (optional) (default to 1)
@@ -118,16 +116,14 @@ Create Sense Collection
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.collection_registration_result import CollectionRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -143,9 +139,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CollectionApi(api_client)
+    api_instance = pastel_gateway_sdk.CollectionApi(api_client)
     collection_name = '' # str | Collection name (optional) (default to '')
     max_collection_entries = 1 # int | Maximum number of items allowed in a collection (optional) (default to 1)
     collection_item_copy_count = 1 # int | Allowed number of copies for all items in a collection (optional) (default to 1)
@@ -214,16 +210,14 @@ Get All Nft Collections
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.collection_registration_result import CollectionRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -239,9 +233,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CollectionApi(api_client)
+    api_instance = pastel_gateway_sdk.CollectionApi(api_client)
 
     try:
         # Get All Nft Collections
@@ -289,16 +283,14 @@ Get All Sense Collections
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.collection_registration_result import CollectionRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -314,9 +306,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CollectionApi(api_client)
+    api_instance = pastel_gateway_sdk.CollectionApi(api_client)
 
     try:
         # Get All Sense Collections
@@ -357,23 +349,21 @@ This endpoint does not need any parameter.
 # **collection_get_nft_collections_from_collection_id**
 > CollectionRegistrationResult collection_get_nft_collections_from_collection_id(collection_id)
 
-Get Nft Collections By Collection Id
+Get Nft Collections From Collection Id
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.collection_registration_result import CollectionRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -389,13 +379,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CollectionApi(api_client)
+    api_instance = pastel_gateway_sdk.CollectionApi(api_client)
     collection_id = 'collection_id_example' # str | 
 
     try:
-        # Get Nft Collections By Collection Id
+        # Get Nft Collections From Collection Id
         api_response = await api_instance.collection_get_nft_collections_from_collection_id(collection_id)
         print("The response of CollectionApi->collection_get_nft_collections_from_collection_id:\n")
         pprint(api_response)
@@ -437,23 +427,21 @@ Name | Type | Description  | Notes
 # **collection_get_sense_collections_from_collection_id**
 > CollectionRegistrationResult collection_get_sense_collections_from_collection_id(collection_id)
 
-Get Sense Collections By Collection Id
+Get Sense Collections From Collection Id
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.collection_registration_result import CollectionRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -469,13 +457,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CollectionApi(api_client)
+    api_instance = pastel_gateway_sdk.CollectionApi(api_client)
     collection_id = 'collection_id_example' # str | 
 
     try:
-        # Get Sense Collections By Collection Id
+        # Get Sense Collections From Collection Id
         api_response = await api_instance.collection_get_sense_collections_from_collection_id(collection_id)
         print("The response of CollectionApi->collection_get_sense_collections_from_collection_id:\n")
         pprint(api_response)

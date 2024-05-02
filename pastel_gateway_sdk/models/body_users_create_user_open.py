@@ -11,37 +11,37 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 from __future__ import annotations
 import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from pydantic import BaseModel, StrictFloat, StrictInt, StrictStr
-from pydantic import Field
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
+
 
 class BodyUsersCreateUserOpen(BaseModel):
     """
     BodyUsersCreateUserOpen
-    """ # noqa: E501
+    """
+
+  # noqa: E501
     password: StrictStr
     email: StrictStr
     full_name: Optional[StrictStr] = None
-    balance_limit: Optional[Union[StrictFloat, StrictInt]] = Field(default=0.0, description="User's balance limit, 0 means no limit")
-    __properties: ClassVar[List[str]] = ["password", "email", "full_name", "balance_limit"]
+    balance_limit: Optional[Union[StrictFloat, StrictInt]] = Field(
+        default=0.0, description="User's balance limit, 0 means no limit")
+    __properties: ClassVar[List[str]] = [
+        "password", "email", "full_name", "balance_limit"
+    ]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
-
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -53,7 +53,7 @@ class BodyUsersCreateUserOpen(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of BodyUsersCreateUserOpen from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -67,16 +67,17 @@ class BodyUsersCreateUserOpen(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         """
+        excluded_fields: Set[str] = set([])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of BodyUsersCreateUserOpen from a dict"""
         if obj is None:
             return None
@@ -85,11 +86,14 @@ class BodyUsersCreateUserOpen(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "password": obj.get("password"),
-            "email": obj.get("email"),
-            "full_name": obj.get("full_name"),
-            "balance_limit": obj.get("balance_limit") if obj.get("balance_limit") is not None else 0.0
+            "password":
+            obj.get("password"),
+            "email":
+            obj.get("email"),
+            "full_name":
+            obj.get("full_name"),
+            "balance_limit":
+            obj.get("balance_limit")
+            if obj.get("balance_limit") is not None else 0.0
         })
         return _obj
-
-

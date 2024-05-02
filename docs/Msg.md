@@ -10,14 +10,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.msg import Msg
+from pastel_gateway_sdk.models.msg import Msg
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of Msg from a JSON string
 msg_instance = Msg.from_json(json)
 # print the JSON string representation of the object
-print Msg.to_json()
+print(Msg.to_json())
 
 # convert the object into a dict
 msg_dict = msg_instance.to_dict()

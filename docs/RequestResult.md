@@ -12,14 +12,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.request_result import RequestResult
+from pastel_gateway_sdk.models.request_result import RequestResult
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of RequestResult from a JSON string
 request_result_instance = RequestResult.from_json(json)
 # print the JSON string representation of the object
-print RequestResult.to_json()
+print(RequestResult.to_json())
 
 # convert the object into a dict
 request_result_dict = request_result_instance.to_dict()

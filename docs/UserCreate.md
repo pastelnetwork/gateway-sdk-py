@@ -15,14 +15,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.user_create import UserCreate
+from pastel_gateway_sdk.models.user_create import UserCreate
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of UserCreate from a JSON string
 user_create_instance = UserCreate.from_json(json)
 # print the JSON string representation of the object
-print UserCreate.to_json()
+print(UserCreate.to_json())
 
 # convert the object into a dict
 user_create_dict = user_create_instance.to_dict()

@@ -1,29 +1,26 @@
-# gateway_client.CascadeApi
+# pastel_gateway_sdk.CascadeApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cascade_process_request**](CascadeApi.md#cascade_process_request) | **POST** /api/v1/cascade | Process Request
-
-[**cascade_get_all_requests**](CascadeApi.md#cascade_get_all_requests) | **GET** /api/v1/cascade/gateway_requests | Get All Requests
-[**cascade_get_request**](CascadeApi.md#cascade_get_request) | **GET** /api/v1/cascade/gateway_requests/{gateway_request_id} | Get Request From Request Id
-[**cascade_get_all_results**](CascadeApi.md#cascade_get_all_results) | **GET** /api/v1/cascade/gateway_results | Get All Results
-[**cascade_get_result**](CascadeApi.md#cascade_get_result) | **GET** /api/v1/cascade/gateway_results/{gateway_result_id} | Get Result From Result Id
-
 [**cascade_get_all_files_from_request**](CascadeApi.md#cascade_get_all_files_from_request) | **GET** /api/v1/cascade/all_files_from_request/{gateway_request_id} | Get All Files From Request
-[**cascade_get_stored_file_from_result**](CascadeApi.md#cascade_get_stored_file_from_result) | **GET** /api/v1/cascade/stored_file/{gateway_result_id} | Get Stored File By Result Id
-
 [**cascade_get_all_pastel_registration_tickets_from_request**](CascadeApi.md#cascade_get_all_pastel_registration_tickets_from_request) | **GET** /api/v1/cascade/pastel_registration_tickets/{gateway_request_id} | Get All Pastel Cascade Registration Tickets From Request
-[**cascade_get_originally_submitted_file_from_result**](CascadeApi.md#cascade_get_originally_submitted_file_from_result) | **GET** /api/v1/cascade/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File By Result Id
-[**cascade_get_pastel_activation_ticket_from_result**](CascadeApi.md#cascade_get_pastel_activation_ticket_from_result) | **GET** /api/v1/cascade/pastel_activation_ticket/{gateway_result_id} | Get Pastel Cascade Activation Ticket By Result Id
-[**cascade_get_pastel_activation_ticket_from_txid**](CascadeApi.md#cascade_get_pastel_activation_ticket_from_txid) | **GET** /api/v1/cascade/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket By Its Txid
-[**cascade_get_pastel_registration_ticket_from_result**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_result) | **GET** /api/v1/cascade/pastel_registration_ticket/{gateway_result_id} | Get Pastel Cascade Registration Ticket By Result Id
-[**cascade_get_pastel_registration_ticket_from_txid**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_txid) | **GET** /api/v1/cascade/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket By Its Txid
-[**cascade_get_pastel_registration_ticket_from_stored_file_hash**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_stored_file_hash) | **GET** /api/v1/cascade/pastel_registration_ticket_from_stored_file_hash/{stored_file_sha256_hash_as_hex} | Get Pastel Registration Ticket By Stored File Hash
-[**cascade_get_public_stored_file_from_registration_ticket**](CascadeApi.md#cascade_get_public_stored_file_from_registration_ticket) | **GET** /api/v1/cascade/public_stored_file_from_registration_ticket/{registration_ticket_txid} | Get Public Stored File By Registration Ticket
-[**cascade_get_stored_file_from_activation_ticket**](CascadeApi.md#cascade_get_stored_file_from_activation_ticket) | **GET** /api/v1/cascade/stored_file_from_activation_ticket/{activation_ticket_txid} | Get Stored File By Activation Ticket
-[**cascade_get_stored_file_from_registration_ticket**](CascadeApi.md#cascade_get_stored_file_from_registration_ticket) | **GET** /api/v1/cascade/stored_file_from_registration_ticket/{registration_ticket_txid} | Get Stored File By Registration Ticket
+[**cascade_get_all_requests**](CascadeApi.md#cascade_get_all_requests) | **GET** /api/v1/cascade/gateway_requests | Get All Requests
+[**cascade_get_all_results**](CascadeApi.md#cascade_get_all_results) | **GET** /api/v1/cascade/gateway_results | Get All Results
+[**cascade_get_originally_submitted_file_from_result**](CascadeApi.md#cascade_get_originally_submitted_file_from_result) | **GET** /api/v1/cascade/originally_submitted_file/{gateway_result_id} | Get Originally Submitted File From Result
+[**cascade_get_pastel_activation_ticket_from_result**](CascadeApi.md#cascade_get_pastel_activation_ticket_from_result) | **GET** /api/v1/cascade/pastel_activation_ticket/{gateway_result_id} | Get Pastel Cascade Activation Ticket From Result
+[**cascade_get_pastel_activation_ticket_from_txid**](CascadeApi.md#cascade_get_pastel_activation_ticket_from_txid) | **GET** /api/v1/cascade/pastel_activation_ticket_from_txid/{activation_ticket_txid} | Get Pastel Activation Ticket From Txid
+[**cascade_get_pastel_registration_ticket_from_result**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_result) | **GET** /api/v1/cascade/pastel_registration_ticket/{gateway_result_id} | Get Pastel Registration Ticket From Result
+[**cascade_get_pastel_registration_ticket_from_stored_file_hash**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_stored_file_hash) | **GET** /api/v1/cascade/pastel_registration_ticket_from_stored_file_hash/{stored_file_sha256_hash_as_hex} | Get Pastel Registration Ticket From Stored File Hash
+[**cascade_get_pastel_registration_ticket_from_txid**](CascadeApi.md#cascade_get_pastel_registration_ticket_from_txid) | **GET** /api/v1/cascade/pastel_registration_ticket_from_txid/{registration_ticket_txid} | Get Pastel Registration Ticket From Txid
+[**cascade_get_public_stored_file_from_registration_ticket**](CascadeApi.md#cascade_get_public_stored_file_from_registration_ticket) | **GET** /api/v1/cascade/public_stored_file_from_registration_ticket/{registration_ticket_txid} | Get Public Stored File From Registration Ticket
+[**cascade_get_request**](CascadeApi.md#cascade_get_request) | **GET** /api/v1/cascade/gateway_requests/{gateway_request_id} | Get Request
+[**cascade_get_result**](CascadeApi.md#cascade_get_result) | **GET** /api/v1/cascade/gateway_results/{gateway_result_id} | Get Result
+[**cascade_get_stored_file_from_activation_ticket**](CascadeApi.md#cascade_get_stored_file_from_activation_ticket) | **GET** /api/v1/cascade/stored_file_from_activation_ticket/{activation_ticket_txid} | Get Stored File From Activation Ticket
+[**cascade_get_stored_file_from_registration_ticket**](CascadeApi.md#cascade_get_stored_file_from_registration_ticket) | **GET** /api/v1/cascade/stored_file_from_registration_ticket/{registration_ticket_txid} | Get Stored File From Registration Ticket
+[**cascade_get_stored_file_from_result**](CascadeApi.md#cascade_get_stored_file_from_result) | **GET** /api/v1/cascade/stored_file/{gateway_result_id} | Get Stored File From Result
+[**cascade_process_request**](CascadeApi.md#cascade_process_request) | **POST** /api/v1/cascade | Process Request
 [**cascade_transfer_pastel_ticket_to_another_pastelid**](CascadeApi.md#cascade_transfer_pastel_ticket_to_another_pastelid) | **GET** /api/v1/cascade/result/transfer_pastel_ticket | Transfer Pastel Ticket To Another Pastelid
 
 
@@ -37,15 +34,13 @@ Get All Files From Request
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -61,9 +56,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     gateway_request_id = 'gateway_request_id_example' # str | 
 
     try:
@@ -116,15 +111,13 @@ Get All Pastel Cascade Registration Tickets From Request
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -140,9 +133,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     gateway_request_id = 'gateway_request_id_example' # str | 
 
     try:
@@ -197,17 +190,15 @@ Return the status of the submitted request
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.req_status import ReqStatus
-from gateway_client.models.request_result import RequestResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.req_status import ReqStatus
+from pastel_gateway_sdk.models.request_result import RequestResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -223,10 +214,10 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
-    status_requested = gateway_client.ReqStatus() # ReqStatus |  (optional)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
+    status_requested = pastel_gateway_sdk.ReqStatus() # ReqStatus |  (optional)
     offset = 0 # int |  (optional) (default to 0)
     limit = 10000 # int |  (optional) (default to 10000)
 
@@ -282,17 +273,15 @@ Get All Results
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.req_status import ReqStatus
-from gateway_client.models.result_registration_result import ResultRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.req_status import ReqStatus
+from pastel_gateway_sdk.models.result_registration_result import ResultRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -308,10 +297,10 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
-    status_requested = gateway_client.ReqStatus() # ReqStatus |  (optional)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
+    status_requested = pastel_gateway_sdk.ReqStatus() # ReqStatus |  (optional)
     offset = 0 # int |  (optional) (default to 0)
     limit = 10000 # int |  (optional) (default to 10000)
 
@@ -360,22 +349,20 @@ Name | Type | Description  | Notes
 # **cascade_get_originally_submitted_file_from_result**
 > object cascade_get_originally_submitted_file_from_result(gateway_result_id)
 
-Get Originally Submitted File By Result Id
+Get Originally Submitted File From Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -391,13 +378,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Originally Submitted File By Result Id
+        # Get Originally Submitted File From Result
         api_response = await api_instance.cascade_get_originally_submitted_file_from_result(gateway_result_id)
         print("The response of CascadeApi->cascade_get_originally_submitted_file_from_result:\n")
         pprint(api_response)
@@ -439,22 +426,20 @@ Name | Type | Description  | Notes
 # **cascade_get_pastel_activation_ticket_from_result**
 > object cascade_get_pastel_activation_ticket_from_result(gateway_result_id)
 
-Get Pastel Cascade Activation Ticket By Result Id
+Get Pastel Cascade Activation Ticket From Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -470,13 +455,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Pastel Cascade Activation Ticket By Result Id
+        # Get Pastel Cascade Activation Ticket From Result
         api_response = await api_instance.cascade_get_pastel_activation_ticket_from_result(gateway_result_id)
         print("The response of CascadeApi->cascade_get_pastel_activation_ticket_from_result:\n")
         pprint(api_response)
@@ -518,33 +503,31 @@ Name | Type | Description  | Notes
 # **cascade_get_pastel_activation_ticket_from_txid**
 > object cascade_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
 
-Get Pastel Activation Ticket By Its Txid
+Get Pastel Activation Ticket From Txid
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     activation_ticket_txid = 'activation_ticket_txid_example' # str | 
 
     try:
-        # Get Pastel Activation Ticket By Its Txid
+        # Get Pastel Activation Ticket From Txid
         api_response = await api_instance.cascade_get_pastel_activation_ticket_from_txid(activation_ticket_txid)
         print("The response of CascadeApi->cascade_get_pastel_activation_ticket_from_txid:\n")
         pprint(api_response)
@@ -586,22 +569,20 @@ No authorization required
 # **cascade_get_pastel_registration_ticket_from_result**
 > object cascade_get_pastel_registration_ticket_from_result(gateway_result_id)
 
-Get Pastel Cascade Registration Ticket By Result Id
+Get Pastel Registration Ticket From Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -617,13 +598,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Pastel Cascade Registration Ticket By Result Id
+        # Get Pastel Registration Ticket From Result
         api_response = await api_instance.cascade_get_pastel_registration_ticket_from_result(gateway_result_id)
         print("The response of CascadeApi->cascade_get_pastel_registration_ticket_from_result:\n")
         pprint(api_response)
@@ -662,104 +643,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cascade_get_pastel_registration_ticket_from_txid**
-> object cascade_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
-
-Get Pastel Registration Ticket By Its Txid
-
-### Example
-
-
-```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
-    registration_ticket_txid = 'registration_ticket_txid_example' # str | 
-
-    try:
-        # Get Pastel Registration Ticket By Its Txid
-        api_response = await api_instance.cascade_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
-        print("The response of CascadeApi->cascade_get_pastel_registration_ticket_from_txid:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling CascadeApi->cascade_get_pastel_registration_ticket_from_txid: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **registration_ticket_txid** | **str**|  | 
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **cascade_get_pastel_registration_ticket_from_stored_file_hash**
 > object cascade_get_pastel_registration_ticket_from_stored_file_hash(stored_file_sha256_hash_as_hex)
 
-Get Pastel Registration Ticket By Stored File Hash
+Get Pastel Registration Ticket From Stored File Hash
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     stored_file_sha256_hash_as_hex = 'stored_file_sha256_hash_as_hex_example' # str | 
 
     try:
-        # Get Pastel Registration Ticket By Stored File Hash
+        # Get Pastel Registration Ticket From Stored File Hash
         api_response = await api_instance.cascade_get_pastel_registration_ticket_from_stored_file_hash(stored_file_sha256_hash_as_hex)
         print("The response of CascadeApi->cascade_get_pastel_registration_ticket_from_stored_file_hash:\n")
         pprint(api_response)
@@ -798,36 +709,100 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cascade_get_public_stored_file_from_registration_ticket**
-> object cascade_get_public_stored_file_from_registration_ticket(registration_ticket_txid)
+# **cascade_get_pastel_registration_ticket_from_txid**
+> object cascade_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
 
-Get Public Stored File By Registration Ticket
+Get Pastel Registration Ticket From Txid
 
 ### Example
 
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     registration_ticket_txid = 'registration_ticket_txid_example' # str | 
 
     try:
-        # Get Public Stored File By Registration Ticket
+        # Get Pastel Registration Ticket From Txid
+        api_response = await api_instance.cascade_get_pastel_registration_ticket_from_txid(registration_ticket_txid)
+        print("The response of CascadeApi->cascade_get_pastel_registration_ticket_from_txid:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CascadeApi->cascade_get_pastel_registration_ticket_from_txid: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **registration_ticket_txid** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cascade_get_public_stored_file_from_registration_ticket**
+> object cascade_get_public_stored_file_from_registration_ticket(registration_ticket_txid)
+
+Get Public Stored File From Registration Ticket
+
+### Example
+
+
+```python
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pastel_gateway_sdk.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
+    registration_ticket_txid = 'registration_ticket_txid_example' # str | 
+
+    try:
+        # Get Public Stored File From Registration Ticket
         api_response = await api_instance.cascade_get_public_stored_file_from_registration_ticket(registration_ticket_txid)
         print("The response of CascadeApi->cascade_get_public_stored_file_from_registration_ticket:\n")
         pprint(api_response)
@@ -869,7 +844,7 @@ No authorization required
 # **cascade_get_request**
 > RequestResult cascade_get_request(gateway_request_id)
 
-Get Request By Request Id
+Get Request
 
 Return the status of the submitted Work
 
@@ -878,16 +853,14 @@ Return the status of the submitted Work
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.request_result import RequestResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.request_result import RequestResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -903,13 +876,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     gateway_request_id = 'gateway_request_id_example' # str | 
 
     try:
-        # Get Request By Request Id
+        # Get Request
         api_response = await api_instance.cascade_get_request(gateway_request_id)
         print("The response of CascadeApi->cascade_get_request:\n")
         pprint(api_response)
@@ -951,23 +924,21 @@ Name | Type | Description  | Notes
 # **cascade_get_result**
 > ResultRegistrationResult cascade_get_result(gateway_result_id)
 
-Get Result By Result Id
+Get Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.result_registration_result import ResultRegistrationResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.result_registration_result import ResultRegistrationResult
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -983,13 +954,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
 
     try:
-        # Get Result By Result Id
+        # Get Result
         api_response = await api_instance.cascade_get_result(gateway_result_id)
         print("The response of CascadeApi->cascade_get_result:\n")
         pprint(api_response)
@@ -1028,104 +999,23 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cascade_get_stored_file_from_result**
-> object cascade_get_stored_file_from_result(gateway_result_id)
-
-Get Stored File By Result Id
-
-### Example
-
-* Api Key Authentication (APIKeyHeader):
-
-```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: APIKeyHeader
-configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
-    gateway_result_id = 'gateway_result_id_example' # str | 
-
-    try:
-        # Get Stored File By Result Id
-        api_response = await api_instance.cascade_get_stored_file_from_result(gateway_result_id)
-        print("The response of CascadeApi->cascade_get_stored_file_from_result:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling CascadeApi->cascade_get_stored_file_from_result: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **gateway_result_id** | **str**|  | 
-
-### Return type
-
-**object**
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **cascade_get_stored_file_from_activation_ticket**
 > object cascade_get_stored_file_from_activation_ticket(activation_ticket_txid)
 
-Get Stored File By Activation Ticket
+Get Stored File From Activation Ticket
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1141,13 +1031,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     activation_ticket_txid = 'activation_ticket_txid_example' # str | 
 
     try:
-        # Get Stored File By Activation Ticket
+        # Get Stored File From Activation Ticket
         api_response = await api_instance.cascade_get_stored_file_from_activation_ticket(activation_ticket_txid)
         print("The response of CascadeApi->cascade_get_stored_file_from_activation_ticket:\n")
         pprint(api_response)
@@ -1189,22 +1079,20 @@ Name | Type | Description  | Notes
 # **cascade_get_stored_file_from_registration_ticket**
 > object cascade_get_stored_file_from_registration_ticket(registration_ticket_txid)
 
-Get Stored File By Registration Ticket
+Get Stored File From Registration Ticket
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1220,13 +1108,13 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     registration_ticket_txid = 'registration_ticket_txid_example' # str | 
 
     try:
-        # Get Stored File By Registration Ticket
+        # Get Stored File From Registration Ticket
         api_response = await api_instance.cascade_get_stored_file_from_registration_ticket(registration_ticket_txid)
         print("The response of CascadeApi->cascade_get_stored_file_from_registration_ticket:\n")
         pprint(api_response)
@@ -1265,26 +1153,23 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cascade_process_request**
-> RequestResult cascade_process_request(files, make_publicly_accessible=make_publicly_accessible, after_activation_transfer_to_pastelid=after_activation_transfer_to_pastelid)
+# **cascade_get_stored_file_from_result**
+> object cascade_get_stored_file_from_result(gateway_result_id)
 
-Process Request
+Get Stored File From Result
 
 ### Example
 
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.models.request_result import RequestResult
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1300,9 +1185,87 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
+    gateway_result_id = 'gateway_result_id_example' # str | 
+
+    try:
+        # Get Stored File From Result
+        api_response = await api_instance.cascade_get_stored_file_from_result(gateway_result_id)
+        print("The response of CascadeApi->cascade_get_stored_file_from_result:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CascadeApi->cascade_get_stored_file_from_result: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gateway_result_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cascade_process_request**
+> RequestResult cascade_process_request(files, make_publicly_accessible=make_publicly_accessible, after_activation_transfer_to_pastelid=after_activation_transfer_to_pastelid)
+
+Process Request
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+
+```python
+import pastel_gateway_sdk
+from pastel_gateway_sdk.models.request_result import RequestResult
+from pastel_gateway_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pastel_gateway_sdk.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     files = None # List[bytearray] | 
     make_publicly_accessible = True # bool | Make the file publicly accessible (optional) (default to True)
     after_activation_transfer_to_pastelid = 'after_activation_transfer_to_pastelid_example' # str | PastelID to transfer the NFT to after activation, if any (optional)
@@ -1359,15 +1322,13 @@ Transfer Pastel Ticket To Another Pastelid
 * Api Key Authentication (APIKeyHeader):
 
 ```python
-import time
-import os
-import gateway_client
-from gateway_client.rest import ApiException
+import pastel_gateway_sdk
+from pastel_gateway_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gateway_client.Configuration(
+configuration = pastel_gateway_sdk.Configuration(
     host = "http://localhost"
 )
 
@@ -1383,9 +1344,9 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with gateway_client.ApiClient(configuration) as api_client:
+async with pastel_gateway_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gateway_client.CascadeApi(api_client)
+    api_instance = pastel_gateway_sdk.CascadeApi(api_client)
     gateway_result_id = 'gateway_result_id_example' # str | 
     pastel_id = 'pastel_id_example' # str | 
 

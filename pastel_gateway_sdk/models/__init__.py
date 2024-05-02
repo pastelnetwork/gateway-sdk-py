@@ -12,13 +12,13 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 # import models into model package
 from pastel_gateway_sdk.models.api_key import ApiKey
 from pastel_gateway_sdk.models.api_key_create import ApiKeyCreate
 from pastel_gateway_sdk.models.body_login_reset_password import BodyLoginResetPassword
 from pastel_gateway_sdk.models.body_users_create_user_open import BodyUsersCreateUserOpen
 from pastel_gateway_sdk.models.body_users_update_user_me import BodyUsersUpdateUserMe
+from pastel_gateway_sdk.models.client_with_secret import ClientWithSecret
 from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
 from pastel_gateway_sdk.models.collection_registration_result_status_messages_inner import CollectionRegistrationResultStatusMessagesInner
 from pastel_gateway_sdk.models.http_validation_error import HTTPValidationError
@@ -32,6 +32,8 @@ from pastel_gateway_sdk.models.status import Status
 from pastel_gateway_sdk.models.token import Token
 from pastel_gateway_sdk.models.user import User
 from pastel_gateway_sdk.models.user_create import UserCreate
+from pastel_gateway_sdk.models.user_create_with_key import UserCreateWithKey
 from pastel_gateway_sdk.models.user_id_or_email import UserIdOrEmail
 from pastel_gateway_sdk.models.user_update import UserUpdate
+from pastel_gateway_sdk.models.user_with_key import UserWithKey
 from pastel_gateway_sdk.models.validation_error import ValidationError

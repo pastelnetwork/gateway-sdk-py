@@ -28,14 +28,14 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gateway_client.models.collection_registration_result import CollectionRegistrationResult
+from pastel_gateway_sdk.models.collection_registration_result import CollectionRegistrationResult
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of CollectionRegistrationResult from a JSON string
 collection_registration_result_instance = CollectionRegistrationResult.from_json(json)
 # print the JSON string representation of the object
-print CollectionRegistrationResult.to_json()
+print(CollectionRegistrationResult.to_json())
 
 # convert the object into a dict
 collection_registration_result_dict = collection_registration_result_instance.to_dict()

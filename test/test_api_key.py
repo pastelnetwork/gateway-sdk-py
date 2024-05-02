@@ -15,17 +15,11 @@
 import unittest
 
 from pastel_gateway_sdk.models.api_key import ApiKey
-from base_test import BaseTestCase
+from .base_test import BaseTestCase
 
 
 class TestApiKey(BaseTestCase):
     """ApiKey unit test stubs"""
-
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
 
     def make_instance(self, include_optional) -> ApiKey:
         """Test ApiKey

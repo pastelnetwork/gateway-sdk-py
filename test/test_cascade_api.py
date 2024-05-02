@@ -13,7 +13,7 @@
 
 
 import unittest
-from base_test import BaseTestCase
+from .base_test import BaseTestCase
 from pastel_gateway_sdk import CascadeApi, ApiKeysApi
 
 
